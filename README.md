@@ -4,7 +4,9 @@
 
 {
     entities: {
+    
       post: {
+      
         1: {
           id: 1,
           title: "First Post"
