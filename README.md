@@ -3,7 +3,7 @@
 ## Sample State Shape
 
 
-
+{
     entities: {
     
       post: {
@@ -49,4 +49,4 @@
       postForm: ["Post body cannot be blank"],
     },
     session: { currentUserId: 12 }
-
+}
