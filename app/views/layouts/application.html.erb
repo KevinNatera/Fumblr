@@ -16,8 +16,8 @@
         // add user to the window as an object called currentUser
         // with all of the necessary properties currentUser has
           window.currentUser = {
-          "id": <%= current_user.id%>,
           "username": "<%= current_user.username%>",
+          "id": <%= current_user.id%>,
           "email": "<%= current_user.email%>"
         };
         // username and email have to be in quotes because they
@@ -26,7 +26,7 @@
         </script>
 
       <%end%>
-      
+
   </head>
 
   <body>
