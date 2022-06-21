@@ -8,6 +8,25 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+       <%# method comes from application controller in standard rails auth  %>
+      <% if current_user%>
+          <%# make a new script to run js if there is a user %>
+        <script>  
+        // add user to the window as an object called currentUser
+        // with all of the necessary properties currentUser has
+          window.currentUser = {
+          "id": <%= current_user.id%>,
+          "username": "<%= current_user.username%>",
+          "email": "<%= current_user.email%>"
+        };
+        // username and email have to be in quotes because they
+        // are strings and javascript will be used to evaluate
+        // the script, not ruby or erb
+        </script>
+
+      <%end%>
+      
   </head>
 
   <body>

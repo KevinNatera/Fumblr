@@ -9,7 +9,7 @@ export default ({ currentUser, logout }) => {
 
   const display = currentUser ? (  //if there is a current user, return this
       <div>
-        <h2> Hello, {currentUser.username}</h2>
+        <h2> Welcome, {currentUser.username}!</h2>
         <button onClick={logout}> Log Out</button>
       </div>
   ) : //if there is no currentUser, return this instead
@@ -23,7 +23,7 @@ export default ({ currentUser, logout }) => {
 
   return (
     <header className="nav-bar">
-      <h1 className="logo">BLUEBIRD</h1>
+      <h1 className="logo">Fumblr</h1>
       <div>
         {display}
       </div>

@@ -34,7 +34,7 @@ class Signup extends React.Component {
         //after the form is filled out, the state will have all the data required to 
         //create a user
         this.props.createNewUser(this.state) 
-            .then( () => this.props.history.push('/api/users/1'))
+            .then( () => this.props.history.push(`/`))
     }   //then if the user is created, redirect 
 
         //you have to bind handle submit because it is not available in the render
