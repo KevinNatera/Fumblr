@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import createStore from './store/store';
 import Root from './components/root';
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
   
@@ -10,12 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
   let preloadedState = undefined; //undefined just so we have something 
 
   if (window.currentUser) {
+    let id = window.currentUser.id
+
     preloadedState = {
+          entities: {
+            users: {
+              [window.currentUser.id]: window.currentUser
+            }
+          },
           session: {
-            id: window.currentUser.id
+            id: window.currentUser.id,
         }         
     };
   }
+
   const store = createStore(preloadedState);
   
   window.store = store
