@@ -15,9 +15,6 @@ class Login extends React.Component {
 
     componentDidMount() {
         this.props.clearErrors();
-        if (this.props.location.type === "demo") {
-            this.handleDemoLogin()
-        }
     }
 
     handleInput(type) {
@@ -34,7 +31,9 @@ class Login extends React.Component {
             .then( () => this.props.history.push(`/`) )
     }   
 
-    handleDemoLogin() {
+    handleDemoLogin(e) {
+        e.preventDefault()
+
         this.props.loginUser({email:'demo@user.com', password:'123456'})
         .then( () => this.props.history.push(`/`) )
     }
