@@ -12189,3 +12189,41 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 8.7ms)
 
 
+Started GET "/" for ::1 at 2022-06-22 16:13:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html within layouts/application
+  Rendered static_pages/root.html within layouts/application (1.9ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 200 OK in 315ms (Views: 306.3ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mycityneedsme/.rbenv/versions/2.5.1/bin/annotate:25
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(16902157403800095)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePosts (20220622201821)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (83.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "author_id" integer NOT NULL, "title" character varying NOT NULL, "body" character varying, "url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20220622201821_create_posts.rb:3
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_posts_on_author_id" ON "posts"  ("author_id")[0m
+  ↳ db/migrate/20220622201821_create_posts.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (7.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220622201821"]]
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (5.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(16902157403800095)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mycityneedsme/.rbenv/versions/2.5.1/bin/annotate:25
