@@ -6,7 +6,7 @@ import { Redirect, Route, withRouter } from 'react-router-dom'
 //first get props 
 
 const mapStateToProps = (state) => ({
-    loggedIn: Boolean(state.entities.session.currentUser)
+    loggedIn: Boolean(state.session.id)
 })
 
 
