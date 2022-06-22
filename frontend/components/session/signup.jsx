@@ -16,6 +16,10 @@ class Signup extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    componentDidMount() {
+        this.props.clearErrors();
+    }
+
     //after constructor, build the handle input function
     //for form fields to update state accordingly
 
@@ -39,7 +43,16 @@ class Signup extends React.Component {
 
         //you have to bind handle submit because it is not available in the render
         //function otherwise
+
+
     render() {
+        let errors;
+        if(this.props.errors.responseJSON) {
+            errors = this.props.errors.responseJSON.map( (error, idx) => (
+                <li className="error" key={idx}> {error} </li> 
+            )
+        )}
+        
         return (
             <div className="session-form">
                 <h2>Sign Up!</h2>
@@ -71,7 +84,16 @@ class Signup extends React.Component {
 
 
                 <button onClick={this.handleSubmit}> Sign Up</button>
+
                 </form>
+
+
+                <ul>
+
+                 { (this.props.errors.responseJSON != null) && errors }
+
+                </ul>
+
             </div>
         )
     }

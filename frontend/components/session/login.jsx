@@ -3,7 +3,7 @@ import React from 'react'
 class Login extends React.Component {
     constructor(props) {
         super(props)
-        //local state
+        
         this.state = {
             email: '',
             password:''
@@ -12,7 +12,9 @@ class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-
+    componentDidMount() {
+        this.props.clearErrors();
+    }
 
     handleInput(type) {
         
@@ -29,6 +31,12 @@ class Login extends React.Component {
     }   
 
     render() {
+        let errors;
+        if(this.props.errors.responseJSON) {
+            errors = this.props.errors.responseJSON.map( (error, idx) => (
+                <li className="error" key={idx}> {error} </li> 
+            )
+        )}
         return (
             <div className="session-form">
                 <h2>Login!</h2>
@@ -50,7 +58,16 @@ class Login extends React.Component {
                     </label>
 
                 <button onClick={this.handleSubmit}> Login</button>
+                
                 </form>
+
+
+                <ul>
+
+                 { (this.props.errors.responseJSON != null) && errors }
+
+                </ul>
+
             </div>
         )
     }
