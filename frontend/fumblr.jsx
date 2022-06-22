@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let preloadedState = undefined; //undefined just so we have something 
 
   if (window.currentUser) {
-    let id = window.currentUser.id
 
     preloadedState = {
           entities: {
