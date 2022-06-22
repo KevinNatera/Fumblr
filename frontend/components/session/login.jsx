@@ -10,10 +10,14 @@ class Login extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemoLogin = this.handleDemoLogin.bind(this)
     }
 
     componentDidMount() {
         this.props.clearErrors();
+        if (this.props.location.type === "demo") {
+            this.handleDemoLogin()
+        }
     }
 
     handleInput(type) {
@@ -30,13 +34,27 @@ class Login extends React.Component {
             .then( () => this.props.history.push(`/`) )
     }   
 
+    handleDemoLogin() {
+        this.props.loginUser({email:'demo@user.com', password:'123456'})
+        .then( () => this.props.history.push(`/`) )
+    }
+
     render() {
+        console.log(this.props)
         let errors;
         if(this.props.errors.responseJSON) {
             errors = this.props.errors.responseJSON.map( (error, idx) => (
                 <li className="error" key={idx}> {error} </li> 
             )
         )}
+        
+        let button;
+        if(this.props.location.type === "demo") {
+            button = <button onClick={this.handleDemoLogin}> Demo Login</button>
+        } else {
+            button = <button onClick={this.handleSubmit}> Login</button>
+        }
+
         return (
             <div className="session-form">
                 <h2>Login!</h2>
@@ -57,8 +75,8 @@ class Login extends React.Component {
                             />
                     </label>
 
-                <button onClick={this.handleSubmit}> Login</button>
-                
+                    {button}
+
                 </form>
 
 
