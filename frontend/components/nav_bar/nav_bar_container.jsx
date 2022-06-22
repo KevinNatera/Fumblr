@@ -10,7 +10,8 @@ import { logout } from '../../actions/session';
 
 //pass in the current user to the navbar
 const mapStateToProps = state => ({
-  currentUser: state.entities.session.currentUser,
+  currentUser: state.entities.users[state.session.id]
+  //connected to route api util ------------------
 });
 
 //also pass in the logout function

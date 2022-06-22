@@ -4,7 +4,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session'
 //create default state to return if there is no currentUser
 //or to logout a user
 const _nullSession = {
-    currentUser: null,
+    id: null,
 };
 
 //now make reducers
@@ -14,9 +14,9 @@ export default (state = _nullSession, action) => {
     //freeze to prevent accidental changes
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            //returns the currentUser object received from the action 
-            //nested under the key currentUser
-            return Object.assign( {}, { currentUser: action.user });
+            //returns the currentUser object received from the action  < - fix this later
+            //nested under the key currentUser  fix this later
+            return Object.assign( {}, { id: action.user.id });
         case LOGOUT_CURRENT_USER:
             return _nullSession;
         default:
