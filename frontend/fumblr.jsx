@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
   const store = createStore(preloadedState);
+  
   window.store = store
 
-  // ReactDOM.render(<h1>Welcome to Fumblr</h1>, root);
   ReactDOM.render(<Root store={store} />, root);
 });
