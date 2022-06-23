@@ -85,6 +85,13 @@ ActiveRecord::Base.transaction do
         url: ""
     )
 
+    post6 = Post.create(
+        author_id: 5,
+        title: "someone",
+        body: "like my post plz :(",
+        url: ""
+    )
+
     # comment1 = Comment.create(
     #     id: 1,
     #     user_id: 1,
