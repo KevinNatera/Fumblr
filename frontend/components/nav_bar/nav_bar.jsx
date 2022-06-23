@@ -12,7 +12,7 @@ export default ({ currentUser, logout }) => {
         <h2> Welcome, {currentUser.username}!</h2>
     
         <Link className="btn" to="/explore">Home</Link>
-        <Link className="btn" to="/profile">Profile</Link>
+        <Link className="btn" to="/profile/posts">Profile</Link>
         <button className="btn" onClick={logout}>Log Out</button>
       </div>
   )  
