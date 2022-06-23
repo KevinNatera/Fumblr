@@ -45,13 +45,6 @@ class Login extends React.Component {
                 <li className="error" key={idx}> {error} </li> 
             )
         )}
-        
-        let button;
-        if(this.props.location.type === "demo") {
-            button = <button onClick={this.handleDemoLogin}> Demo Login</button>
-        } else {
-            button = <button onClick={this.handleSubmit}> Login</button>
-        }
 
         return (
             <div className="session-form">
@@ -73,7 +66,8 @@ class Login extends React.Component {
                             />
                     </label>
 
-                    {button}
+                <button onClick={this.handleSubmit}> Login</button>
+                <button onClick={this.handleDemoLogin}> Demo Login</button>
 
                 </form>
 
