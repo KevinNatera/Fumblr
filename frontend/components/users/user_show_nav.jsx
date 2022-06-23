@@ -13,7 +13,7 @@ class UserShowNav extends React.Component {
 
 
         return (
-            <div id="user-show-nav">
+            <div className="nav-bar">
 
                 <Link className="btn" to="/profile/posts">Posts</Link>
                 <Link className="btn" to="/profile/likes">Likes</Link>
