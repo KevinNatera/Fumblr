@@ -37,6 +37,19 @@ ActiveRecord::Base.transaction do
         password: 123456
     )
 
+    user5 = User.create(
+        username: "Loser User",
+        email: "loser@user.com",
+        password: 123456
+    )
+
+    user6 = User.create(
+        username: "0",
+        email: "0",
+        password: 123456
+    )
+
+
     post1 = Post.create(
         author_id: 4,
         title: "first",

@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { createNewUser } from '../../actions/session'
 import { clearErrors } from '../../actions/session'
 import Signup from './signup'
+import { requestAllUsers } from '../../actions/users'
 
 //make the signup class now
 

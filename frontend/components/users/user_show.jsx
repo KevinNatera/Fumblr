@@ -1,5 +1,5 @@
 import React from 'react'
-import PostsIndexItem from '../posts/posts_index_item';
+import PostsIndexItemContainer from '../posts/posts_index_item_container';
 
 class UserShow extends React.Component {
     constructor(props){
@@ -11,12 +11,18 @@ class UserShow extends React.Component {
     }
 
     render() {
+        // console.log(this.props.currentUserId) //HAS CURRENT USER id
+        
         return (
             <div className="user-show">
                 <ul>
 
                 {this.props.posts.map((post) => (
-                <PostsIndexItem key={post.id} post={post} />
+                < PostsIndexItemContainer
+                    key={post.id} 
+                    post={post} 
+                    currentUserId={this.props.currentUserId}
+                />
                 ))
                 }
                 </ul>
