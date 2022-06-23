@@ -10,19 +10,19 @@ export default ({ currentUser, logout }) => {
   const display = currentUser ? (  //if there is a current user, return this
       <div>
         <h2> Welcome, {currentUser.username}!</h2>
-        <button onClick={logout}> Log Out</button>
+    
+        <Link className="btn" to="/explore">Home</Link>
+        <Link className="btn" to="/profile">Profile</Link>
+        <button className="btn" onClick={logout}>Log Out</button>
       </div>
-  ) : //if there is no currentUser, return this instead
-  
+  )  
+      :  //if there is no currentUser, return the following instead
   (
     <div>
       
-      
-      <Link className="btn" to="/">Home</Link>
       <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to={{ pathname: "/login", type: "login" }}>Log In</Link>
-      <Link className="btn" to={{ pathname: "/login", type: "demo" }}>Demo Login</Link>
-      {/* pass props in demo link */}
+      <Link className="btn" to="login">Log In</Link>
+      {/* <Link className="btn" to={{ pathname: "/login", type: "demo" }}>Demo Login</Link> */}
     </div>
   );
 

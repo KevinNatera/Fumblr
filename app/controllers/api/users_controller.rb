@@ -12,7 +12,6 @@ class Api::UsersController < ApplicationController
           # redirect_to user_url(@user)
           render :show
         else
-          # flash[:errors] = @user.errors.full_messages
           # render :new
           render json: @user.errors.full_messages, status: 422
         end
@@ -27,10 +26,10 @@ class Api::UsersController < ApplicationController
         end
       end
     
-      # def index
-      #   @users = User.all
-      #   render :index
-      # end
+      def index
+        @users = User.all
+        render :index
+      end
     
       # def edit
       #   @user = User.find(params[:id])

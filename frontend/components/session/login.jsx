@@ -28,14 +28,13 @@ class Login extends React.Component {
         e.preventDefault()
         
         this.props.loginUser(this.state) 
-            .then( () => this.props.history.push(`/`) )
+            .then( () => this.props.history.push(`/profile/posts`) )
     }   
 
     handleDemoLogin(e) {
         e.preventDefault()
-
         this.props.loginUser({email:'demo@user.com', password:'123456'})
-        .then( () => this.props.history.push(`/`) )
+        .then( () => this.props.history.push(`/profile/posts`) )
     }
 
     render() {
@@ -46,13 +45,6 @@ class Login extends React.Component {
                 <li className="error" key={idx}> {error} </li> 
             )
         )}
-        
-        let button;
-        if(this.props.location.type === "demo") {
-            button = <button onClick={this.handleDemoLogin}> Demo Login</button>
-        } else {
-            button = <button onClick={this.handleSubmit}> Login</button>
-        }
 
         return (
             <div className="session-form">
@@ -74,7 +66,8 @@ class Login extends React.Component {
                             />
                     </label>
 
-                    {button}
+                <button onClick={this.handleSubmit}> Login</button>
+                <button onClick={this.handleDemoLogin}> Demo Login</button>
 
                 </form>
 
