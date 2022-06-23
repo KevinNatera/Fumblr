@@ -17,7 +17,7 @@ class Api::PostsController < ApplicationController
         
         if @post.save 
             # redirect_to posts_url
-            render :show
+            render json: {}
         else
             render json: @post.errors.full_messages, status: 422
         end 
@@ -45,6 +45,14 @@ class Api::PostsController < ApplicationController
 
     # end 
 
+    def destroy 
+        @Post = Post.find(params[:id])
+
+        if @Post.destroy 
+        else 
+            render json: @post.errors.full_messages, status: 422
+        end
+    end
 
     private 
     def post_params 
