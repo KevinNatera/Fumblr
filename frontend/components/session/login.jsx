@@ -28,13 +28,13 @@ class Login extends React.Component {
         e.preventDefault()
         
         this.props.loginUser(this.state) 
-            .then( () => this.props.history.push(`/profile`) )
+            .then( () => this.props.history.push(`/profile/posts`) )
     }   
 
     handleDemoLogin(e) {
         e.preventDefault()
         this.props.loginUser({email:'demo@user.com', password:'123456'})
-        .then( () => this.props.history.push(`/profile`) )
+        .then( () => this.props.history.push(`/profile/posts`) )
     }
 
     render() {
