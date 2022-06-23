@@ -14,8 +14,8 @@ class PostsIndexItem extends React.Component{
 
       return (
            <li className="posts-index-item">
+                <h1>{this.props.post.title}</h1>
                 <p>{this.props.post.id}</p>
-                <p>{this.props.post.title}</p>
                 <p>{this.props.post.body}</p>
                 {/* <img src={this.props.post.url} width="30px" height="30px"/> */}
            </li>

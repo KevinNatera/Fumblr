@@ -20,9 +20,8 @@ export default ({ currentUser, logout }) => {
       
       <Link className="btn" to="/">Home</Link>
       <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to={{ pathname: "/login", type: "login" }}>Log In</Link>
-      <Link className="btn" to={{ pathname: "/login", type: "demo" }}>Demo Login</Link>
-      {/* pass props in demo link */}
+      <Link className="btn" to="login">Log In</Link>
+      {/* <Link className="btn" to={{ pathname: "/login", type: "demo" }}>Demo Login</Link> */}
     </div>
   );
 

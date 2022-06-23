@@ -12,7 +12,8 @@ export default () => (
     
     <Route path="/" component={NavBarContainer} />
     <Route exact path="/" component={Home} />
-    <ProtectedRoute exact path="/posts" component={PostsIndexContainer} />
+    <ProtectedRoute exact path="/" component={PostsIndexContainer} />
+    {/* <ProtectedRoute exact path="/posts" component={PostsIndexContainer} /> */}
     <Switch>
     <AuthRoute path="/signup" component={SignupContainer} />
     <AuthRoute path="/login" component={LoginContainer} />
