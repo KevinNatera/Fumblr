@@ -5,7 +5,7 @@ class Api::PostsController < ApplicationController
         @post = Post.new
         render :new 
     end
-    #ajax
+    
     def index 
         @posts = Post.all 
         render :index 
@@ -16,10 +16,10 @@ class Api::PostsController < ApplicationController
         @post.author_id = params[:author_id]
         
         if @post.save 
-            redirect_to posts_url
-        else 
-            # flash.now[:errors] = [ @post.errors.full_messages[0] ]
-            render :new 
+            # redirect_to posts_url
+            render :show
+        else
+            render json: @post.errors.full_messages, status: 422
         end 
     end
 

@@ -8,7 +8,8 @@
 ActiveRecord::Base.transaction do
     User.delete_all
     ActiveRecord::Base.connection.reset_pk_sequence!('users')
-    # Post.delete_all
+    Post.delete_all
+    ActiveRecord::Base.connection.reset_pk_sequence!('posts')
     # Comment.delete_all 
     # Like.delete_all 
 
@@ -36,12 +37,40 @@ ActiveRecord::Base.transaction do
         password: 123456
     )
 
-    # post1 = Post.create(
-    #     id: 1,
-    #     author_id: 1,
-    #     title: "first",
-    #     image_url: "wefijbnweogfwoemf"
-    # )
+    post1 = Post.create(
+        author_id: 4,
+        title: "first",
+        body: "The very first post!",
+        url: ""
+    )
+
+    post2 = Post.create(
+        author_id: 4,
+        title: "example 2",
+        body: "The very SECOND post! It's even BETTER!",
+        url: ""
+    )
+
+    post3 = Post.create(
+        author_id: 2,
+        title: "r4t4",
+        body: "t42r4r3",
+        url: ""
+    )
+
+    post4 = Post.create(
+        author_id: 1,
+        title: "ewifjn",
+        body: "4-0rk4po",
+        url: ""
+    )
+
+    post5 = Post.create(
+        author_id: 3,
+        title: "f30j9op",
+        body: "r02op09rop",
+        url: ""
+    )
 
     # comment1 = Comment.create(
     #     id: 1,
