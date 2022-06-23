@@ -7,26 +7,26 @@ import { Link } from "react-router-dom";
 class PostsIndexItem extends React.Component{
      constructor(props){
      super(props)
-    
+          
+
+          this.deletePost = this.deletePost.bind(this)
      }
     
     componentDidMount(){
-          this.props.requestAllUsers()
+        this.props.requestAllUsers()
     }
     
+     deletePost = () => {
+          this.props.deletePost(this.props.post.id).then(() => { window.location.reload()})
+     }
 
     render(){
-    
-
-          let deletePost = () => {
-               this.props.deletePost(this.props.post.id)
-          }
          
           let editButton;
           let deleteButton;
           if (this.props.currentUserId === this.props.post.author_id) {
                editButton = <button className="edit-post">EDIT</button>
-               deleteButton = <button className="delete-post" onClick={deletePost} >DELETE</button>
+               deleteButton = <button className="delete-post" onClick={this.deletePost} >DELETE</button>
           }
           
           let user;
