@@ -5,29 +5,34 @@ import { Link } from "react-router-dom";
 
 
 class PostsIndexItem extends React.Component{
-    constructor(props){
-    super(props)
-    }
+     constructor(props){
+     super(props)
+    
+     }
     
     componentDidMount(){
-     this.props.requestAllUsers()
+          this.props.requestAllUsers()
     }
     
 
     render(){
+    
 
+          let deletePost = () => {
+               this.props.deletePost(this.props.post.id)
+          }
+         
           let editButton;
           let deleteButton;
           if (this.props.currentUserId === this.props.post.author_id) {
                editButton = <button className="edit-post">EDIT</button>
-               deleteButton = <button className="delete-post">DELETE</button>
+               deleteButton = <button className="delete-post" onClick={deletePost} >DELETE</button>
           }
-
+          
           let user;
           let username = "";
           
           user = (this.props.users.filter(user => user.id === this.props.post.author_id))
-          console.log(user)
        
           if (user.length != 0) {
              username = user[0].username
