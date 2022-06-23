@@ -38,7 +38,7 @@ class Login extends React.Component {
     }
 
     render() {
-        console.log(this.props)
+        
         let errors;
         if(this.props.errors.responseJSON) {
             errors = this.props.errors.responseJSON.map( (error, idx) => (
