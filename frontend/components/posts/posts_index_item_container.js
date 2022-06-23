@@ -1,6 +1,8 @@
 import { connect } from 'react-redux'
 import { selectAllUsers } from '../../reducers/selectors';
 import { requestAllUsers } from '../../actions/users'
+import { deletePost } from '../../actions/posts'
+
 // import { clearErrors } from '../../actions/session'
 import PostsIndexItem from './posts_index_item'
 
@@ -9,8 +11,9 @@ const mapStateToProps = (state, ownProps) => ({
     // errors: state.errors.session
 })
 
-const mapDispatchToProps = dispatch => ({
-    requestAllUsers: () => dispatch(requestAllUsers())
+const mapDispatchToProps = (dispatch, ownProps) => ({
+    requestAllUsers: () => dispatch(requestAllUsers()),
+    deletePost: () => dispatch(deletePost(ownProps.post.id))
     // clearErrors: () => dispatch(clearErrors())
 });
 
