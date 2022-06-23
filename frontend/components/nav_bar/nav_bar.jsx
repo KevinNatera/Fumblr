@@ -20,7 +20,6 @@ export default ({ currentUser, logout }) => {
   (
     <div>
       
-      <Link className="btn" to="/explore">Home</Link>
       <Link className="btn" to="/signup">Sign Up</Link>
       <Link className="btn" to="login">Log In</Link>
       {/* <Link className="btn" to={{ pathname: "/login", type: "demo" }}>Demo Login</Link> */}

@@ -1,5 +1,5 @@
 import React from 'react'
-import PostsIndexItem from './posts_index_item';
+import PostsIndexItemContainer from './posts_index_item_container';
 
 class PostsIndex extends React.Component {
     constructor(props){
@@ -16,7 +16,7 @@ class PostsIndex extends React.Component {
                 <ul>
 
                 {this.props.posts.map((post) => (
-                <PostsIndexItem key={post.id} post={post} />
+                <PostsIndexItemContainer key={post.id} post={post} />
                 ))
                 }
                 </ul>

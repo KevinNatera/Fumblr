@@ -11,7 +11,7 @@ export const fetchAllPosts = () => {
       method: "GET",
       url: "/api/posts"
     })
-  }
+}
   
   
 export const fetchPost = (id) => {

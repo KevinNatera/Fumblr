@@ -5,3 +5,7 @@ export const selectAllPosts = (state) => {
 export const selectUserPosts = (state,id) => {
     return Object.values(state.entities.posts).filter(post => post.author_id === id)
 }
+
+export const selectAllUsers = (state) => {
+    return Object.values(state.entities.users)
+}
