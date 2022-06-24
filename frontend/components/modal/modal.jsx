@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import LoginContainer from '../session/login_container';
 import SignupContainer from '../session/signup_container';
 
-function Modal({modal, closeModal}) {
+function Modal({modal, closeModal , errors}) {
   if (!modal) {
     return null;
   }
@@ -22,12 +22,7 @@ function Modal({modal, closeModal}) {
 
 
 
-  // let errors;
-  // if(this.props.errors.responseJSON) {
-  //     errors = this.props.errors.responseJSON.map( (error, idx) => (
-  //         <li className="error" key={idx}> {error} </li> 
-  //     )
-  // )}
+ 
   // { (this.props.errors.responseJSON != null) && errors }
   
   return (
@@ -35,8 +30,6 @@ function Modal({modal, closeModal}) {
     <div className="modal-background" onClick={closeModal}>
       <div className="modal-child" onClick={e => e.stopPropagation()}>
         { component }
-
-        
       </div>
     </div>
   );
