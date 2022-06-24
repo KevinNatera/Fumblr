@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { createNewUser } from '../../actions/session'
 import { clearErrors } from '../../actions/session'
 import Signup from './signup'
-import { requestAllUsers } from '../../actions/users'
+import { closeModal } from '../../actions/modal';
 
 //make the signup class now
 
@@ -20,7 +20,8 @@ const mapStateToProps = (state, ownProps) => ({
 //returns a POJO
 const mapDispatchToProps = dispatch => ({
     createNewUser: formUser => dispatch(createNewUser(formUser)),
-    clearErrors: () => dispatch(clearErrors())
+    clearErrors: () => dispatch(clearErrors()),
+    closeModal: () => dispatch(closeModal())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Signup);

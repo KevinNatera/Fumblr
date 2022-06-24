@@ -13,11 +13,10 @@ class UserShowNav extends React.Component {
 
 
         return (
-            <div className="nav-bar">
-
-                <Link className="btn" to="/profile/posts">Posts</Link>
-                <Link className="btn" to="/profile/likes">Likes</Link>
-                <Link className="btn" to="/profile/comments">Comments</Link>
+            <div className="user-show-nav-bar">
+                <Link className="btn" to="/profile">Posts</Link>
+                <Link className="btn" to="/likes">Likes</Link>
+                <Link className="btn" to="/comments">Comments</Link>
             </div>
 
         )

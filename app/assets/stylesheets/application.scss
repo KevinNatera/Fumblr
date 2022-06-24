@@ -67,6 +67,27 @@
      box-shadow: 1px 1px 1px darkblue;
   }
 }
+
+.user-show-nav-bar {
+  display: flex;
+  position: sticky;
+  justify-content: right;
+  padding: 20px;
+  background: lightblue;
+  align-items: center;
+  .btn {
+    display: block;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 3px 3px 3px darkblue;
+    text-decoration: none;
+  }
+  .btn:hover {
+     background-color: rgb(240, 240, 240);
+     box-shadow: 1px 1px 1px darkblue;
+  }
+}
+ 
  
 .session-form {
     display: flex;
@@ -93,6 +114,23 @@
     padding: 10px;
     margin: 20px;
   }
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // .error {

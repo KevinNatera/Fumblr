@@ -1,4 +1,5 @@
 import React from 'react'
+import { closeModal } from '../../actions/modal'
 
 class Login extends React.Component {
     constructor(props) {
@@ -27,14 +28,17 @@ class Login extends React.Component {
     handleSubmit(e) {
         e.preventDefault()
         
-        this.props.loginUser(this.state) 
-            .then( () => this.props.history.push(`/profile/posts`) )
+        this.props.loginUser(this.state)
+            .then( () => this.props.closeModal()) 
+            .then( () => this.props.history.push(`/profile`) )
     }   
 
     handleDemoLogin(e) {
         e.preventDefault()
+
         this.props.loginUser({email:'demo@user.com', password:'123456'})
-        .then( () => this.props.history.push(`/profile/posts`) )
+        .then( () => this.props.closeModal()) 
+        .then( () => this.props.history.push(`/profile`) )
     }
 
     render() {
