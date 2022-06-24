@@ -86,14 +86,16 @@ class Signup extends React.Component {
 
                 <button onClick={this.handleSubmit}> Sign Up</button>
 
+                <ul>
+
+                { (this.props.errors.responseJSON != null) && errors }
+
+                    </ul>
+                
                 </form>
 
 
-                <ul>
-
-                 { (this.props.errors.responseJSON != null) && errors }
-
-                </ul>
+           
 
             </div>
         )

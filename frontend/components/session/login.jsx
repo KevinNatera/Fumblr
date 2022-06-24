@@ -52,8 +52,9 @@ class Login extends React.Component {
 
         return (
             <div className="session-form">
-                <h2>Login!</h2>
+                
                 <form>
+                <h2>Login!</h2>
                     <label>Email:
                         <input
                             type="text"
@@ -73,14 +74,13 @@ class Login extends React.Component {
                 <button onClick={this.handleSubmit}> Login</button>
                 <button onClick={this.handleDemoLogin}> Demo Login</button>
 
-                </form>
-
-
                 <ul>
 
-                 { (this.props.errors.responseJSON != null) && errors }
+                { (this.props.errors.responseJSON != null) && errors }
 
                 </ul>
+                
+                </form>
 
             </div>
         )
