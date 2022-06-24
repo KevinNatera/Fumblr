@@ -1,15 +1,15 @@
 import { connect } from 'react-redux'
-import { login } from '../../actions/session'
+import Modal from './modal'
 import { clearErrors } from '../../actions/session'
-import Login from './login'
 
 const mapStateToProps = (state, ownProps) => ({
     errors: state.errors.session
 })
 
+
+//returns a POJO
 const mapDispatchToProps = dispatch => ({
-    loginUser: formUser => dispatch(login(formUser)),
     clearErrors: () => dispatch(clearErrors())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);

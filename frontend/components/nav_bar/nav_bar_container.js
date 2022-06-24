@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NavBar from './nav_bar';
+import { openModal } from '../../actions/modal';
 
 // Comment this back in after you have built the login functionality
 
@@ -17,6 +18,8 @@ const mapStateToProps = state => ({
 //also pass in the logout function
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
+  openSignupForm: () => dispatch(openModal('signup')),
+  openLoginForm: () => dispatch(openModal('login'))
 });
 
 
