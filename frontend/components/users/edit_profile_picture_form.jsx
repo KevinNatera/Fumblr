@@ -51,7 +51,8 @@ class EditProfilePictureForm extends React.Component {
     const formData = new FormData();
     formData.append('avatar', this.state.imgFile);
     
-    console.log(formData)
+    
+   
     window.formData = formData
 
 

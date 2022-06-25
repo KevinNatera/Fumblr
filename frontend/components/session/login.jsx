@@ -30,7 +30,7 @@ class Login extends React.Component {
         
         this.props.loginUser(this.state)
             .then( () => this.props.closeModal()) 
-            .then( () => this.props.history.push(`/profile`) )
+            // .then( () => this.props.history.push(`/profile`) )
     }   
 
     handleDemoLogin(e) {
@@ -38,7 +38,7 @@ class Login extends React.Component {
 
         this.props.loginUser({email:'demo@user.com', password:'123456'})
         .then( () => this.props.closeModal()) 
-        .then( () => this.props.history.push(`/profile`) )
+        // .then( () => this.props.history.push(`/profile`) )
     }
 
     render() {

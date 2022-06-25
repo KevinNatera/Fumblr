@@ -20,7 +20,7 @@ export const updateUser = (id, avatar) => {
     processData: false,
     contentType: false,
     cache: false,
-    data: { avatar }
+    data:  avatar 
   })
 }
 
