@@ -35,6 +35,19 @@ class Api::UsersController < ApplicationController
       #   @user = User.find(params[:id])
       #   render :edit
       # end
+
+      def update
+        @user = User.find(params[:id])
+
+        @user.avatar.attach(params[:avatar])
+
+        if @user.avatar.attached? 
+          puts(@user)
+          render :show
+         else 
+           render json: ["Error: profile didn't attach"], status: 422
+        end
+      end
     
       # def update
       #   @user = User.find(params[:id])
@@ -62,6 +75,6 @@ class Api::UsersController < ApplicationController
       private
     
       def user_params
-        params.require(:user).permit(:username, :email, :password)
+        params.require(:user).permit(:username, :email, :password, :avatar)
       end
 end

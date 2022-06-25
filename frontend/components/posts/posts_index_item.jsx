@@ -9,7 +9,7 @@ class PostsIndexItem extends React.Component{
      super(props)
           
 
-          this.deletePost = this.deletePost.bind(this)
+        this.deletePost = this.deletePost.bind(this)
      }
     
     componentDidMount(){
@@ -17,10 +17,11 @@ class PostsIndexItem extends React.Component{
     }
     
      deletePost = () => {
-          this.props.deletePost(this.props.post.id).then(() => { window.location.reload()})
+          this.props.deletePost(this.props.post.id)
+          .then(() => { window.location.reload()})
      }
 
-    render(){
+    render() {
          
           let editButton;
           let deleteButton;
