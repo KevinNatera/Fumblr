@@ -19,6 +19,10 @@
     margin: 0;
     font-family: sans-serif;
   }
+
+.error {
+    color: red
+ }
  
 .home-img-frame {
   position: absolute;
@@ -133,6 +137,14 @@
   transform: translate(-50%, -50%);
 }
 
-// .error {
-// 
-// }
+
+.profile-pic {
+  height: 50px;
+  width: 50px
+}
+
+#edit-profile-image {
+  height: 200px;
+  width: 200px
+}
+

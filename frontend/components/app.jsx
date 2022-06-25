@@ -9,6 +9,9 @@ import Home from './home/home';
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import ModalContainer from './modal/modal_container';
+import EditProfilePictureContainer from './users/edit_profile_picture_container'
+// import ErrorPage from ''
+
 
 export default () => (
   <div>
@@ -20,9 +23,7 @@ export default () => (
     <ProtectedRoute path="/likes" component={UserShowNavContainer} />
     <ProtectedRoute path="/comments" component={UserShowNavContainer} />
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
-    <Switch>
-    {/* <AuthRoute path="/signup" component={SignupContainer} />
-    <AuthRoute path="/login" component={LoginContainer} /> */}
-    </Switch>
+    <ProtectedRoute exact path="/edit-profile-pic" component={EditProfilePictureContainer} />
+    {/* <Route path="*" component={ErrorPage} /> */}
   </div>
 );

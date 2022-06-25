@@ -17,6 +17,7 @@ class UserShowNav extends React.Component {
                 <Link className="btn" to="/profile">Posts</Link>
                 <Link className="btn" to="/likes">Likes</Link>
                 <Link className="btn" to="/comments">Comments</Link>
+                <Link className="btn" to="/edit-profile-pic">Edit Profile Pic</Link>
             </div>
 
         )

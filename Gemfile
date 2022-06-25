@@ -24,6 +24,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
+gem 'better_errors'
+gem 'binding_of_caller'
+gem 'pry-rails'
+gem 'aws-sdk-s3'
+
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
