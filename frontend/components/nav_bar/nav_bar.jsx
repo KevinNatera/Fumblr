@@ -10,7 +10,9 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
   const display = currentUser ? (  //if there is a current user, return this
       <div>
         <h2> Welcome, {currentUser.username}!</h2>
-    
+        <div className="profile-pic-frame">
+        <img className="profile-pic" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fskycenter.arizona.edu%2Fsites%2Fdefault%2Ffiles%2Fgallery%2FGalaxies%2Fm81.jpg&f=1&nofb=1"/>
+        </div>
         <Link className="btn" to="/explore">Home</Link>
         <Link className="btn" to="/profile">Profile</Link>
         <button className="btn" onClick={logout}>Log Out</button>
@@ -20,8 +22,9 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
   (
     <div>
 
-    <button className="btn" onClick={openSignupForm}>Sign Up</button> 
+    
     <button className="btn" onClick={openLoginForm}>Login</button> 
+    <button className="btn" onClick={openSignupForm}>Sign Up</button> 
 {/*       
       <Link className="btn" to="/signup">Sign Up</Link>
       <Link className="btn" to="login">Log In</Link> */}
