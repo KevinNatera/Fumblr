@@ -4,6 +4,6 @@
     end 
 
 
-
+    #  url_for(:avatar)
     
 end

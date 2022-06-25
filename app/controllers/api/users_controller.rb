@@ -33,14 +33,18 @@ class Api::UsersController < ApplicationController
     
       # def edit
       #   @user = User.find(params[:id])
-      #   render :edit
       # end
 
       def update
         @user = User.find(params[:id])
 
+        puts("YOOOOOOOOOOOOOOOO")
+        puts(params[:avatar])
+  
+        puts(params)
+        
         @user.avatar.attach(params[:avatar])
-
+        
         if @user.avatar.attached? 
           puts(@user)
           render :show
