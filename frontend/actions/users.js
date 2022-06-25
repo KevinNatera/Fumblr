@@ -22,3 +22,20 @@ export const requestSingleUser = (id) => (dispatch) => (
     UserUtil.fetchUser(id)
       .then(user => dispatch(receiveUser(user)))
 )
+
+export const updateUser = (id, avatar) => (dispatch) => (
+    UserUtil.updateUser(id, avatar)
+      .then(user => dispatch(receiveUser(user)))
+)
+
+// export const createNewUser = (formUser) => dispatch => postUser(formUser)
+//     .then(user => dispatch(receiveCurrentUser(user)),
+//          err => dispatch(receiveErrors(err)) );
+
+// export const postUser = (user) => (
+//     $.ajax({
+//         url: '/api/users',
+//         method: 'POST',    //is a post request because data is being sent
+//         data: { user },  //nests user object under keyword:user
+//     })
+// );

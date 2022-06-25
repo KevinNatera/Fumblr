@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
+import { updateUser } from '../../actions/users';
 
 
 
@@ -9,16 +9,20 @@ class EditProfilePictureForm extends React.Component {
     constructor(props){
         super(props)
 
-        // this.submitPhoto = this.submitPhoto.bind(this)
-        this.onChange = this.onChange.bind(this)
+      //   this.state = {
+      //     imgUrl:  "",
+      //     imgFile: null
+      // }
 
-        this.state = {
-          imgUrl:  "",
-          imgFile: null
-        }
-
-        this.imgRef = React.createRef()
+  
+      this.onChange = this.onChange.bind(this)
+      this.handleSubmit = this.handleSubmit.bind(this)
+      this.imgRef = React.createRef()
 }
+
+  componentDidMount() {
+    console.log(this.props)
+  }
 
 
 
@@ -28,9 +32,8 @@ class EditProfilePictureForm extends React.Component {
       const img = this.imgRef.current;
 
       reader.onloadend = () =>  {
+
       this.setState({ imgUrl: reader.result, imgFile: file });
-      
-      
       img.src = reader.result
     }
 
@@ -46,18 +49,25 @@ class EditProfilePictureForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('post[title]', this.state.title);
-    if (this.state.photoFile) {
+    formData.append('avatar', this.state.imgFile);
+    
+    console.log(formData)
+    window.formData = formData
 
-      formData.append('post[photo]', this.state.imgFile);
-    }
-  //   $.ajax({
-  //   url: '/api/posts',
-  //   method: 'POST',
-  //   data: formData,
-  //   contentType: false,
-  //   processData: false
-  // });
+
+    this.props.updateUser(this.props.currentUser.id,formData)
+    // $.ajax({
+    //   method: "POST",
+    //   processData: false,
+    //   contentType: false,
+    //   cache: false,
+    //   url: `/api/users/${this.props.currentUser.id}`,
+    //   data: { avatar: formData},
+    //   success: function(response) {
+    //     // Code to handle a succesful upload
+    //     console.log("we did it")
+    //   }
+    // })
   }
 
 
@@ -76,13 +86,15 @@ class EditProfilePictureForm extends React.Component {
           </div>
 
 
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <input 
               type="file"
               accept="image/png, image/jpeg"
+              name="avatar"
               onChange={this.onChange}
             />
-            
+          
+
            <input type="submit"/>
           </form>
       </div>
