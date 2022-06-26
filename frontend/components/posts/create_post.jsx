@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+import PostsIndexContainer from '../posts/posts_index_container';
 
 class CreatePost extends React.Component {
     constructor(props){
@@ -15,6 +16,9 @@ class CreatePost extends React.Component {
             <div className="create-post-frame">
                
               <Link className="btn" to="/new/text">Text</Link>
+          
+             
+
               <Link className="btn" to="/new/photo">Photo</Link>
 
             </div>
