@@ -18,7 +18,12 @@ export const receiveAllPosts = (posts) => ({
     type: REMOVE_POST,
     postId,
   });
-  
+
+  export const createNewPost = (formPost) => dispatch => 
+   PostUtil.createPost(formPost)
+    .then(post => dispatch(receivePost(post))
+  )
+
   export const requestAllPosts = () => (dispatch) => (
     PostUtil.fetchAllPosts()
       .then(posts => dispatch(receiveAllPosts(posts)))

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { requestAllPosts } from '../../actions/posts'
+import { createPost } from '../../actions/posts'
 // import { clearErrors } from '../../actions/session'
 import CreatePost from './create_post'
 
@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    requestAllPosts: () => dispatch(requestAllPosts())
+    createPost: (formPost) => dispatch(createPost(formPost))
     // clearErrors: () => dispatch(clearErrors())
 });
 
