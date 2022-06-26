@@ -19,7 +19,7 @@ export const receiveAllPosts = (posts) => ({
     postId,
   });
 
-  export const createNewPost = (formPost) => dispatch => 
+  export const createPost = (formPost) => dispatch => 
    PostUtil.createPost(formPost)
     .then(post => dispatch(receivePost(post))
   )
