@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 class CreatePost extends React.Component {
     constructor(props){
@@ -12,10 +12,10 @@ class CreatePost extends React.Component {
 
     render() {
         return (
-            <div className="create-post">
+            <div className="create-post-frame">
                
-                
-
+              <Link className="btn" to="/new/text">Text</Link>
+              <Link className="btn" to="/new/photo">Photo</Link>
 
             </div>
         )
