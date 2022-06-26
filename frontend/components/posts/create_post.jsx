@@ -14,8 +14,7 @@ class CreatePost extends React.Component {
         return (
             <div className="create-post">
                
-
-
+                
 
 
             </div>
@@ -24,4 +23,4 @@ class CreatePost extends React.Component {
 
 }
 
-export default PostsIndex
+export default CreatePost
