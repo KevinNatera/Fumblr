@@ -22,6 +22,7 @@ export default () => (
     <ProtectedRoute path="/profile" component={UserShowNavContainer} />
     <ProtectedRoute path="/likes" component={UserShowNavContainer} />
     <ProtectedRoute path="/comments" component={UserShowNavContainer} />
+    <ProtectedRoute path="/edit-profile-pic" component={UserShowNavContainer} />
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
     <ProtectedRoute exact path="/edit-profile-pic" component={EditProfilePictureContainer} />
     {/* <Route path="*" component={ErrorPage} /> */}
