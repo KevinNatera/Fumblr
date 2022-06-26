@@ -3,6 +3,7 @@ import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './session/signup_container'
 import LoginContainer from './session/login_container'
 import PostsIndexContainer from './posts/posts_index_container'
+import CreatePostContainer from './posts/create_post_container'
 import UserShowContainer from './users/user_show_container'
 import UserShowNavContainer from './users/user_show_nav_container'
 import Home from './home/home';
@@ -18,8 +19,10 @@ export default () => (
     <ModalContainer/> 
     <Route path="/" component={NavBarContainer} />
     <Route exact path="/explore" component={Home} />
+    <ProtectedRoute exact path="/explore" component={CreatePostContainer} />
     <ProtectedRoute exact path="/explore" component={PostsIndexContainer} />
     <ProtectedRoute path="/profile" component={UserShowNavContainer} />
+    <ProtectedRoute exact path="/profile" component={CreatePostContainer} />
     <ProtectedRoute path="/likes" component={UserShowNavContainer} />
     <ProtectedRoute path="/comments" component={UserShowNavContainer} />
     <ProtectedRoute path="/edit-profile-pic" component={UserShowNavContainer} />
