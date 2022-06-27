@@ -7,7 +7,9 @@ import { selectAllPosts } from '../../reducers/selectors';
 import PostsIndex from './posts_index'
 
 const mapStateToProps = (state, ownProps) => ({
-    posts: selectAllPosts(state)
+    posts: selectAllPosts(state),
+    currentUserId: state.session.id,
+    text: "All Posts"
     // errors: state.errors.session
 })
 
