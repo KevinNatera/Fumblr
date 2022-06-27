@@ -7,7 +7,8 @@ import PostsIndexItem from './posts_index_item'
 
 const mapStateToProps = (state, ownProps) => ({
     users: selectAllUsers(state),
-    likes: selectAllLikes(state)
+    likes: selectAllLikes(state),
+    currentUser: state.session.id
     // errors: state.errors.session
 })
 

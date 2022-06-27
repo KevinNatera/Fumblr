@@ -8,6 +8,7 @@ class PostsIndexItem extends React.Component{
      constructor(props){
      super(props)
           
+        this.likeButtonText = "LIKE"
 
         this.deletePost = this.deletePost.bind(this)
         this.handleEdit = this.handleEdit.bind(this)
@@ -52,9 +53,28 @@ class PostsIndexItem extends React.Component{
                username = "Name Not Found"
           }
 
-          let liked;
-          let totalLikes = (this.props.likes.filter(like => like.post_id === this.props.post.id)).length
+          let likeArr = (this.props.likes.filter(like => like.post_id === this.props.post.id))
+          let totalLikes = likeArr.length
+          let like = {
+               
+                    liker_id: this.props.currentUser,
+                    post_id: this.props.post.id
+          }
+
+        
+
+         for(let i = 0; i < likeArr.length; i++) {
+          if (likeArr[i].liker_id === like.liker_id && likeArr[i].post_id === like.post_id) {
+               this.likeButtonText = "UNLIKE";
+               break
+          }
+         }
           
+
+          
+          console.log(like)
+          
+
                //assign user info to this.state to call in the return below
       return (
            <li className="posts-index-item">
@@ -71,7 +91,7 @@ class PostsIndexItem extends React.Component{
                     <br></br>
                     <button className="comment-post">COMMENT</button>
                                    
-                    <button className="like-post">LIKE  
+                    <button className="like-post">{this.likeButtonText} 
                     ({totalLikes})</button>
                 {/* comment button then like button */}
            </li>
