@@ -22,7 +22,6 @@ class CreatePost extends React.Component {
               <button className="btn" onClick={this.props.openCreateTextPost}>Text</button>
     
              
-
               {/* <button className="btn" >Photo</button> */}
 
             </div>
