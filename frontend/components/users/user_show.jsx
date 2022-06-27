@@ -7,7 +7,8 @@ class UserShow extends React.Component {
     }
         
     componentDidMount(){
-        this.props.requestAllPosts()
+        this.props.requestAllPosts(),
+        this.props.requestAllLikes()
     }
 
     render() {

@@ -8,9 +8,9 @@ class PostsIndex extends React.Component {
     }
         
     componentDidMount(){
-        this.props.requestAllPosts(),
-        this.props.requestAllUsers()
-        
+        this.props.requestAllPosts();
+        this.props.requestAllUsers();
+        this.props.requestAllLikes();
     }
 
     render() {
