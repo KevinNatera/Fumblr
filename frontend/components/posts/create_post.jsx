@@ -23,7 +23,7 @@ class CreatePost extends React.Component {
     
              
 
-              <button className="btn" >Photo</button>
+              {/* <button className="btn" >Photo</button> */}
 
             </div>
         )
