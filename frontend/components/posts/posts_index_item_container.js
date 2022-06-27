@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
 import { selectAllUsers } from '../../reducers/selectors';
-import { requestAllUsers } from '../../actions/users'
 import { deletePost } from '../../actions/posts'
 
 // import { clearErrors } from '../../actions/session'
@@ -12,7 +11,6 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    requestAllUsers: () => dispatch(requestAllUsers()),
     deletePost: () => dispatch(deletePost(ownProps.post.id))
     // clearErrors: () => dispatch(clearErrors())
 });

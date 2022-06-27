@@ -18,7 +18,7 @@ class Api::PostsController < ApplicationController
         # puts(params[:post][:author_id])
         if @post.save 
             # redirect_to posts_url
-            render json: {}
+            render json: @post
         else
             render json: @post.errors.full_messages, status: 422
         end 
