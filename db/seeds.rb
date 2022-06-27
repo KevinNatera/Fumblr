@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
 ActiveRecord::Base.transaction do
     User.delete_all
     ActiveRecord::Base.connection.reset_pk_sequence!('users')
@@ -137,6 +139,22 @@ ActiveRecord::Base.transaction do
         liker_id: 4,
         post_id: 2,
     )
+
+    defaultBatman1 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
+    defaultBatman3 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
+    defaultBatman4 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
+    user1.avatar.attach(io: defaultBatman1, filename: 'default_batman.png')
+    user1.save! 
+    # user2.avatar.attach(io: defaultBatman, filename: 'default_batman.png')
+    # # user2.save! 
+    user3.avatar.attach(io: defaultBatman3, filename: 'default_batman.png')
+    # user3.save! 
+    user4.avatar.attach(io: defaultBatman4, filename: 'default_batman.png')
+    user4.save! 
+    # user5.avatar.attach(io: defaultBatman, filename: 'default_batman.png')
+    # # user5.save! 
+    # user6.avatar.attach(io: defaultBatman, filename: 'default_batman.png')
+    # user6.save! 
 
     # comment1 = Comment.create(
     #     id: 1,
