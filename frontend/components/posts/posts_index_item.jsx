@@ -67,13 +67,17 @@ class PostsIndexItem extends React.Component{
           
           let user;
           let username = "";
-          let avatar_url = "";
+          let avatar_url = "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png";
           
           user = (this.props.users.filter(user => user.id === this.props.post.author_id))
 
           if (user.length != 0) {
              username = user[0].username
-             avatar_url = user[0].avatar_url
+             
+             if (user.avatar_url) {
+               avatar_url = user[0].avatar_url
+             }
+             
           } else {
                username = "Name Not Found"
           }
@@ -104,7 +108,6 @@ class PostsIndexItem extends React.Component{
                 <img className="profile-pic" src={avatar_url}/> <h2>{username}</h2>      
                 <h1>{this.props.post.title}</h1>
                 <p>{this.props.post.body}</p>
-          
                 
                 {deleteButton}
                 {editButton}
@@ -113,7 +116,7 @@ class PostsIndexItem extends React.Component{
                     <br></br>
                     <button className="comment-post">COMMENT</button>
                                    
-                    <button className="like-post" onClick={this.handleLike} >{this.likeButtonText} 
+                    <button className="like-post" onClick={this.handleLike}> {this.likeButtonText} 
                     ({totalLikes})</button>
                <h1>------------------------</h1>
            </li>
