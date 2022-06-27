@@ -10,8 +10,9 @@ ActiveRecord::Base.transaction do
     ActiveRecord::Base.connection.reset_pk_sequence!('users')
     Post.delete_all
     ActiveRecord::Base.connection.reset_pk_sequence!('posts')
+    Like.delete_all
+    ActiveRecord::Base.connection.reset_pk_sequence!('likes')
     # Comment.delete_all 
-    # Like.delete_all 
 
     user1 = User.create(
       username: "bob",
@@ -92,6 +93,51 @@ ActiveRecord::Base.transaction do
         url: ""
     )
 
+    like1 = Like.create(
+        liker_id: 2,
+        post_id: 1,
+    )
+
+    like2 = Like.create(
+        liker_id: 1,
+        post_id: 1,
+    )
+
+    like3 = Like.create(
+        liker_id: 4,
+        post_id: 3,
+    )
+
+    like4 = Like.create(
+        liker_id: 3,
+        post_id: 1,
+    )
+
+    like5 = Like.create(
+        liker_id: 5,
+        post_id: 1,
+    )
+
+    like6 = Like.create(
+        liker_id: 1,
+        post_id: 5,
+    )
+
+    like7 = Like.create(
+        liker_id: 3,
+        post_id: 4,
+    )
+
+    like8 = Like.create(
+        liker_id: 4,
+        post_id: 5,
+    )
+
+    like9 = Like.create(
+        liker_id: 4,
+        post_id: 2,
+    )
+
     # comment1 = Comment.create(
     #     id: 1,
     #     user_id: 1,
@@ -99,9 +145,5 @@ ActiveRecord::Base.transaction do
     #     body: "I'M THE GREATEST"
     # )
 
-    # like1 = Like.create(
-    #     id: 1,
-    #     user_id: 1,
-    # )
-
+  
   end
