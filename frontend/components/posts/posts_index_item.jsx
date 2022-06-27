@@ -115,9 +115,10 @@ class PostsIndexItem extends React.Component{
                                    
                     <button className="like-post" onClick={this.handleLike} >{this.likeButtonText} 
                     ({totalLikes})</button>
-                {/* comment button then like button */}
+               <h1>------------------------</h1>
            </li>
 
+          
       )
     }
     }
