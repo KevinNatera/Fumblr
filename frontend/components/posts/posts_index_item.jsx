@@ -67,11 +67,13 @@ class PostsIndexItem extends React.Component{
           
           let user;
           let username = "";
+          let avatar_url = "";
           
           user = (this.props.users.filter(user => user.id === this.props.post.author_id))
 
           if (user.length != 0) {
              username = user[0].username
+             avatar_url = user[0].avatar_url
           } else {
                username = "Name Not Found"
           }
@@ -99,7 +101,7 @@ class PostsIndexItem extends React.Component{
       return (
            <li className="posts-index-item">
                               {/* menu button goes to the top right of username */}
-                <h2>{username}</h2>      
+                <img className="profile-pic" src={avatar_url}/> <h2>{username}</h2>      
                 <h1>{this.props.post.title}</h1>
                 <p>{this.props.post.body}</p>
                 {/* <img src={this.props.post.url} width="30px" height="30px"/> */}
