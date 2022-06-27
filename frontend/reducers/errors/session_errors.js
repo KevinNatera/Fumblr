@@ -1,16 +1,16 @@
 import { 
-    RECEIVE_POST_ERRORS,
-    RECEIVE_POST,
+    RECEIVE_SESSION_ERRORS,
+    RECEIVE_CURRENT_USER,
     CLEAR_ERRORS
-} from "../actions/posts";
+} from "../../actions/session";
 
-const postErrorsReducer = (state = {}, action) => {
+const sessionErrorsReducer = (state = {}, action) => {
     Object.freeze(state);
 
     switch(action.type) {
-        case RECEIVE_POST_ERRORS:
+        case RECEIVE_SESSION_ERRORS:
             return Object.assign( [], action.errors );
-        case RECEIVE_POST:
+        case RECEIVE_CURRENT_USER:
             return [];
         case CLEAR_ERRORS:
             return [];
@@ -19,4 +19,4 @@ const postErrorsReducer = (state = {}, action) => {
     }
 }
 
-export default postErrorsReducer;
+export default sessionErrorsReducer;
