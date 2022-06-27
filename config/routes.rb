@@ -6,6 +6,5 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :index, :destroy]
     resource :session, only: [:create, :destroy]
   end
-  post '/presigned_url', to: 'direct_upload#create'
   root to: 'static_pages#root'
 end

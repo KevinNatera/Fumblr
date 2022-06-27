@@ -4,14 +4,18 @@ import { Link } from 'react-router-dom';
 //destructuring currentUser and logout, which are being received
 //from the nav container
 export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
-  
+  let avatar_url = "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"
+
+  if (currentUser.avatar_url) {
+    avatar_url = currentUser.avatar_url
+  }
   //use a ternary to conditionally render the right buttons 
   
   const display = currentUser ? (  //if there is a current user, return this
       <div>
         <h2> Welcome, {currentUser.username}!</h2>
         <div className="profile-pic-frame">
-        <img className="profile-pic" src={currentUser.avatar_url}/>
+        <img className="profile-pic" src={avatar_url}/>
         </div>
         <Link className="btn" to="/explore">Home</Link>
         <Link className="btn" to="/profile">Profile</Link>

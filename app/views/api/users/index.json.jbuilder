@@ -7,7 +7,4 @@
       end
     end 
 
-
-    #  url_for(:avatar)
-    # :avatar_url
 end

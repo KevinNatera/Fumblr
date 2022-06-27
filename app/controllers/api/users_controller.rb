@@ -38,11 +38,6 @@ class Api::UsersController < ApplicationController
 
       def update
         @user = User.find(params[:id])
-
-        puts("YOOOOOOOOOOOOOOOO")
-        puts(params[:avatar])
-  
-        puts(params)
         
         @user.avatar.attach(params[:avatar])
         
