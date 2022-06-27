@@ -17,7 +17,7 @@ class CreateTextForm extends React.Component {
 
     componentDidMount() {
         this.props.clearErrors();
-        this.props.openCreateTextPost()
+        // this.props.openCreateTextPost()
         console.log(this.props)
     }
 

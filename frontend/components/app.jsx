@@ -6,7 +6,7 @@ import SignupContainer from './session/signup_container'
 import LoginContainer from './session/login_container'
 
 import PostsIndexContainer from './posts/posts_index_container'
-import CreatePost from './posts/create_post'
+import CreatePostContainer from './posts/create_post_container'
 import CreateTextFormContainer from './posts/create_text_form_container'
 
 import UserShowContainer from './users/user_show_container'
@@ -15,23 +15,23 @@ import EditProfilePictureContainer from './users/edit_profile_picture_container'
 
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
-import ModalContainer from './modal/modal_container';
+import Modal from './modal/modal';
 
 // import ErrorPage from ''
 
 
 export default () => (
   <div>
-    <ModalContainer/> 
+    <Modal/> 
 
     <Route path="/" component={NavBarContainer} />
 
     <Route exact path="/explore" component={Home} />
-    <ProtectedRoute exact path="/explore" component={CreatePost} />
+    <ProtectedRoute exact path="/explore" component={CreatePostContainer} />
     <ProtectedRoute exact path="/explore" component={PostsIndexContainer} />
 
     <ProtectedRoute path="/profile" component={UserShowNavContainer} />
-    <ProtectedRoute exact path="/profile" component={CreatePost} />
+    <ProtectedRoute exact path="/profile" component={CreatePostContainer} />
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
 
     <ProtectedRoute path="/likes" component={UserShowNavContainer} />
@@ -42,8 +42,10 @@ export default () => (
     <ProtectedRoute exact path="/edit-profile-pic" component={EditProfilePictureContainer} />
     
     <ProtectedRoute path="/new" component={UserShowNavContainer} />
-    <ProtectedRoute path="/new" component={CreatePost} />
+    <ProtectedRoute path="/new" component={CreatePostContainer} />
     <ProtectedRoute exact path="/new/text" component={CreateTextFormContainer} />
+  
+
     {/* <Route path="*" component={ErrorPage} /> */}
   </div>
 );
