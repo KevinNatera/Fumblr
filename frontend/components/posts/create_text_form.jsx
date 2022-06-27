@@ -68,6 +68,7 @@ class CreateTextForm extends React.Component {
                     <label>Body:
                         <textarea
                             value={this.state.body}
+                            rows="7"
                             onChange={this.handleInput('body')}
                             >
                             </textarea>
