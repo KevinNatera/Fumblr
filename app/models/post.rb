@@ -18,5 +18,10 @@ class Post < ApplicationRecord
         foreign_key: :author_id,
         class_name: :User
 
+    has_many :likes,
+        primary_key: :id,
+        foreign_key: :post_id,
+        class_name: :Like
+
     has_one_attached :image
 end

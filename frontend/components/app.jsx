@@ -7,11 +7,12 @@ import LoginContainer from './session/login_container'
 
 import PostsIndexContainer from './posts/posts_index_container'
 import CreatePostContainer from './posts/create_post_container'
-import CreateTextFormContainer from './posts/create_text_form_container'
 
 import UserShowContainer from './users/user_show_container'
 import UserShowNavContainer from './users/user_show_nav_container'
 import EditProfilePictureContainer from './users/edit_profile_picture_container'
+
+import LikesIndexContainer from './likes/likes_index_container'
 
 import { Route, Switch } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
@@ -32,6 +33,7 @@ export default () => (
     <ProtectedRoute exact path="/explore" component={PostsIndexContainer} />
 
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
+    <ProtectedRoute exact path="/likes" component={LikesIndexContainer} />
 
     <ProtectedRoute exact path="/edit-profile-pic" component={EditProfilePictureContainer} />
     
