@@ -7,11 +7,20 @@ import { Link } from "react-router-dom";
 class PostsIndexItem extends React.Component{
      constructor(props){
      super(props)
-          
+     
+        this.state = {
+             like: {
+                  id: "",
+                liker_id:"",
+                post_id:""
+             }
+        }
         this.likeButtonText = "LIKE"
-
-        this.deletePost = this.deletePost.bind(this)
+        this.handleLike = this.handleLike.bind(this)
         this.handleEdit = this.handleEdit.bind(this)
+        this.deletePost = this.deletePost.bind(this)
+        
+
      }
     
     componentDidMount(){
@@ -28,10 +37,24 @@ class PostsIndexItem extends React.Component{
           e.preventDefault()
           this.props.requestSinglePost(this.props.post.id)
           .then( () => {this.props.openEditPostForm()} )
-
-
-          // this.props.openEditPostForm();
      }
+
+     handleLike = (e) => {
+          e.preventDefault()
+
+          if (this.likeButtonText === "LIKE") {
+          
+               this.likeButtonText = "UNLIKE"
+               this.props.createLike(this.state.like)
+
+          } else {
+
+               this.likeButtonText = "LIKE"
+               this.props.deleteLike(this.state.like.id)
+          }
+
+     }
+
 
     render() {
          
@@ -55,8 +78,7 @@ class PostsIndexItem extends React.Component{
 
           let likeArr = (this.props.likes.filter(like => like.post_id === this.props.post.id))
           let totalLikes = likeArr.length
-          let like = {
-               
+           this.state.like = {
                     liker_id: this.props.currentUser,
                     post_id: this.props.post.id
           }
@@ -64,16 +86,14 @@ class PostsIndexItem extends React.Component{
         
 
          for(let i = 0; i < likeArr.length; i++) {
-          if (likeArr[i].liker_id === like.liker_id && likeArr[i].post_id === like.post_id) {
+          if (likeArr[i].liker_id === this.state.like.liker_id && likeArr[i].post_id === this.state.like.post_id) {
                this.likeButtonText = "UNLIKE";
+               this.state.like.id = likeArr[i].id
                break
           }
          }
-          
-
-          
-          console.log(like)
-          
+       
+          // console.log(this.state.like)
 
                //assign user info to this.state to call in the return below
       return (
@@ -91,7 +111,7 @@ class PostsIndexItem extends React.Component{
                     <br></br>
                     <button className="comment-post">COMMENT</button>
                                    
-                    <button className="like-post">{this.likeButtonText} 
+                    <button className="like-post" onClick={this.handleLike} >{this.likeButtonText} 
                     ({totalLikes})</button>
                 {/* comment button then like button */}
            </li>
