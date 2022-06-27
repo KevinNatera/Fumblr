@@ -14,6 +14,7 @@ class PostsIndex extends React.Component {
     render() {
         return (
             <div className="posts-index">
+                <h1>All Posts</h1>
                 <ul>
 
                 {this.props.posts.map((post) => (
