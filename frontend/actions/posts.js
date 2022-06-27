@@ -30,30 +30,35 @@ export const receiveAllPosts = (posts) => ({
   export const createPost = (formPost) => dispatch => 
    PostUtil.createPost(formPost)
     .then(post => dispatch(receivePost(post)),
-     err => dispatch(receiveErrors(err)) 
+     err => dispatch(receiveErrors(err))
   )
+  export const creartePost = (formPost) => dispatch => 
+  PostUtil.createPost(formPost)
+   .then(post => dispatch(receivePost(post)),
+    err => dispatch(receiveErrors(err))
+ )
 
-  export const requestAllPosts = () => (dispatch) => (
+  export const requestAllPosts = () => dispatch => 
     PostUtil.fetchAllPosts()
-      .then(posts => dispatch(receiveAllPosts(posts))),
+      .then(posts => dispatch(receiveAllPosts(posts)),
       err => dispatch(receiveErrors(err)) 
   )
   
-  export const requestSinglePost = (postId) => (dispatch) => (
+  export const requestSinglePost = (postId) => (dispatch) => 
     PostUtil.fetchPost(postId)
-      .then(post => dispatch(receivePost(post)))
-      // err => dispatch(receiveErrors(err))
+      .then(post => dispatch(receivePost(post)),
+      err => dispatch(receiveErrors(err))
   )
 
-  export const updatePost = (post) => (dispatch) => (
+  export const updatePost = (post) => (dispatch) => 
     PostUtil.updatePost(post)
-      .then(post => dispatch(receivePost(post)))
-      // (err) => dispatch(receiveErrors(err)) 
+      .then(post => dispatch(receivePost(post)),
+      err => dispatch(receiveErrors(err)) 
   );
 
   export const deletePost = (postId) => (dispatch) =>
-    PostUtil.deletePost(postId).then(() =>
-    dispatch(removePost(postId)),
+    PostUtil.deletePost(postId)
+    .then(() => dispatch(removePost(postId)),
     err => dispatch(receiveErrors(err)) 
   );
 

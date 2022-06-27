@@ -38,18 +38,21 @@ export const clearErrors = () => ({
 //this means we can call .then on it
 //.then if we receive a user, dispatch our invoked action with the user
 
-export const createNewUser = (formUser) => dispatch => postUser(formUser)
+export const createNewUser = (formUser) => dispatch => 
+    postUser(formUser)
     .then(user => dispatch(receiveCurrentUser(user)),
          err => dispatch(receiveErrors(err)) 
     );
 
-export const login = (formUser) => dispatch => postSession(formUser)
+export const login = (formUser) => dispatch => 
+    postSession(formUser)
     .then(user => dispatch(receiveCurrentUser(user)),
          err => dispatch(receiveErrors(err)) 
     );
 
 //thunk action creaters must be arrow functions if they take no args
-export const logout = () => dispatch => deleteSession()
+export const logout = () => dispatch => 
+    deleteSession()
     .then( () => dispatch(logoutCurrentUser()), 
         err => dispatch(receiveErrors(err)) 
     );
