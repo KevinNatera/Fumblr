@@ -47,8 +47,8 @@ class Api::UsersController < ApplicationController
         @user.avatar.attach(params[:avatar])
         
         if @user.avatar.attached? 
-          puts(@user)
-          render json: @user
+          
+          render json: url_for(@user.avatar)
          else 
            render json: ["Error: profile didn't attach"], status: 422
         end
