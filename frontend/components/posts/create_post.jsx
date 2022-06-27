@@ -1,22 +1,28 @@
 import React from 'react'
+import { Route, Link } from 'react-router-dom';
 
 
 class CreatePost extends React.Component {
     constructor(props){
         super(props)
+
+       
     }
         
     componentDidMount(){
-        // this.props.requestAllPosts()
+
     }
+
 
     render() {
         return (
-            <div className="create-post">
+            <div className="create-post-frame">
                
+              <Link className="btn" to="/new/text" onClick={this.props.openCreateTextPost}>Text</Link>
+            {/* <button className="btn"onClick={this.props.openCreateTextPost} > TEST</button> */}
+             
 
-
-
+              <Link className="btn" to="/new/photo">Photo</Link>
 
             </div>
         )
@@ -24,4 +30,4 @@ class CreatePost extends React.Component {
 
 }
 
-export default PostsIndex
+export default CreatePost
