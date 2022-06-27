@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-//import thunk action from posts actions
+
 
 
 
@@ -14,7 +14,7 @@ class PostsIndexItem extends React.Component{
      }
     
     componentDidMount(){
-     //    this.props.requestAllUsers()
+     
     }
     
      deletePost = () => {
@@ -45,12 +45,15 @@ class PostsIndexItem extends React.Component{
           let username = "";
           
           user = (this.props.users.filter(user => user.id === this.props.post.author_id))
-       
+
           if (user.length != 0) {
              username = user[0].username
           } else {
                username = "Name Not Found"
           }
+
+          let liked;
+          let totalLikes = (this.props.likes.filter(like => like.post_id === this.props.post.id)).length
           
                //assign user info to this.state to call in the return below
       return (
@@ -64,9 +67,12 @@ class PostsIndexItem extends React.Component{
                 {deleteButton}
                 {editButton}
                     <br></br>
+                    
                     <br></br>
                     <button className="comment-post">COMMENT</button>
-                    <button className="like-post">LIKE</button>
+                                   
+                    <button className="like-post">LIKE  
+                    ({totalLikes})</button>
                 {/* comment button then like button */}
            </li>
 
