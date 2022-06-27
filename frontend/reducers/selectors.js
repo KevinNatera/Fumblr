@@ -1,5 +1,8 @@
 export const selectAllPosts = (state) => {
-    return Object.values(state.entities.posts).reverse()
+    let arr = Object.values(state.entities.posts)
+    // console.log(arr)
+    // console.log(arr.sort((a,b ) => a - b))
+    return arr.reverse()
     //sort
 }
 
