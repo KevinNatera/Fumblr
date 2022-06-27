@@ -48,6 +48,7 @@ class EditPostForm extends React.Component {
     handleCancel(e) {
         e.preventDefault()
         this.props.closeModal()
+        window.location.reload()
         // this.props.history.goBack()
     }
       
