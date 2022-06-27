@@ -1,31 +1,33 @@
 import React from 'react'
-import PostsIndexItemContainer from './posts_index_item_container';
+import PostsIndexItemContainer from '../posts/posts_index_item_container';
 
 class PostsIndex extends React.Component {
     constructor(props){
         super(props)
-
     }
         
     componentDidMount(){
-        this.props.requestAllPosts();
-        this.props.requestAllUsers();
-        this.props.requestAllLikes();
+        this.props.requestAllUsers(),
+        this.props.requestAllPosts(),
+        this.props.requestAllLikes()
     }
 
     render() {
+        
         return (
-            <div className="posts-index">
-                <h1>All Posts</h1>
+            <div className="user-show">
+                <h1>{this.props.text}</h1>
                 <ul>
 
                 {this.props.posts.map((post) => (
-                <PostsIndexItemContainer key={post.id} post={post} />
+                < PostsIndexItemContainer
+                    key={post.id} 
+                    post={post} 
+                    currentUserId={this.props.currentUserId}
+                />
                 ))
                 }
                 </ul>
-
-
 
             </div>
         )
