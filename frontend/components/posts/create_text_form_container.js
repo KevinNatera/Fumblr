@@ -11,7 +11,6 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
     createPost: (formPost) => dispatch(createPost(formPost)),
-    openCreateTextPost: () => dispatch(openModal('new/text')),
     closeModal: () => dispatch(closeModal()),
     clearErrors: () => dispatch(clearErrors())
 });

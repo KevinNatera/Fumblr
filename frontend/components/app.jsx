@@ -35,7 +35,7 @@ export default () => (
 
     <ProtectedRoute exact path="/edit-profile-pic" component={EditProfilePictureContainer} />
     
-    <ProtectedRoute exact path="/new/text" component={CreateTextFormContainer} />
+    {/* <ProtectedRoute exact path="/new/text" component={CreateTextFormContainer} /> */} 
 
 
     {/* <Route path="*" component={ErrorPage} /> */}
