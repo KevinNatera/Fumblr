@@ -10,6 +10,7 @@ class PostsIndexItem extends React.Component{
           
 
         this.deletePost = this.deletePost.bind(this)
+        this.handleEdit = this.handleEdit.bind(this)
      }
     
     componentDidMount(){
@@ -19,6 +20,16 @@ class PostsIndexItem extends React.Component{
      deletePost = () => {
           this.props.deletePost(this.props.post.id)
           .then(() => { window.location.reload()})
+
+     }
+
+     handleEdit = (e) => {
+          e.preventDefault()
+          this.props.requestSinglePost(this.props.post.id)
+          .then( () => {this.props.openEditPostForm()} )
+
+
+          // this.props.openEditPostForm();
      }
 
     render() {
@@ -26,7 +37,7 @@ class PostsIndexItem extends React.Component{
           let editButton;
           let deleteButton;
           if (this.props.currentUserId === this.props.post.author_id) {
-               editButton = <button className="edit-post">EDIT</button>
+               editButton = <button className="edit-post"onClick={this.handleEdit} >EDIT</button>
                deleteButton = <button className="delete-post" onClick={this.deletePost} >DELETE</button>
           }
           

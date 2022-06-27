@@ -11,13 +11,19 @@ class Api::PostsController < ApplicationController
         render :index 
     end
 
+    def show
+        @post = Post.find(params[:id])
+        if @post
+          render :show
+        else
+          render json: @post.errors.full_messages, status: 404
+        end
+      end
+
     def create 
         @post = Post.new(post_params)
-        # @post.author_id = params[:post][:author_id]
-        
-        # puts(params[:post][:author_id])
+    
         if @post.save 
-            # redirect_to posts_url
             render json: @post
         else
             render json: @post.errors.full_messages, status: 422
@@ -29,22 +35,22 @@ class Api::PostsController < ApplicationController
     #     render :edit
     # end
 
-    # def update 
-    #     @post = Post.find(params[:id])
+    def update 
+        @post = Post.find(params[:id])
 
-    #     if @post.author_id == current_user.id 
+        if @post.author_id == current_user.id 
 
-    #         if @post.update(post_params) 
-    #             redirect_to posts_url 
-    #         else  
-    #             flash[:errors] = ["Something went wrong!"]
-    #         end
+            if @post.update(post_params) 
+                render json: @post
+            else  
+                render json: @post.errors.full_messages, status: 422
+            end
+            
+        else  
+            render json: ["Something went wrong!"], status: 422
+        end
 
-    #     else  
-    #         flash[:errors] = ["Something went wrong!"]
-    #     end
-
-    # end 
+    end 
 
     def destroy 
         @Post = Post.find(params[:id])

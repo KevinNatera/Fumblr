@@ -11,7 +11,6 @@ class Api::SessionsController < ApplicationController
           render json: ['Invalid username or password.'],  status: 422
         else
           login(@user)
-          # redirect_to user_url(@user)
           render "api/users/show"
         end
     

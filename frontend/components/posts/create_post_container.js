@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { createPost } from '../../actions/posts'
 import { clearErrors } from '../../actions/session'
-import { openModal, closeModal } from '../../actions/modal';
+import { openModal } from '../../actions/modal';
 import CreatePost from './create_post'
 
 const mapStateToProps = (state, ownProps) => ({
@@ -10,8 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    openCreateTextPost: () => dispatch(openModal('new/text')),
-    closeModal: () => dispatch(closeModal())
+    openCreateTextPost: () => dispatch(openModal('new/text'))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CreatePost);
