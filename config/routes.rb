@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, except: [:destroy]
     resources :posts
+    resources :likes, only: [:create, :index, :destroy]
     resource :session, only: [:create, :destroy]
   end
   post '/presigned_url', to: 'direct_upload#create'
