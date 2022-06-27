@@ -17,7 +17,6 @@ class CreateTextForm extends React.Component {
 
     componentDidMount() {
         this.props.clearErrors();
-        // this.props.openCreateTextPost()
         console.log(this.props)
     }
 
@@ -34,13 +33,14 @@ class CreateTextForm extends React.Component {
        
         this.props.createPost(this.state)
             .then( () => this.props.closeModal())  //success             //fail ,() => window.location.reload() 
-            .then( () => this.props.history.goBack())
+            .then( () => window.location.reload())
+            // .then( () => this.props.history.goBack()) if using link
     }  
 
     handleCancel(e) {
         e.preventDefault()
         this.props.closeModal()
-        this.props.history.goBack()
+        // this.props.history.goBack()
     }
       
 
