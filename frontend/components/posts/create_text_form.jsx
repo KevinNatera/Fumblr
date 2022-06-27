@@ -12,6 +12,7 @@ class CreateTextForm extends React.Component {
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleCancel = this.handleCancel.bind(this)
     }
 
     componentDidMount() {
@@ -33,9 +34,14 @@ class CreateTextForm extends React.Component {
        
         this.props.createPost(this.state)
             .then( () => this.props.closeModal())  //success             //fail ,() => window.location.reload() 
-            .then( () => this.props.history.push(`/profile`))
+            .then( () => this.props.history.goBack())
     }  
 
+    handleCancel(e) {
+        e.preventDefault()
+        this.props.closeModal()
+        this.props.history.goBack()
+    }
       
 
     render() {
@@ -48,9 +54,9 @@ class CreateTextForm extends React.Component {
         
         return (
             <div className="create-post">
-                <h2>Create a New Post!</h2>
+                
                 <form>
-    
+                <h2>Create a New Post!</h2>
                     <label>Title:
                         <input
                             type="text"
@@ -72,7 +78,7 @@ class CreateTextForm extends React.Component {
 
 
                 <button onClick={this.handleSubmit}> Create Post</button>
-
+                <button onClick={this.handleCancel}> Cancel</button>
                 <ul>
 
                 { (this.props.errors.responseJSON != null) && errors }
