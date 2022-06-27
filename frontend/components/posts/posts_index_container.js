@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
-import { requestAllPosts } from '../../actions/posts'
 import { requestAllUsers } from '../../actions/users'
+import { requestAllPosts } from '../../actions/posts'
+import { requestAllLikes } from '../../actions/likes'
 import { selectAllPosts } from '../../reducers/selectors';
 // import { clearErrors } from '../../actions/session'
 import PostsIndex from './posts_index'
@@ -12,7 +13,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
     requestAllPosts: () => dispatch(requestAllPosts()),
-    requestAllUsers: () => dispatch(requestAllUsers())
+    requestAllUsers: () => dispatch(requestAllUsers()),
+    requestAllLikes: () => dispatch(requestAllLikes()),
     // clearErrors: () => dispatch(clearErrors())
 });
 

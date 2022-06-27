@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
-import { selectAllUsers } from '../../reducers/selectors';
+import { selectAllUsers, selectAllLikes } from '../../reducers/selectors';
 import { requestSinglePost, deletePost } from '../../actions/posts'
 import { openModal } from '../../actions/modal';
 // import { clearErrors } from '../../actions/session'
 import PostsIndexItem from './posts_index_item'
 
 const mapStateToProps = (state, ownProps) => ({
-    users: selectAllUsers(state)
+    users: selectAllUsers(state),
+    likes: selectAllLikes(state)
     // errors: state.errors.session
 })
 

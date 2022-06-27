@@ -13,3 +13,6 @@ export const selectUserPosts = (state,id) => {
 export const selectAllUsers = (state) => {
     return Object.values(state.entities.users)
 }
+export const selectAllLikes = (state) => {
+    return Object.values(state.entities.likes)
+}
