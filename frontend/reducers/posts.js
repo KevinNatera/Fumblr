@@ -2,6 +2,8 @@ import { RECEIVE_ALL_POSTS, RECEIVE_POST , REMOVE_POST} from '../actions/posts';
 
 const postsReducer = (state = {}, action) => {
   Object.freeze(state);
+  let nextState = Object.assign({}, state);
+
   switch (action.type) {
   case RECEIVE_ALL_POSTS:
     return Object.assign( {}, action.posts, state);
@@ -9,7 +11,6 @@ const postsReducer = (state = {}, action) => {
       const newPost = { [action.post.id]: action.post };
       return newPost;
     case REMOVE_POST:
-      let nextState = Object.assign({}, state);
       delete nextState[action.postId];
       return nextState;
   default:
