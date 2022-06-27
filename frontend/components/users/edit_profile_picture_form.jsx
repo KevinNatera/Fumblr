@@ -53,7 +53,13 @@ class EditProfilePictureForm extends React.Component {
     // window.formData = formData
 
     this.props.updateUser(this.props.currentUser.id,formData)
-    window.location.reload()
+    // .then( () => console.log("yo")) 
+    setTimeout( () => {
+      window.location.reload()
+    }, 125)
+    
+  
+    
     
     
   }

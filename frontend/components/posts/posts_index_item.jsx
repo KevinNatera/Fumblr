@@ -104,7 +104,7 @@ class PostsIndexItem extends React.Component{
                 <img className="profile-pic" src={avatar_url}/> <h2>{username}</h2>      
                 <h1>{this.props.post.title}</h1>
                 <p>{this.props.post.body}</p>
-                {/* <img src={this.props.post.url} width="30px" height="30px"/> */}
+          
                 
                 {deleteButton}
                 {editButton}
