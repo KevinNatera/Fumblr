@@ -7,6 +7,7 @@ import CreateTextForm from './create_text_form'
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.session.id,
     errors: state.errors.session
+    //build post errors and change this
 })
 
 const mapDispatchToProps = dispatch => ({

@@ -8,7 +8,7 @@ class CreatePost extends React.Component {
     }
         
     componentDidMount(){
-        // this.props.requestAllPosts()
+        
     }
 
     render() {
