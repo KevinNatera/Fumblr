@@ -74,7 +74,7 @@ class PostsIndexItem extends React.Component{
           if (user.length != 0) {
              username = user[0].username
              
-             if (user.avatar_url) {
+             if (user[0].avatar_url) {
                avatar_url = user[0].avatar_url
              }
              
