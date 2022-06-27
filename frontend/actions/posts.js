@@ -32,11 +32,6 @@ export const receiveAllPosts = (posts) => ({
     .then(post => dispatch(receivePost(post)),
      err => dispatch(receiveErrors(err))
   )
-  export const creartePost = (formPost) => dispatch => 
-  PostUtil.createPost(formPost)
-   .then(post => dispatch(receivePost(post)),
-    err => dispatch(receiveErrors(err))
- )
 
   export const requestAllPosts = () => dispatch => 
     PostUtil.fetchAllPosts()
