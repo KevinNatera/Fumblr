@@ -28,7 +28,7 @@ class PostsIndex extends React.Component {
                 ))
                 }
                 </ul>
-
+                
             </div>
         )
     }

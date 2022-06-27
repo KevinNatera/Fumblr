@@ -12,6 +12,7 @@ class EditProfilePictureForm extends React.Component {
       this.onChange = this.onChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
       this.imgRef = React.createRef()
+      this.submitButtonRef = React.createRef()
 }
 
   componentDidMount() {
@@ -25,11 +26,13 @@ class EditProfilePictureForm extends React.Component {
       const reader = new FileReader();
       const file = e.currentTarget.files[0];
       const img = this.imgRef.current;
+      const submitButton = this.submitButtonRef.current;
 
       reader.onloadend = () =>  {
 
       this.setState({ imgUrl: reader.result, imgFile: file });
       img.src = reader.result
+      submitButton.type = "submit"
     }
 
     if (file) {
@@ -37,6 +40,7 @@ class EditProfilePictureForm extends React.Component {
      } else {
      this.setState({ imgUrl: "", imgFile: null });
      img.src = ""
+     submitButton.type = "hidden"
    }
 
   } 
@@ -58,7 +62,7 @@ class EditProfilePictureForm extends React.Component {
  render() {
     return (
       <div>
-        EDIT PROFILE PICTURE
+            <h1>Choose an Image!</h1>
 
           <div className="edit-profile-preview-frame">
               <img id="edit-profile-image" 
@@ -79,7 +83,7 @@ class EditProfilePictureForm extends React.Component {
             />
           
 
-           <input type="submit"/>
+           <input type="hidden" ref={this.submitButtonRef}/>
           </form>
       </div>
     );

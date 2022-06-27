@@ -95,6 +95,21 @@ ActiveRecord::Base.transaction do
         url: ""
     )
 
+    post7 = Post.create(
+        author_id: 6,
+        title: "They're watching.",
+        body: "Right now.",
+        url: ""
+    )
+
+    post8 = Post.create(
+        author_id: 5,
+        title: "PLZZZZZZ",
+        body: "D':",
+        url: ""
+    )
+
+
     like1 = Like.create(
         liker_id: 2,
         post_id: 1,
@@ -140,21 +155,25 @@ ActiveRecord::Base.transaction do
         post_id: 2,
     )
 
+    basicAttackPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/basic_attack_copy.png")
+    goldPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/gold+copy.png")
+    healPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/heal+copy.png")
     defaultBatman1 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
+    defaultBatman2 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
     defaultBatman3 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
-    defaultBatman4 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
-    user1.avatar.attach(io: defaultBatman1, filename: 'default_batman.png')
+
+    user1.avatar.attach(io: basicAttackPic1, filename: 'basic_attack_copy.png')
     user1.save! 
-    # user2.avatar.attach(io: defaultBatman, filename: 'default_batman.png')
-    # # user2.save! 
-    user3.avatar.attach(io: defaultBatman3, filename: 'default_batman.png')
-    # user3.save! 
-    user4.avatar.attach(io: defaultBatman4, filename: 'default_batman.png')
+    user2.avatar.attach(io: goldPic1, filename: 'gold_copy.png')
+    user2.save! 
+    user3.avatar.attach(io: healPic1, filename: 'heal_copy.png')
+    user3.save! 
+    user4.avatar.attach(io: defaultBatman1, filename: 'default_batman.png')
     user4.save! 
-    # user5.avatar.attach(io: defaultBatman, filename: 'default_batman.png')
-    # # user5.save! 
-    # user6.avatar.attach(io: defaultBatman, filename: 'default_batman.png')
-    # user6.save! 
+    user5.avatar.attach(io: defaultBatman2, filename: 'default_batman.png')
+    user5.save! 
+    user6.avatar.attach(io: defaultBatman3, filename: 'default_batman.png')
+    user6.save! 
 
     # comment1 = Comment.create(
     #     id: 1,
