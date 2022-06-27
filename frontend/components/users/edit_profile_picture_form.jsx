@@ -8,12 +8,6 @@ import { updateUser } from '../../actions/users';
 class EditProfilePictureForm extends React.Component {
     constructor(props){
         super(props)
-
-      //   this.state = {
-      //     imgUrl:  "",
-      //     imgFile: null
-      // }
-
   
       this.onChange = this.onChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
@@ -21,7 +15,7 @@ class EditProfilePictureForm extends React.Component {
 }
 
   componentDidMount() {
-    console.log(this.props)
+    // console.log(this.props)
  
   }
 
@@ -51,13 +45,11 @@ class EditProfilePictureForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
     formData.append('avatar', this.state.imgFile);
-    
-    
    
-    window.formData = formData
-
+    // window.formData = formData
 
     this.props.updateUser(this.props.currentUser.id,formData)
+    window.location.reload()
     
     
   }
