@@ -1,11 +1,12 @@
 import React from 'react'
-
+import { withRouter } from 'react-router-dom';
 
 class CreateTextForm extends React.Component {
     constructor(props) {
         super(props)
       
         this.state = {
+            author_id: this.props.currentUser,
             title: '',
             body: ''
         }
@@ -32,7 +33,7 @@ class CreateTextForm extends React.Component {
        
         this.props.createPost(this.state)
             .then( () => this.props.closeModal())  //success             //fail ,() => window.location.reload() 
-            .then( () => this.props.history.push(`/posts`))
+            .then( () => this.props.history.push(`/profile`))
     }  
 
       
@@ -88,4 +89,4 @@ class CreateTextForm extends React.Component {
     }
 }
 
-export default CreateTextForm;
+export default withRouter(CreateTextForm);
