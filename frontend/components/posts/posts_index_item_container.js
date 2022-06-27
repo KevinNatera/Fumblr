@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { selectAllUsers } from '../../reducers/selectors';
-import { deletePost } from '../../actions/posts'
-
+import { requestSinglePost, deletePost } from '../../actions/posts'
+import { openModal } from '../../actions/modal';
 // import { clearErrors } from '../../actions/session'
 import PostsIndexItem from './posts_index_item'
 
@@ -11,7 +11,10 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    deletePost: () => dispatch(deletePost(ownProps.post.id))
+    requestSinglePost: (id) => dispatch(requestSinglePost(id)),
+    deletePost: () => dispatch(deletePost(ownProps.post.id)),
+    openEditPostForm: () => dispatch(openModal('new/edit'))
+    
     // clearErrors: () => dispatch(clearErrors())
 });
 

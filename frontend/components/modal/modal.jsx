@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginContainer from '../session/login_container';
 import SignupContainer from '../session/signup_container';
 import CreateTextFormContainer from '../posts/create_text_form_container';
+import EditPostFormContainer from '../posts/edit_post_form_container';
 
 function Modal({modal, closeModal , errors}) {
   if (!modal) {
@@ -19,6 +20,9 @@ function Modal({modal, closeModal , errors}) {
       break;
     case 'new/text':
       component = <CreateTextFormContainer />;
+    break;
+    case 'new/edit':
+      component = <EditPostFormContainer />;
     break;
     default:
       return null;

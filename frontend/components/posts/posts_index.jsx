@@ -4,11 +4,13 @@ import PostsIndexItemContainer from './posts_index_item_container';
 class PostsIndex extends React.Component {
     constructor(props){
         super(props)
+
     }
         
     componentDidMount(){
         this.props.requestAllPosts(),
         this.props.requestAllUsers()
+        
     }
 
     render() {
@@ -22,8 +24,6 @@ class PostsIndex extends React.Component {
                 ))
                 }
                 </ul>
-
-
 
 
 

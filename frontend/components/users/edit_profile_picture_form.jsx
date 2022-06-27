@@ -57,18 +57,8 @@ class EditProfilePictureForm extends React.Component {
 
 
     this.props.updateUser(this.props.currentUser.id,formData)
-    // $.ajax({
-    //   method: "POST",
-    //   processData: false,
-    //   contentType: false,
-    //   cache: false,
-    //   url: `/api/users/${this.props.currentUser.id}`,
-    //   data: { avatar: formData},
-    //   success: function(response) {
-    //     // Code to handle a succesful upload
-    //     console.log("we did it")
-    //   }
-    // })
+    
+    
   }
 
 
