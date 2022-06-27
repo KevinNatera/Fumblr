@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { createPost } from '../../actions/posts'
 import { clearErrors } from '../../actions/session'
 import { openModal, closeModal } from '../../actions/modal';
-import CreatePost from './create_post'
+import CreateTextForm from './create_text_form'
 
 const mapStateToProps = (state, ownProps) => ({
     currentUser: state.session.id,
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
     clearErrors: () => dispatch(clearErrors())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreatePost);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateTextForm);

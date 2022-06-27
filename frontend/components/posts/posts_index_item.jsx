@@ -13,7 +13,7 @@ class PostsIndexItem extends React.Component{
      }
     
     componentDidMount(){
-        this.props.requestAllUsers()
+     //    this.props.requestAllUsers()
     }
     
      deletePost = () => {
