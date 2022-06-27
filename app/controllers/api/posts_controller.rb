@@ -13,8 +13,9 @@ class Api::PostsController < ApplicationController
 
     def create 
         @post = Post.new(post_params)
-        @post.author_id = params[:author_id]
+        # @post.author_id = params[:post][:author_id]
         
+        # puts(params[:post][:author_id])
         if @post.save 
             # redirect_to posts_url
             render json: {}
@@ -56,6 +57,6 @@ class Api::PostsController < ApplicationController
 
     private 
     def post_params 
-        params.require(:post).permit(:title,:body,:url)
+        params.require(:post).permit(:title,:body,:url,:author_id)
     end
 end
