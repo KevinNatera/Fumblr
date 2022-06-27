@@ -25,26 +25,18 @@ export default () => (
     <Modal/> 
 
     <Route path="/" component={NavBarContainer} />
-
+    <ProtectedRoute path={["/profile","/likes","/comments","/edit-profile-pic","/new"]} component={UserShowNavContainer} />
+    
     <Route exact path="/explore" component={Home} />
-    <ProtectedRoute exact path="/explore" component={CreatePostContainer} />
+    <ProtectedRoute exact path={["/explore","/profile","/new"]} component={CreatePostContainer} />
     <ProtectedRoute exact path="/explore" component={PostsIndexContainer} />
 
-    <ProtectedRoute path="/profile" component={UserShowNavContainer} />
-    <ProtectedRoute exact path="/profile" component={CreatePostContainer} />
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
 
-    <ProtectedRoute path="/likes" component={UserShowNavContainer} />
-
-    <ProtectedRoute path="/comments" component={UserShowNavContainer} />
-
-    <ProtectedRoute path="/edit-profile-pic" component={UserShowNavContainer} />
     <ProtectedRoute exact path="/edit-profile-pic" component={EditProfilePictureContainer} />
     
-    <ProtectedRoute path="/new" component={UserShowNavContainer} />
-    <ProtectedRoute path="/new" component={CreatePostContainer} />
     <ProtectedRoute exact path="/new/text" component={CreateTextFormContainer} />
-  
+
 
     {/* <Route path="*" component={ErrorPage} /> */}
   </div>

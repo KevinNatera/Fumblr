@@ -11,10 +11,10 @@ class UserShow extends React.Component {
     }
 
     render() {
-        // console.log(this.props.currentUserId) //HAS CURRENT USER id
         
         return (
             <div className="user-show">
+                <h1>My Posts</h1>
                 <ul>
 
                 {this.props.posts.map((post) => (
@@ -26,10 +26,6 @@ class UserShow extends React.Component {
                 ))
                 }
                 </ul>
-
-
-
-
 
             </div>
         )
