@@ -21,7 +21,8 @@ class EditProfilePictureForm extends React.Component {
 }
 
   componentDidMount() {
-    // console.log(this.props)
+    console.log(this.props)
+ 
   }
 
 
@@ -69,7 +70,7 @@ class EditProfilePictureForm extends React.Component {
 
           <div className="edit-profile-preview-frame">
               <img id="edit-profile-image" 
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fskycenter.arizona.edu%2Fsites%2Fdefault%2Ffiles%2Fgallery%2FGalaxies%2Fm81.jpg&f=1&nofb=1"
+              src={this.props.currentUser.avatar_url}
               ref={this.imgRef}
               >
 

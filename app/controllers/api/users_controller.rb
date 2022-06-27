@@ -7,6 +7,7 @@ class Api::UsersController < ApplicationController
     
       def create
         @user = User.new(user_params)
+        @user.avatar.attach(io: File.open("app/assets/images/default_batman.png"), filename: "default_batman.png")
         if @user.save
           login(@user)
           # redirect_to user_url(@user)
@@ -47,7 +48,7 @@ class Api::UsersController < ApplicationController
         
         if @user.avatar.attached? 
           puts(@user)
-          render :show
+          render json: @user
          else 
            render json: ["Error: profile didn't attach"], status: 422
         end
