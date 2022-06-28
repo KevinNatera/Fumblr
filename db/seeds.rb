@@ -8,11 +8,11 @@
 require 'open-uri'
 
 ActiveRecord::Base.transaction do
-    User.delete_all
+    User.destroy_all
     ActiveRecord::Base.connection.reset_pk_sequence!('users')
-    Post.delete_all
+    Post.destroy_all
     ActiveRecord::Base.connection.reset_pk_sequence!('posts')
-    Like.delete_all
+    Like.destroy_all
     ActiveRecord::Base.connection.reset_pk_sequence!('likes')
     # Comment.delete_all 
 

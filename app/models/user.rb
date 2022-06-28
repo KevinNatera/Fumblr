@@ -28,9 +28,9 @@ class User < ApplicationRecord
         foreign_key: :liker_id,
         class_name: :Like
 
-    has_one_attached :avatar
+    has_one_attached :avatar 
 
-    has_one_attached :cover
+    has_one_attached :cover 
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

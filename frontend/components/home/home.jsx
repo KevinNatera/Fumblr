@@ -14,8 +14,8 @@ class Home extends React.Component {
 
   render() {
     let src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fskycenter.arizona.edu%2Fsites%2Fdefault%2Ffiles%2Fgallery%2FGalaxies%2Fm81.jpg&f=1&nofb=1"
-
-    if (this.props.currentUser !== undefined) {
+  
+    if (this.props.currentUser !== undefined && this.props.currentUser.cover_url !== undefined) {
       src = this.props.currentUser.cover_url
     }
 
