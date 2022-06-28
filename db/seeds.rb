@@ -159,6 +159,7 @@ ActiveRecord::Base.transaction do
     # goldPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/gold+copy.png")
     # healPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/heal+copy.png")
     # defaultBatman1 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
+
     # defaultBatman2 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
     # defaultBatman3 = open("https://fumblr11-seeds.s3.amazonaws.com/default_batman.png")
 
@@ -168,8 +169,9 @@ ActiveRecord::Base.transaction do
     # user2.save! 
     # user3.avatar.attach(io: healPic1, filename: 'heal_copy.png')
     # user3.save! 
-    # user4.avatar.attach(io: defaultBatman1, filename: 'default_batman.png')
+    # user4.avatar.attach(io: defaultBatman1, filename: 'default_batman.png'
     # user4.save! 
+
     # user5.avatar.attach(io: defaultBatman2, filename: 'default_batman.png')
     # user5.save! 
     # user6.avatar.attach(io: defaultBatman3, filename: 'default_batman.png')

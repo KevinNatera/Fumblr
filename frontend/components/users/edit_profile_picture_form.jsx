@@ -90,7 +90,7 @@ class EditProfilePictureForm extends React.Component {
 
     if (this.state.profileImgFile !== undefined) {
       formData.append('avatar', this.state.profileImgFile);
-    }
+    } 
 
     if (this.state.coverImgFile !== undefined) {
       formData.append('cover', this.state.coverImgFile);
