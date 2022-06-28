@@ -17,7 +17,7 @@ class PostsIndex extends React.Component {
         return (
             <div className="user-show">
                 <h1>{this.props.text}</h1>
-                <ul>
+               
 
                 {this.props.posts.map((post) => (
                 < PostsIndexItemContainer
@@ -27,7 +27,7 @@ class PostsIndex extends React.Component {
                 />
                 ))
                 }
-                </ul>
+             
                 
             </div>
         )

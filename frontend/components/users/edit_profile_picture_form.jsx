@@ -106,7 +106,7 @@ class EditProfilePictureForm extends React.Component {
 
  render() {
     return (
-      <div>
+      <div className="edit-profile-frame">
             <h1>Choose a New Profile Image!</h1>
 
           
