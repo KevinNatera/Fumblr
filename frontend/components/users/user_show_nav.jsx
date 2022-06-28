@@ -15,8 +15,9 @@ class UserShowNav extends React.Component {
         return (
             <div className="user-show-nav-bar">
                 <Link className="btn" to="/profile">Posts</Link>
-                <Link className="btn" to="/likes">Likes</Link>
-                <Link className="btn" to="/edit-profile-pic">Edit Profile Pic</Link>
+                <Link className="btn" to="/followers">Followers</Link>
+                <Link className="btn" to="/activity">Activity</Link>
+                <Link className="btn" to="/edit-profile">Edit Appearance</Link>
             </div>
 
         )
