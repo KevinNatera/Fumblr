@@ -15,6 +15,7 @@ class EditProfilePictureForm extends React.Component {
       this.profileImgRef = React.createRef()
       this.coverImgRef = React.createRef()
       this.submitButton = React.createRef()
+
 }
 
   componentDidMount() {
@@ -115,7 +116,7 @@ class EditProfilePictureForm extends React.Component {
 
           <div className="edit-profile-preview-frame">
               <img id="edit-profile-image" 
-              src={this.props.currentUser.avatar_url}
+              src={this.props.currentUser.avatar_url ? currentUser.avatar_url : "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"}
               ref={this.profileImgRef}
               >
 
@@ -134,7 +135,7 @@ class EditProfilePictureForm extends React.Component {
 
           <div className="edit-profile-preview-frame">
               <img id="edit-profile-image" 
-              src={this.props.currentUser.avatar_url}
+              src={this.props.currentUser.cover_url ? currentUser.cover_url : "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fskycenter.arizona.edu%2Fsites%2Fdefault%2Ffiles%2Fgallery%2FGalaxies%2Fm81.jpg&f=1&nofb=1"}
               ref={this.coverImgRef}
               >
 
