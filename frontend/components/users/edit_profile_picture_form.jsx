@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { updateUser } from '../../actions/users';
+import { withRouter } from 'react-router-dom'
 
 
 
@@ -9,10 +9,12 @@ class EditProfilePictureForm extends React.Component {
     constructor(props){
         super(props)
   
-      this.onChange = this.onChange.bind(this)
+      this.onProfileChange = this.onProfileChange.bind(this)
+      this.onCoverChange = this.onCoverChange.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
-      this.imgRef = React.createRef()
-      this.submitButtonRef = React.createRef()
+      this.profileImgRef = React.createRef()
+      this.coverImgRef = React.createRef()
+      this.submitButton = React.createRef()
 }
 
   componentDidMount() {
@@ -22,77 +24,138 @@ class EditProfilePictureForm extends React.Component {
 
 
 
-  onChange(e) {
+  onProfileChange(e) {
       const reader = new FileReader();
       const file = e.currentTarget.files[0];
-      const img = this.imgRef.current;
-      const submitButton = this.submitButtonRef.current;
+      const profileImg = this.profileImgRef.current;
+      const submitButton = this.submitButton.current;
 
       reader.onloadend = () =>  {
 
-      this.setState({ imgUrl: reader.result, imgFile: file });
-      img.src = reader.result
+      this.setState({ profileImgUrl: reader.result, profileImgFile: file });
+      profileImg.src = reader.result
       submitButton.type = "submit"
     }
+
+  
 
     if (file) {
       reader.readAsDataURL(file)
      } else {
-     this.setState({ imgUrl: "", imgFile: null });
-     img.src = ""
-     submitButton.type = "hidden"
+     this.setState({ profileImgUrl: "", profileImgFile: null });
+     profileImg.src = ""
+
+     if (this.state.coverImgUrl === "") {
+      submitButton.type = "hidden"
+     }
+
    }
 
   } 
 
+
+  onCoverChange(e) {
+    const reader = new FileReader();
+    const file = e.currentTarget.files[0];
+    const coverImg = this.coverImgRef.current;
+    const submitButton = this.submitButton.current;
+
+    reader.onloadend = () =>  {
+
+    this.setState({ coverImgUrl: reader.result, coverImgFile: file });
+    coverImg.src = reader.result
+    submitButton.type = "submit"
+  }
+
+ 
+
+  if (file) {
+    reader.readAsDataURL(file)
+   } else {
+   this.setState({ coverImgUrl: "", coverImgFile: null });
+   coverImg.src = ""
+
+   if (this.state.profileImgUrl === "") {
+    submitButton.type = "hidden"
+   }
+   
+ }
+
+} 
+
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('avatar', this.state.imgFile);
-   
+
+    if (this.state.profileImgFile !== undefined) {
+      formData.append('avatar', this.state.profileImgFile);
+    }
+
+    if (this.state.coverImgFile !== undefined) {
+      formData.append('cover', this.state.coverImgFile);
+    }
+  
     // window.formData = formData
 
     this.props.updateUser(this.props.currentUser.id,formData)
-    // .then( () => console.log("yo")) 
-    setTimeout( () => {
-      window.location.reload()
-    }, 125)
-    
-  
-    
-    
-    
+    .then( () => this.props.history.push('/explore')) 
+    .then( () =>{window.location.reload()}) 
   }
 
 
  render() {
     return (
       <div>
-            <h1>Choose an Image!</h1>
+            <h1>Choose a New Profile Image!</h1>
+
+          
+
+
+          <form onSubmit={this.handleSubmit}>
 
           <div className="edit-profile-preview-frame">
               <img id="edit-profile-image" 
               src={this.props.currentUser.avatar_url}
-              ref={this.imgRef}
+              ref={this.profileImgRef}
+              >
+
+              </img>
+          </div>
+            <input 
+              type="file"
+              accept="image/png, image/jpeg"
+              name="avatar"
+              onChange={this.onProfileChange}
+            />
+          
+
+           
+          <h1>Choose a New Cover Image!</h1>
+
+          <div className="edit-profile-preview-frame">
+              <img id="edit-profile-image" 
+              src={this.props.currentUser.avatar_url}
+              ref={this.coverImgRef}
               >
 
               </img>
           </div>
 
-
-          <form onSubmit={this.handleSubmit}>
             <input 
               type="file"
               accept="image/png, image/jpeg"
-              name="avatar"
-              onChange={this.onChange}
+              name="cover"
+              onChange={this.onCoverChange}
             />
           
 
-           <input type="hidden" ref={this.submitButtonRef}/>
+          <input type="hidden" ref={this.submitButton}/>
+
           </form>
+
+          
       </div>
     );
   }
 }
-export default EditProfilePictureForm
+export default withRouter(EditProfilePictureForm)

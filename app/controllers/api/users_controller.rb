@@ -8,6 +8,8 @@ class Api::UsersController < ApplicationController
       def create
         @user = User.new(user_params)
         @user.avatar.attach(io: File.open("app/assets/images/default_batman.png"), filename: "default_batman.png")
+        @user.cover.attach(io: File.open("app/assets/images/fumblr.png"), filename: "fumblr.png")
+
         if @user.save
           login(@user)
           # redirect_to user_url(@user)
@@ -39,13 +41,22 @@ class Api::UsersController < ApplicationController
       def update
         @user = User.find(params[:id])
         
-        @user.avatar.attach(params[:avatar])
+         puts(params)
+
+        if params[:avatar] != nil
+          @user.avatar.attach(params[:avatar])
+        end
+
+        if params[:cover] != nil
+          @user.cover.attach(params[:cover])
+         end
         
-        if @user.avatar.attached? 
+        
+        if @user.avatar.attached? || @user.cover.attached?
           
-          render json: url_for(@user.avatar)
+          render json: [url_for(@user.avatar),url_for(@user.cover)]
          else 
-           render json: ["Error: profile didn't attach"], status: 422
+           render json: ["Error: picture didn't attach"], status: 422
         end
       end
     
@@ -75,6 +86,6 @@ class Api::UsersController < ApplicationController
       private
     
       def user_params
-        params.require(:user).permit(:username, :email, :password, :avatar)
+        params.require(:user).permit(:username, :email, :password, :avatar, :cover)
       end
 end

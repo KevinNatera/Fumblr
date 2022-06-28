@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBarContainer from './nav_bar/nav_bar_container';
-import Home from './home/home';
+import HomeContainer from './home/home_container';
 
 import SignupContainer from './session/signup_container'
 import LoginContainer from './session/login_container'
@@ -26,16 +26,16 @@ export default () => (
     <Modal/> 
 
     <Route path="/" component={NavBarContainer} />
-    <ProtectedRoute path={["/profile","/likes","/comments","/edit-profile-pic","/new"]} component={UserShowNavContainer} />
+    <ProtectedRoute path={["/profile","/activity","/followers","/comments","/edit-profile","/new"]} component={UserShowNavContainer} />
     
-    <Route exact path="/explore" component={Home} />
+    <Route exact path="/explore" component={HomeContainer} />
     <ProtectedRoute exact path={["/explore","/profile","/new"]} component={CreatePostContainer} />
     <ProtectedRoute exact path="/explore" component={PostsIndexContainer} />
 
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
-    <ProtectedRoute exact path="/likes" component={LikesIndexContainer} />
+    <ProtectedRoute exact path="/activity" component={LikesIndexContainer} />
 
-    <ProtectedRoute exact path="/edit-profile-pic" component={EditProfilePictureContainer} />
+    <ProtectedRoute exact path="/edit-profile" component={EditProfilePictureContainer} />
     
     {/* <ProtectedRoute exact path="/new/text" component={CreateTextFormContainer} /> */} 
 
