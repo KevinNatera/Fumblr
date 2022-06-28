@@ -12,7 +12,7 @@ class Api::UsersController < ApplicationController
 
         if @user.save
           login(@user)
-          # redirect_to user_url(@user)
+        
           render :show
         else
           # render :new
@@ -41,20 +41,26 @@ class Api::UsersController < ApplicationController
       def update
         @user = User.find(params[:id])
         
+
+        
          puts(params)
 
         if params[:avatar] != nil
+        
           @user.avatar.attach(params[:avatar])
         end
 
         if params[:cover] != nil
+       
           @user.cover.attach(params[:cover])
-         end
-        
-        
-        if @user.avatar.attached? || @user.cover.attached?
           
-          render json: [url_for(@user.avatar),url_for(@user.cover)]
+        end
+        
+         if @user.save! 
+          render json: ["Success"]
+        # if @user.avatar.attached? || @user.cover.attached?
+          
+        #   render json: [url_for(@user.avatar),url_for(@user.cover)]
          else 
            render json: ["Error: picture didn't attach"], status: 422
         end

@@ -18,8 +18,7 @@
           window.currentUser = {
           "id": <%= current_user.id%>,
           "username": "<%= current_user.username%>",
-          "email": "<%= current_user.email%>",
-          // "avatar_url": 
+          "email": "<%= current_user.email%>"
        
         };
         // username and email have to be in quotes because they
@@ -31,15 +30,15 @@
 
 
 
-       <%  if current_user && current_user.avatar %>
+       <%  if current_user && current_user.avatar.attached? %>
         <script> 
       window.currentUser.avatar_url = "<%= url_for(current_user.avatar)%>"
       </script>
         <%end%>
 
-        <% if current_user && current_user.cover %>
+        <% if current_user  && current_user.cover.attached? %>
         <script> 
-      window.currentUser.cover_url = "<%= url_for(current_user.cover)%>"
+        window.currentUser.cover_url = "<%= url_for(current_user.cover)%>"
       </script>
         <%end%>
       
