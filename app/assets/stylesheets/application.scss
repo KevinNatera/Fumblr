@@ -20,6 +20,10 @@
     font-family: sans-serif;
   }
 
+body {
+  background-color: black;
+}
+
 .error {
     color: red
  }
@@ -187,13 +191,168 @@ button {
 }
 
 
-.profile-pic {
-  height: 50px;
-  width: 50px
-}
+
 
 #edit-profile-image {
   height: 200px;
   width: 200px
 }
 
+    
+
+.posts-index-item {
+  background: #333;
+  // border-radius: 3px;
+  // color: RGB(white);
+  // line-height: 0;
+  left: 100px;
+  max-width: 540px;
+  // max-width: 540px;
+  position: relative;
+  // width: 100%;
+  margin-bottom: 30px;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  
+}
+
+.posts-index-item::marker {
+    display: none;
+    color: transparent;
+}
+
+
+.p-i-header {
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 3px 3px 0 0;
+  // box-sizing: border-box;
+  // justify-content: left;
+  width: 100%;
+
+  span {
+    color: white;
+    right: 30px;
+    position: relative;
+    vertical-align: center;
+    top: -20px;
+    }
+}
+
+.profile-pic {
+  height: 50px;
+  width: 50px;
+  top: -18px;
+  left: -70px;
+  position: relative;
+}
+
+.p-i-title-div {
+  h1 {
+  color: white;
+  position: relative;
+  left: 20px;
+  top: -35px;
+
+  width: 510px;
+  font-size: 1.625rem;
+  font-weight: 400;
+  line-height: 1.3077;
+  overflow: auto;
+}
+ 
+}
+
+.p-i-body-div {
+  p {
+    color: white;
+    position: relative;
+    left: 20px;
+    top: -35px;
+    width: 510px;
+    height: 200px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // text-align: left;
+    // overflow: auto;
+    text-align: center;
+    // line-height: 100px;
+    vertical-align: middle;
+    // display: table-cell;
+    }
+
+    position: relative;
+    // display: table;
+    // width: 300px;
+    // height: 100px;
+}
+
+
+.p-i-footer {
+    //  display: flex;
+    // flex-wrap: wrap;
+    // justify-content: right;
+}
+
+hr {
+  width: 500px;
+  border-top: 1px solid #333;
+  color: red;
+}
+
+.edit-delete-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.like-comment-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  position: relative;
+  top: 5px;
+}
+
+.edit-post {
+  
+  margin-left: 30px;
+  margin-right: 20px;
+  // position: relative;
+}
+
+.delete-post {
+  
+}
+
+.like-post {
+  margin-left: 30px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.comment-post {
+  margin-bottom: 20px;
+}
+
+
+.user-show {
+
+  display: block;
+  h1 {
+    color: white;
+    position: relative;
+    left: 20px;
+  }
+}
+
+
+.edit-profile-frame {
+  h1 {
+    color: white;
+    position: relative;
+  }
+}

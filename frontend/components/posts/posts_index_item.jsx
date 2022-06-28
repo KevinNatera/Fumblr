@@ -104,21 +104,47 @@ class PostsIndexItem extends React.Component{
                //assign user info to this.state to call in the return below
       return (
            <li className="posts-index-item">
-                              {/* menu button goes to the top right of username */}
-                <img className="profile-pic" src={avatar_url}/> <h2>{username}</h2>      
+               
+               <header className="p-i-header">
+
+                <img className="profile-pic" src={avatar_url}/> <span>{username}</span> 
+
+                </header> 
+
+
+                <div className="p-i-title-div">
+
                 <h1>{this.props.post.title}</h1>
+
+                </div>
+
+
+               <div className="p-i-body-div">
+
                 <p>{this.props.post.body}</p>
+
+                </div>
                 
+
+               <footer className="p-i-footer">
+
+               <div className="edit-delete-div">
                 {deleteButton}
+
                 {editButton}
-                    <br></br>
+                    </div>
+                <hr noshade="true"></hr>
+                  
                     
-                    <br></br>
+              
+          
+               <div className="like-comment-div">
                     <button className="comment-post">COMMENT</button>
                                    
                     <button className="like-post" onClick={this.handleLike}> {this.likeButtonText} 
                     ({totalLikes})</button>
-               <h1>------------------------</h1>
+                         </div>
+               </footer>
            </li>
 
           
