@@ -36,7 +36,7 @@ export const receiveAllPosts = (posts) => ({
   export const requestAllPosts = () => dispatch => 
     PostUtil.fetchAllPosts()
       .then(posts => dispatch(receiveAllPosts(posts)),
-      err => dispatch(receiveErrors(err)) 
+      err => dispatch(receiveErrors(err))
   )
   
   export const requestSinglePost = (postId) => (dispatch) => 
@@ -48,7 +48,7 @@ export const receiveAllPosts = (posts) => ({
   export const updatePost = (post) => (dispatch) => 
     PostUtil.updatePost(post)
       .then(post => dispatch(receivePost(post)),
-      err => dispatch(receiveErrors(err)) 
+      err => dispatch(receiveErrors(err))
   );
 
   export const deletePost = (postId) => (dispatch) =>

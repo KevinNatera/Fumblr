@@ -256,39 +256,37 @@ button {
   position: relative;
   left: 20px;
   top: -35px;
-
+  // height: 100px;
   width: 510px;
   font-size: 1.625rem;
   font-weight: 400;
   line-height: 1.3077;
+  white-space: pre-wrap;
+  word-wrap: break-word;
   overflow: auto;
+
 }
  
 }
 
 .p-i-body-div {
+  
   p {
     color: white;
     position: relative;
     left: 20px;
     top: -35px;
     width: 510px;
-    height: 200px;
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: center;
-    // text-align: left;
-    // overflow: auto;
-    text-align: center;
-    // line-height: 100px;
-    vertical-align: middle;
-    // display: table-cell;
-    }
-
-    position: relative;
-    // display: table;
-    // width: 300px;
     // height: 100px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+    position: relative;
+    
+  }
+
+  
 }
 
 
