@@ -17,6 +17,7 @@ class PostsIndexItem extends React.Component{
         }
 
         this.likeButtonText = "LIKE"
+        this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/like_icon.png"
         this.handleLike = this.handleLike.bind(this)
         this.handleEdit = this.handleEdit.bind(this)
         this.deletePost = this.deletePost.bind(this)
@@ -47,11 +48,13 @@ class PostsIndexItem extends React.Component{
           
                this.likeButtonText = "UNLIKE"
                this.props.createLike(this.state.like)
+               this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/unlike_icon.png"
 
           } else {
 
                this.likeButtonText = "LIKE"
                this.props.deleteLike(this.state.like.id)
+               this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/like_icon.png"
           }
 
      }
@@ -62,8 +65,8 @@ class PostsIndexItem extends React.Component{
           let editButton;
           let deleteButton;
           if (this.props.currentUserId === this.props.post.author_id) {
-               editButton = <button className="edit-post"onClick={this.handleEdit} >EDIT</button>
-               deleteButton = <button className="delete-post" onClick={this.deletePost} >DELETE</button>
+               editButton = <button className="edit-post"onClick={this.handleEdit} ></button>
+               deleteButton = <button className="delete-post" onClick={this.deletePost} ></button>
           }
           
           let user;
@@ -105,6 +108,7 @@ class PostsIndexItem extends React.Component{
          for(let i = 0; i < likeArr.length; i++) {
           if (likeArr[i].liker_id === this.state.like.liker_id && likeArr[i].post_id === this.state.like.post_id) {
                this.likeButtonText = "UNLIKE";
+               this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/unlike_icon.png"
                this.state.like.id = likeArr[i].id
                break
           }
@@ -156,9 +160,9 @@ class PostsIndexItem extends React.Component{
                          {totalLikes}
                     </div>
 
-                    <button className="comment-post">COMMENT</button>
-                                   
-                    <button className="like-post" onClick={this.handleLike}> {this.likeButtonText} 
+                    <button className="comment-post"></button>
+                                    
+                    <button className="like-post" style={ { backgroundImage: `url( ${this.likeImgUrl} )` } } onClick={this.handleLike}>
                     </button>
                          </div>
                </footer>
