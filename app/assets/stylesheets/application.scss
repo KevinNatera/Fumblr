@@ -101,22 +101,47 @@ body {
 
 .create-post-frame {
   display: flex;
-  position: sticky;
+  position: relative;
   justify-content: space-evenly;
   padding: 20px;
-  
+  left: 100px;
+  width: 500px;
+  top: 20px;
+
   background: #333;
   align-items: center;
-  .btn {
+
+  h1 {
+    color: white;
+  }
+  .create-btn {
     display: block;
-    background-color: white;
     padding: 10px;
-    box-shadow: 3px 3px 3px darkblue;
-    text-decoration: none;
+    background-image: url("https://fumblr11-seeds.s3.amazonaws.com/text_icon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background-color: #333;
+    border: none;
+
+    span {
+      color: white;
+      position: relative;
+      top: 30px;
+      right: 5px;
+      font-size: 20px;
+      font-weight: 700;
+      width: 100px;
+      text-align: left;
+      overflow: auto;
+      position: relative;
+    }
+    
   }
   .btn:hover {
-     background-color: rgb(240, 240, 240);
-     box-shadow: 1px 1px 1px darkblue;
      cursor: pointer;
   }
 }
