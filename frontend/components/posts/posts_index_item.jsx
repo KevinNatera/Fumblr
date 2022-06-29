@@ -84,7 +84,17 @@ class PostsIndexItem extends React.Component{
           }
 
           let likeArr = (this.props.likes.filter(like => like.post_id === this.props.post.id))
-          let totalLikes = likeArr.length
+          
+          let totalLikes = `${likeArr.length} Notes`
+          
+          if (likeArr.length === 0) {
+               totalLikes = ""
+          }
+
+          if (likeArr.length === 1) {
+               totalLikes = `${likeArr.length} Note`
+          }
+
            this.state.like = {
                     liker_id: this.props.currentUser,
                     post_id: this.props.post.id
@@ -141,10 +151,15 @@ class PostsIndexItem extends React.Component{
               
           
                <div className="like-comment-div">
+
+                    <div className="note-div">
+                         {totalLikes}
+                    </div>
+
                     <button className="comment-post">COMMENT</button>
                                    
                     <button className="like-post" onClick={this.handleLike}> {this.likeButtonText} 
-                    ({totalLikes})</button>
+                    </button>
                          </div>
                </footer>
            </li>
