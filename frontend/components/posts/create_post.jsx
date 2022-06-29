@@ -19,8 +19,8 @@ class CreatePost extends React.Component {
             <div className="create-post-frame">
                <h1> Create Post</h1>
               {/* <Link className="btn" to="/new/text" onClick={this.props.openCreateTextPost}>Text</Link> */}
-              <button className="btn" onClick={this.props.openCreateTextPost}>Text</button>
-    
+              <button className="create-btn" onClick={this.props.openCreateTextPost}><span>Text</span></button>
+                
              
               {/* <button className="btn" >Photo</button> */}
 
