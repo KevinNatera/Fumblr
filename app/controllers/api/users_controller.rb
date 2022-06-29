@@ -48,6 +48,7 @@ class Api::UsersController < ApplicationController
         if params[:avatar] != nil
         
           @user.avatar.attach(params[:avatar])
+          
         end
 
         if params[:cover] != nil

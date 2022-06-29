@@ -15,6 +15,7 @@ class PostsIndexItem extends React.Component{
                 post_id:""
              }
         }
+
         this.likeButtonText = "LIKE"
         this.handleLike = this.handleLike.bind(this)
         this.handleEdit = this.handleEdit.bind(this)
@@ -123,6 +124,7 @@ class PostsIndexItem extends React.Component{
 
                 <p>{this.props.post.body}</p>
 
+          
                 </div>
                 
 
