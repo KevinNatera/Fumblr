@@ -1,9 +1,6 @@
 export const selectAllPosts = (state) => {
     let arr = Object.values(state.entities.posts)
-    // console.log(arr)
-    // console.log(arr.sort((a,b ) => a - b))
     return arr.reverse()
-    //sort
 }
 
 export const selectUserPosts = (state,id) => {
@@ -38,4 +35,9 @@ export const selectAllUsers = (state) => {
 }
 export const selectAllLikes = (state) => {
     return Object.values(state.entities.likes)
+}
+
+export const selectAllComments = (state) => {
+    let arr = Object.values(state.entities.comments)
+    return arr.reverse()
 }
