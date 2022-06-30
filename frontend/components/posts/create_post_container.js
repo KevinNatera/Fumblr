@@ -5,7 +5,7 @@ import { openModal } from '../../actions/modal';
 import CreatePost from './create_post'
 
 const mapStateToProps = (state, ownProps) => ({
-    currentUser: state.session.id,
+    currentUser: state.entities.users[state.session.id],
     errors: state.errors.post
 })
 

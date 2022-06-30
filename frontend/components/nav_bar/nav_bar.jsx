@@ -16,7 +16,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
       <div>
         <h2> Welcome, {currentUser.username}!</h2>
         <div className="profile-pic-frame">
-        <img className="profile-pic" src={currentUser.avatar_url ? currentUser.avatar_url : "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"}/>
+        <img className="nav-profile-pic" src={currentUser.avatar_url ? currentUser.avatar_url : "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"}/>
         </div>
         <Link className="btn" to="/explore">Home</Link>
         <Link className="btn" to="/profile">Profile</Link>
