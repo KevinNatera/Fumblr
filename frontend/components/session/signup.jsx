@@ -67,7 +67,7 @@ class Signup extends React.Component {
                             />
                     </label>
                     <br></br>
-                    <label>Email:
+                    <label className="email-label">Email:
                         <input
                             type="text"
                             value={this.state.email}
