@@ -554,13 +554,29 @@ hr {
   top: -20px;
   left: 60px;
   z-index: 15;
+  cursor: pointer;
+}
+
+.delete-comment-btn {
+    height: 30px;
+    width: 50px;
+    position: relative;
+    left: 250px;
+    top: 20px;
+    background-color: #333;
+    background-image: url("https://fumblr11-seeds.s3.amazonaws.com/delete_icon.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 50% 50%;
+    border: none;
+    z-index: 5;
+    cursor: pointer;
 }
 
 .comment-errors {
  position: relative;
  height: 20px;
  left: 150px;
-
 }
 
 
