@@ -173,7 +173,7 @@ body {
   position: relative;
   justify-content: space-evenly;
   padding: 20px;
-  left: 100px;
+  left: 380px;
   width: 500px;
   top: 20px;
 
@@ -306,12 +306,16 @@ button {
 
 .posts-index-item {
   background: #333;
-  left: 100px;
+  left: 380px;
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
 
   h1 {
+    color: white;
+    position: relative;
+    left: 20px;
+    width: 500px;
     z-index: 1;
   }
   
@@ -362,7 +366,7 @@ button {
   height: 50px;
   width: 50px;
   top: 73px;
-  left: 30px;
+  left: 310px;
   position: relative
 }
 
@@ -474,44 +478,77 @@ hr {
 .user-show {
 
   display: block;
-  h1 {
-    color: white;
-    position: relative;
-    left: 20px;
-    width: 500px;
+
+  
+    h1.page {
+      color: white;
+      position: relative;
+      left: 575px;
+      top: 10px;
+      width: 500px;
   }
+
+
 }
 
 
 .edit-profile-frame {
+  position: relative;
+  left: 380px; 
+  top: 50px;
+
   h1 {
     color: white;
     position: relative;
     width: 500px;
+    left: 50px;
   }
 
   .edit-profile-divider {
     border-bottom: 1px solid gray;
     position: relative;
-    top: 10px;
+    top: 20px;
+    left: 20px;
     width: 500px;
   }
 
-  .comments {
-    width: 540px;
-    height: 540px;
-
+  .edit-profile-preview-frame, .edit-cover-preview-frame {
     position: relative;
-    background-color: blue;
-
-    h1 {
-      background-color: red;
-      color: blue;
-    }
+    left: 175px;
   }
 
-  .commenth1 {
-    background-color: red;
-    color: blue;
+  .edit-profile-input, .edit-cover-input {
+    position: relative;
+    left: 230px;
+    top: 10px;
   }
+
+  .edit-profile-submit {
+    position: relative;
+    right: 25px;
+    bottom: 620px;
+  }
+  
 }
+
+// .comments {
+//   width: 540px;
+//   height: 540px;
+
+//   position: relative;
+//   background-color: blue;
+
+//   h1 {
+//     background-color: red;
+//     color: blue;
+//   }
+// }
+
+// .commenth1 {
+//   background-color: red;
+//   color: blue;
+// }
+
+// .comment-item {
+//   background-color: red;
+// }

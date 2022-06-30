@@ -18,7 +18,7 @@ class PostsIndex extends React.Component {
         
         return (
             <div className="user-show">
-                <h1>{this.props.text}</h1>
+                <h1 className="page">{this.props.text}</h1>
                
 
                 {this.props.posts.map((post) => (
