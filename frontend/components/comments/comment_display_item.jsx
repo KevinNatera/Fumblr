@@ -19,7 +19,7 @@ class CommentDisplayItem extends React.Component {
 
                 <h2>{this.props.commenter.username}</h2>
                 <p>{this.props.comment.body}</p>
-                    
+                    {/* ADD PICTURE AND STYLE THIS SHIT AND WE LIT, also remove refresh from posts */}
              
                 
             </div>

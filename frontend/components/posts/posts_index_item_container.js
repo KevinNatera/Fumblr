@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { selectAllUsers, selectAllLikes } from '../../reducers/selectors';
-import { requestSinglePost, deletePost } from '../../actions/posts'
+import { requestSinglePost, requestAllPosts, deletePost } from '../../actions/posts'
 import { createLike, deleteLike } from '../../actions/likes'
 import { openModal } from '../../actions/modal';
 // import { clearErrors } from '../../actions/session'
@@ -15,6 +15,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
     requestSinglePost: (id) => dispatch(requestSinglePost(id)),
+    requestAllPosts: () => dispatch(requestAllPosts()),
     deletePost: () => dispatch(deletePost(ownProps.post.id)),
     openEditPostForm: () => dispatch(openModal('new/edit')),
     createLike: (like) => dispatch(createLike(like)),
