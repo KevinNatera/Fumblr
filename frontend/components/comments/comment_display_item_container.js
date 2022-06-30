@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { selectAllUsers, selectAllLikes } from '../../reducers/selectors';
+import { selectCommenter, selectAllLikes } from '../../reducers/selectors';
 import { requestSinglePost, deletePost } from '../../actions/posts'
 import {  deleteComment } from '../../actions/comments'
 import { openModal } from '../../actions/modal';
@@ -7,7 +7,7 @@ import { openModal } from '../../actions/modal';
 import CommentDisplayItem from './comment_display_item'
 
 const mapStateToProps = (state, ownProps) => ({
-    users: selectAllUsers(state),
+    commenter: selectCommenter(state, ownProps.comment.commenter_id),
     likes: selectAllLikes(state),
     currentUser: state.entities.users[state.session.id]
     // errors: state.errors.session
@@ -16,7 +16,6 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
     requestSinglePost: (id) => dispatch(requestSinglePost(id)),
     deleteComment: (commentId) => dispatch(deleteComment(commentId))
-    
     // clearErrors: () => dispatch(clearErrors())
 });
 

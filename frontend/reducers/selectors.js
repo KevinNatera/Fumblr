@@ -33,6 +33,11 @@ export const selectUserLikedPosts = (state,id) => {
 export const selectAllUsers = (state) => {
     return Object.values(state.entities.users)
 }
+
+export const selectCommenter = (state, commenterId) => {
+    return Object.values(state.entities.users).filter(user => user.id === commenterId)[0]
+}
+
 export const selectAllLikes = (state) => {
     return Object.values(state.entities.likes)
 }
