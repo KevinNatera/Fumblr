@@ -18,7 +18,7 @@ class CreatePost extends React.Component {
         let avatar_url = "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png";
           
 
-            if (this.props.currentUser.avatar_url) {
+            if (this.props.currentUser !== undefined && this.props.currentUser.avatar_url !== undefined) {
               avatar_url = this.props.currentUser.avatar_url
             }
             
