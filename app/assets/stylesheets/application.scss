@@ -532,10 +532,35 @@ hr {
   
 }
 
+.comments {
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 
 .create-comment {
   position: relative;
-  top: -30px;
+  top: 35px;
+  left: 50px;
+  width: 350px;
+  height: 50px;
+  margin-bottom: 30px;
+  // z-index: 5;
+}
+
+.create-comment-btn {
+  position: relative;
+  top: -20px;
+  left: 60px;
+  z-index: 15;
+}
+
+.comment-errors {
+ position: relative;
+ height: 20px;
+ left: 150px;
+
 }
 
 
@@ -544,18 +569,23 @@ hr {
   // justify-content: left;
   // max-width: 450px;
   position: relative;
-  top: -50px;
+  // top: -50px;
 
   margin-bottom: 20px;
 }
 
 .main-comment-div {
-  max-width: 450px;
+  max-width: 400px;
   position: relative;
   left: 80px;
   top: -53px;
   border: 1px solid gray;
   border-radius: 25px;
+  color: white;
+     text-align: left;
+     white-space: pre-wrap;
+     word-wrap: break-word;
+     position: relative;
 }
 
 .comment-header {
@@ -572,12 +602,13 @@ hr {
     text-align: left;
     white-space: pre-wrap;
     word-wrap: break-word;
-    overflow: auto;
     position: relative;
   }
 }
 
-.comment-profile-pic {
+
+
+.comment-profile-pic, .current-user-comment-pic {
   height: 50px;
   width: 50px;
   position: relative;
@@ -590,11 +621,13 @@ hr {
   top: -40px;
   left: 30px;
   p {
+    width: 350px;
      color: white;
      text-align: left;
      white-space: pre-wrap;
      word-wrap: break-word;
-     overflow: auto;
      position: relative;
   }
+
+ 
 }

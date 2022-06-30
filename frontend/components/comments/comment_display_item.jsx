@@ -26,8 +26,10 @@ class CommentDisplayItem extends React.Component {
                 <header className="comment-header">
                 
                 <h3>{this.props.commenter.username}</h3>
-                        {/* followbutton */}
+                        {/* follow button */}
+                        {/* delete button */}
                 </header>
+
 
                 <div className="comment-body-div">
                 <p>{this.props.comment.body}</p>
