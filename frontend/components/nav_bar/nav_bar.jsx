@@ -45,7 +45,9 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
 
   return (
     <header className="nav-bar">
-      <h1 className="logo">Fumblr</h1>
+      {/* <h1 className="logo">Fumblr</h1>
+       */}
+       <img className="logo" src="https://fumblr11-seeds.s3.amazonaws.com/fumblr_logo.png"/>
       <div>
         {display}
       </div>
