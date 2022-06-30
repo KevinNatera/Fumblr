@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { selectAllUsers, selectAllLikes , selectAllComments } from '../../reducers/selectors';
+import { selectAllUsers, selectAllLikes , selectPostComments } from '../../reducers/selectors';
 import { requestSinglePost } from '../../actions/posts'
 import { createComment, deleteComment } from '../../actions/comments'
 // import { clearErrors } from '../../actions/session'
@@ -8,7 +8,7 @@ import CommentDisplay from './comment_display'
 const mapStateToProps = (state, ownProps) => ({
     users: selectAllUsers(state),
     likes: selectAllLikes(state),
-    comments: selectAllComments(state),
+    comments: selectPostComments(state, ownProps.post.id),
     currentUser: state.entities.users[state.session.id]
     // errors: state.errors.session
 })

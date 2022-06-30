@@ -41,3 +41,8 @@ export const selectAllComments = (state) => {
     let arr = Object.values(state.entities.comments)
     return arr.reverse()
 }
+
+export const selectPostComments = (state, postId) => {
+    let arr = Object.values(state.entities.comments).filter(comment => comment.post_id == postId)
+    return arr.reverse()
+}
