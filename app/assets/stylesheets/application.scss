@@ -134,7 +134,7 @@ body {
   position: relative;
   justify-content: right;
   padding: 20px;
-  right: 50px;
+  right: 20px;
   top: 50px;
   background: black;
   align-items: center;
@@ -250,7 +250,8 @@ body {
   form {
    height: 500px;
    width: 400px;
-   background: rgb(240, 240, 240);
+   color: white;
+   background-color: #333;
    display: flex;
    flex-direction: column;
    justify-content: center;
