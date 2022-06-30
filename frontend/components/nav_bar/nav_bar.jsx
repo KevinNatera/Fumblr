@@ -18,9 +18,15 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
         <div className="profile-pic-frame">
         <img className="nav-profile-pic" src={currentUser.avatar_url ? currentUser.avatar_url : "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"}/>
         </div>
-        <Link className="btn" to="/explore">Home</Link>
-        <Link className="btn" to="/profile">Profile</Link>
-        <button className="btn" onClick={logout}>Log Out</button>
+       
+        <Link className="home-btn" to="/explore">
+        <img className="home-btn-img" src="https://fumblr11-seeds.s3.amazonaws.com/home_icon.png"/>
+        </Link>
+       
+        <Link className="profile-btn" to="/profile">
+        <img className="profile-btn-img" src="https://fumblr11-seeds.s3.amazonaws.com/profile_icon.png"/>
+        </Link>
+        <button className="logout-btn" onClick={logout}></button>
       </div>
   )  
       :  //if there is no currentUser, return the following instead
@@ -28,8 +34,8 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
     <div>
 
     
-    <button className="btn" onClick={openLoginForm}>Login</button> 
-    <button className="btn" onClick={openSignupForm}>Sign Up</button> 
+    <button className="login-btn" onClick={openLoginForm}>Login</button> 
+    <button className="signup-btn" onClick={openSignupForm}>Sign Up</button> 
 {/*       
       <Link className="btn" to="/signup">Sign Up</Link>
       <Link className="btn" to="login">Log In</Link> */}

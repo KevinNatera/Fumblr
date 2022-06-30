@@ -58,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  border-bottom: 1px solid gray;
   h1 {
   height: 100%;
   z-index: 1;
@@ -73,24 +74,56 @@ body {
   padding: 20px;
   background: black;
   align-items: center;
-  .btn {
-    padding: 10px;
-    box-shadow: 3px 3px 3px darkblue;
-    text-decoration: none;
-    background-color: white;
-  }
+  border-bottom: 1px solid gray;
+
   .btn:hover {
      background-color: rgb(240, 240, 240);
      box-shadow: 1px 1px 1px darkblue;
      cursor: pointer;
   }
-
+      
   div {
-    h2 {
-      color:white;
+      h2 {
+        color:white;
+      }
     }
-  }
+
 }
+
+  .home-btn, .profile-btn, .logout-btn, .login-btn, .signup-btn { 
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: 50% 50%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  
+  .home-btn {
+   
+  }
+  
+  .home-btn-img, .profile-btn-img {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    margin-right: 20px;
+    left: 20px;
+    top: -5px;
+  }
+ 
+  .logout-btn {
+    background-image: url("https://fumblr11-seeds.s3.amazonaws.com/logout_icon.png");
+    position: relative;
+    left: 15px;
+  }
+
+
+  
+
 
 .user-show-nav-bar {
   display: flexbox;
@@ -387,6 +420,8 @@ hr {
   word-wrap: break-word;
 }
 
+
+
 .edit-post, .delete-post, .like-post, .comment-post {
   background-repeat: no-repeat;
   // background-size: cover;
@@ -398,6 +433,8 @@ hr {
   background-color: #333;
   cursor: pointer;
 }
+
+
 
 .edit-post {
   
@@ -437,6 +474,13 @@ hr {
   h1 {
     color: white;
     position: relative;
+    width: 500px;
+  }
+
+  .edit-profile-divider {
+    border-bottom: 1px solid gray;
+    position: relative;
+    top: 10px;
     width: 500px;
   }
 }
