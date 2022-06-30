@@ -56,6 +56,8 @@ class CommentDisplay extends React.Component {
             avatar_url = this.props.currentUser.avatar_url
         }
 
+        
+
         return (
 
             

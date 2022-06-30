@@ -4,10 +4,19 @@ import React from 'react'
 class CommentDisplayItem extends React.Component {
     constructor(props){
         super(props)
+
+        this.deleteComment = this.deleteComment.bind(this)
     }
         
     componentDidMount(){
         // console.log(this.props)
+    }
+
+    deleteComment(e) {
+        e.preventDefault()
+
+        this.props.deleteComment(this.props.comment.id)
+
     }
 
     render() {
@@ -16,6 +25,12 @@ class CommentDisplayItem extends React.Component {
         if (this.props.commenter.avatar_url) {
             avatar_url = this.props.commenter.avatar_url
         }
+
+        let deleteButton;
+
+        if (this.props.currentUser.id === this.props.comment.commenter_id) {
+            deleteButton = <button className="delete-comment-btn" onClick={this.deleteComment} ></button>
+       }
         
         return (
             <div className="comment-item">
@@ -27,7 +42,7 @@ class CommentDisplayItem extends React.Component {
                 
                 <h3>{this.props.commenter.username}</h3>
                         {/* follow button */}
-                        {/* delete button */}
+                        {deleteButton}
                 </header>
 
 
