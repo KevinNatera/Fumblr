@@ -18,6 +18,10 @@ class User < ApplicationRecord
     before_validation :ensure_seession_token
     attr_reader :password
 
+    has_one_attached :avatar 
+
+    has_one_attached :cover 
+
     has_many :posts,
         primary_key: :id,
         foreign_key: :author_id,
@@ -28,9 +32,12 @@ class User < ApplicationRecord
         foreign_key: :liker_id,
         class_name: :Like
 
-    has_one_attached :avatar 
+    has_many :comments,
+        primary_key: :id,
+        foreign_key: :commenter_id,
+        class_name: :Comment
 
-    has_one_attached :cover 
+   
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
