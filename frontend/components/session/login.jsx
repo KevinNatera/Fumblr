@@ -55,7 +55,7 @@ class Login extends React.Component {
                 
                 <form>
                 <h2>Fumblr</h2>
-                    <label>Email:
+                    <label className="email-label">Email:
                         <input
                             type="text"
                             value={this.state.email}
