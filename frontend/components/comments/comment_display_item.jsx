@@ -7,7 +7,7 @@ class CommentDisplayItem extends React.Component {
     }
         
     componentDidMount(){
-  
+        console.log(this.props)
     }
 
     render() {
@@ -15,8 +15,10 @@ class CommentDisplayItem extends React.Component {
         return (
             <div className="comment-item">
                 
-               
-                <h1>{this.props.comment.body}</h1>
+                {/* <img className="comment-profile-pic" src={avatar_url}/> */}
+
+                <h2>{this.props.commenter.username}</h2>
+                <p>{this.props.comment.body}</p>
                     
              
                 

@@ -7,7 +7,6 @@ class PostsIndex extends React.Component {
     }
         
     componentDidMount() {
-        console.log(this.props)
         this.props.requestAllUsers(),
         this.props.requestAllPosts(),
         this.props.requestAllLikes()

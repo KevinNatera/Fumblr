@@ -10,7 +10,7 @@ class CommentDisplay extends React.Component {
         // this.props.requestAllUsers(),
         // this.props.requestAllPosts(),
         // this.props.requestAllLikes()
-        console.log(this.props)
+        // console.log(this.props)
         
     }
 
