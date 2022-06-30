@@ -1,5 +1,4 @@
 class Api::PostsController < ApplicationController
-    # before_action :require_logged_in, only: [:index, :new, :create, :edit, :update]
 
     def new 
         @post = Post.new
