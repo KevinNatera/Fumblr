@@ -155,6 +155,36 @@ ActiveRecord::Base.transaction do
         post_id: 2,
     )
 
+    comment1 = Comment.create(
+        commenter_id: 3,
+        post_id: 2,
+        body: "Nah the first post got it"
+    )
+
+    comment2 = Comment.create(
+        commenter_id: 4,
+        post_id: 6,
+        body: "Get a load of this fella"
+    )
+
+    comment3 = Comment.create(
+        commenter_id: 6,
+        post_id: 6,
+        body: "No one likes you."
+    )
+
+    comment4 = Comment.create(
+        commenter_id: 4,
+        post_id: 5,
+        body: "wat"
+    )
+
+    comment5 = Comment.create(
+        commenter_id: 1,
+        post_id: 5,
+        body: "He is speaking the language of the gods."
+    )
+
     # basicAttackPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/basic_attack_copy.png")
     # goldPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/gold+copy.png")
     # healPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/heal+copy.png")
@@ -176,13 +206,6 @@ ActiveRecord::Base.transaction do
     # user5.save! 
     # user6.avatar.attach(io: defaultBatman3, filename: 'default_batman.png')
     # user6.save! 
-
-    # comment1 = Comment.create(
-    #     id: 1,
-    #     user_id: 1,
-    #     artwork_id: 1,
-    #     body: "I'M THE GREATEST"
-    # )
 
   
   end
