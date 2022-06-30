@@ -75,12 +75,6 @@ body {
   background: black;
   align-items: center;
   border-bottom: 1px solid gray;
-
-  .btn:hover {
-     background-color: rgb(240, 240, 240);
-     box-shadow: 1px 1px 1px darkblue;
-     cursor: pointer;
-  }
       
   div {
       h2 {
@@ -97,13 +91,23 @@ body {
     height: 50px;
     width: 50px;
     border: none;
-    color: white;
     background-color: black;
+    font-weight: bold;
     cursor: pointer;
   }
-  
-  .home-btn {
-   
+
+  .login-btn, .signup-btn {
+    width: 100px;
+    height: 40px;
+  }
+
+  .login-btn {
+    background-color: green;
+  }
+
+  .signup-btn {
+    margin-left: 30px;
+    background-color: cornflowerblue;
   }
   
   .home-btn-img, .profile-btn-img {
@@ -135,7 +139,7 @@ body {
   background: black;
   align-items: center;
   float: right;
-  // z-index: 5;
+  z-index: 5;
 
   .btn {
     display: block;
