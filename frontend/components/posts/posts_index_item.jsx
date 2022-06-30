@@ -98,15 +98,16 @@ class PostsIndexItem extends React.Component{
           }
 
           let likeArr = (this.props.likes.filter(like => like.post_id === this.props.post.id))
+          let commentArr = (this.props.comments.filter(comment => comment.post_id === this.props.post.id))
           
-          let totalLikes = `${likeArr.length} Notes`
+          let totalNotes = `${likeArr.length + commentArr.length} Notes`
           
-          if (likeArr.length === 0) {
-               totalLikes = ""
+          if (likeArr.length + commentArr.length === 0) {
+               totalNotes = ""
           }
 
-          if (likeArr.length === 1) {
-               totalLikes = `${likeArr.length} Note`
+          if (likeArr.length + commentArr.length === 1) {
+               totalNotes = `${likeArr.length + commentArr.length} Note`
           }
 
            this.state.like = {
@@ -168,7 +169,7 @@ class PostsIndexItem extends React.Component{
                <div className="like-comment-div">
 
                     <div className="note-div">
-                         {totalLikes}
+                         {totalNotes}
                     </div>
 
                     <button className="comment-post" onClick={this.toggleCommentDisplay}>
