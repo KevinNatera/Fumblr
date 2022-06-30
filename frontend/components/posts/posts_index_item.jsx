@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import CommentDisplayContainer from '../comments/comment_display_container';
 
 
 
@@ -16,17 +16,29 @@ class PostsIndexItem extends React.Component{
              }
         }
 
+        this.commentDisplay = false
+
         this.likeButtonText = "LIKE"
         this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/like_icon.png"
         this.handleLike = this.handleLike.bind(this)
         this.handleEdit = this.handleEdit.bind(this)
         this.deletePost = this.deletePost.bind(this)
-        
+        this.toggleCommentDisplay = this.toggleCommentDisplay.bind(this)
 
      }
     
     componentDidMount(){
      
+    }
+
+    toggleCommentDisplay() {
+          if (this.commentDisplay === false) {
+               this.commentDisplay = true
+          } else if (this.commentDisplay === true) {
+               this.commentDisplay = false
+          }
+
+          this.setState({like: this.state.like})
     }
     
      deletePost = () => {
@@ -65,7 +77,7 @@ class PostsIndexItem extends React.Component{
           let editButton;
           let deleteButton;
           if (this.props.currentUserId === this.props.post.author_id) {
-               editButton = <button className="edit-post"onClick={this.handleEdit} ></button>
+               editButton = <button className="edit-post" onClick={this.handleEdit} ></button>
                deleteButton = <button className="delete-post" onClick={this.deletePost} ></button>
           }
           
@@ -160,12 +172,15 @@ class PostsIndexItem extends React.Component{
                          {totalLikes}
                     </div>
 
-                    <button className="comment-post"></button>
+                    <button className="comment-post" onClick={this.toggleCommentDisplay}>
+                    </button>
                                     
                     <button className="like-post" style={ { backgroundImage: `url( ${this.likeImgUrl} )` } } onClick={this.handleLike}>
                     </button>
                          </div>
                </footer>
+
+               {this.commentDisplay === true ? <CommentDisplayContainer post={this.props.post} /> : null}
            </li>
 
           

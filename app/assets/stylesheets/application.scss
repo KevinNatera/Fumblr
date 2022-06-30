@@ -496,4 +496,22 @@ hr {
     top: 10px;
     width: 500px;
   }
+
+  .comments {
+    width: 540px;
+    height: 540px;
+
+    position: relative;
+    background-color: blue;
+
+    h1 {
+      background-color: red;
+      color: blue;
+    }
+  }
+
+  .commenth1 {
+    background-color: red;
+    color: blue;
+  }
 }
