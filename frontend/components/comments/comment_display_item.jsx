@@ -7,21 +7,34 @@ class CommentDisplayItem extends React.Component {
     }
         
     componentDidMount(){
-        console.log(this.props)
+        // console.log(this.props)
     }
 
     render() {
+        let avatar_url = "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png";
+           
+        if (this.props.commenter.avatar_url) {
+            avatar_url = this.props.commenter.avatar_url
+        }
         
         return (
             <div className="comment-item">
                 
-                {/* <img className="comment-profile-pic" src={avatar_url}/> */}
-
-                <h2>{this.props.commenter.username}</h2>
-                <p>{this.props.comment.body}</p>
-                    {/* ADD PICTURE AND STYLE THIS SHIT AND WE LIT, also remove refresh from posts */}
-             
+                <img className="comment-profile-pic" src={avatar_url}/>
+            
+            <div className="main-comment-div">
+                <header className="comment-header">
                 
+                <h3>{this.props.commenter.username}</h3>
+                        {/* followbutton */}
+                </header>
+
+                <div className="comment-body-div">
+                <p>{this.props.comment.body}</p>
+                    </div>
+
+
+                    </div>
             </div>
         )
     }

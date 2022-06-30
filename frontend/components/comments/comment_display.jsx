@@ -11,7 +11,6 @@ class CommentDisplay extends React.Component {
         // this.props.requestAllPosts(),
         // this.props.requestAllLikes()
         // console.log(this.props)
-        
     }
 
     render() {
@@ -20,7 +19,7 @@ class CommentDisplay extends React.Component {
             <div className="comments">
 
 
-                <h1 className="commenth1">Comments</h1>
+                <h1 className="create-comment">Create Comment</h1>
 
 
                  {this.props.comments.map((comment) => (
