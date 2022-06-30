@@ -122,7 +122,8 @@ class EditProfilePictureForm extends React.Component {
 
               </img>
           </div>
-            <input 
+            <input
+              className="edit-profile-input"
               type="file"
               accept="image/png, image/jpeg"
               name="avatar"
@@ -142,7 +143,8 @@ class EditProfilePictureForm extends React.Component {
               </img>
           </div>
 
-            <input 
+            <input
+              className="edit-cover-input"
               type="file"
               accept="image/png, image/jpeg"
               name="cover"
@@ -150,7 +152,7 @@ class EditProfilePictureForm extends React.Component {
             />
           
 
-          <input type="hidden" ref={this.submitButton}/>
+          <input className="edit-profile-submit" type="hidden" value="Update Profile" ref={this.submitButton}/>
 
           </form>
 
