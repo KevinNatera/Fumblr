@@ -26,7 +26,7 @@ export default () => (
     <Modal/> 
 
     <Route path="/" component={NavBarContainer} />
-    <Route path="/" render={() => <Redirect to="/explore" />} />
+    <Route exact path="/" render={() => <Redirect to="/explore" />} />
    
     <ProtectedRoute path={["/profile","/activity","/followers","/comments","/edit-profile","/new"]} component={UserShowNavContainer} />
     

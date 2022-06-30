@@ -122,7 +122,7 @@ class PostsIndexItem extends React.Component{
                
                <header className="p-i-header">
 
-                <img className="profile-pic" src={avatar_url}/> <span>{username}</span> 
+                <img className="post-profile-pic" src={avatar_url}/> <span>{username}</span> 
 
                 </header> 
 

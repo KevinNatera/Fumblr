@@ -10,19 +10,32 @@ class CreatePost extends React.Component {
     }
         
     componentDidMount(){
-
+      
     }
 
 
     render() {
+        let avatar_url = "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png";
+          
+
+            if (this.props.currentUser.avatar_url) {
+              avatar_url = this.props.currentUser.avatar_url
+            }
+            
+
+
         return (
+            <div> 
+                <img className="create-profile-pic" src={avatar_url}/>
+
             <div className="create-post-frame">
-               <h1> Create Post</h1>
+
+               
               {/* <Link className="btn" to="/new/text" onClick={this.props.openCreateTextPost}>Text</Link> */}
               <button className="create-btn" onClick={this.props.openCreateTextPost}><span>Text</span></button>
-                
-             
-              {/* <button className="btn" >Photo</button> */}
+              
+
+            </div>
 
             </div>
         )

@@ -53,6 +53,8 @@ class CreateTextForm extends React.Component {
         )}
         
         return (
+
+            
             <div className="create-post">
                 
                 <form>
