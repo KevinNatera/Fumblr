@@ -10,7 +10,7 @@ class CreateTextForm extends React.Component {
             title: '',
             body: ''
         }
-
+        
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleCancel = this.handleCancel.bind(this)
     }
