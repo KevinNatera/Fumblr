@@ -17,7 +17,7 @@ class CommentDisplayItem extends React.Component {
                 
                
                 <h1>{this.props.comment.body}</h1>
-               
+                    
              
                 
             </div>
