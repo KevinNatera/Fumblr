@@ -40,15 +40,15 @@ class EditPostForm extends React.Component {
         e.preventDefault()
        
         this.props.updatePost(this.state)
-            .then( () => this.props.closeModal())  //success             //fail ,() => window.location.reload() 
-            .then( () => window.location.reload())
-            // .then( () => this.props.history.goBack()) if using link
+            .then( () => this.props.closeModal())
+            .then( () => this.props.requestAllPosts())
     }  
 
     handleCancel(e) {
         e.preventDefault()
         this.props.closeModal()
-        window.location.reload()
+        // this.props.requestAllPosts()
+        // window.location.reload()
         // this.props.history.goBack()
     }
       

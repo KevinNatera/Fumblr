@@ -43,14 +43,13 @@ class PostsIndexItem extends React.Component{
     
      deletePost = () => {
           this.props.deletePost(this.props.post.id)
-          .then(() => { window.location.reload()})
-
      }
 
      handleEdit = (e) => {
           e.preventDefault()
           this.props.requestSinglePost(this.props.post.id)
           .then( () => {this.props.openEditPostForm()} )
+          .then( () => {this.props.requestAllPosts()})
      }
 
      handleLike = (e) => {

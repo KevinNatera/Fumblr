@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { updatePost } from '../../actions/posts'
+import { updatePost, requestAllPosts } from '../../actions/posts'
 import { clearErrors } from '../../actions/session'
 import { closeModal } from '../../actions/modal';
 import { selectAllPosts } from '../../reducers/selectors';
@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
     updatePost: (post) => dispatch(updatePost(post)),
+    requestAllPosts: () => dispatch(requestAllPosts()),
     closeModal: () => dispatch(closeModal()),
     clearErrors: () => dispatch(clearErrors())
 });
