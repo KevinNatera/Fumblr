@@ -54,7 +54,7 @@ class Login extends React.Component {
             <div className="session-form">
                 
                 <form>
-                <h2>Login!</h2>
+                <h2>Fumblr</h2>
                     <label>Email:
                         <input
                             type="text"
