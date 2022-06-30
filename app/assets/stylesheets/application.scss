@@ -527,28 +527,74 @@ hr {
     position: relative;
     right: 25px;
     bottom: 620px;
+    z-index: 10;
   }
   
 }
 
-// .comments {
-//   width: 540px;
-//   height: 540px;
 
-//   position: relative;
-//   background-color: blue;
+.create-comment {
+  position: relative;
+  top: -30px;
+}
 
-//   h1 {
-//     background-color: red;
-//     color: blue;
-//   }
-// }
 
-// .commenth1 {
-//   background-color: red;
-//   color: blue;
-// }
+.comment-item {
+  // display: flex;
+  // justify-content: left;
+  // max-width: 450px;
+  position: relative;
+  top: -50px;
 
-// .comment-item {
-//   background-color: red;
-// }
+  margin-bottom: 20px;
+}
+
+.main-comment-div {
+  max-width: 450px;
+  position: relative;
+  left: 80px;
+  top: -53px;
+  border: 1px solid gray;
+  border-radius: 25px;
+}
+
+.comment-header {
+  position: relative;
+  // top: -350px;
+  display: flex;
+  justify-content: left;
+
+  h3 {
+    position: relative;
+    left: 30px;
+    top: -15px;
+    color: white;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto;
+    position: relative;
+  }
+}
+
+.comment-profile-pic {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  // margin-right: 50px;
+  left: 20px;
+}
+
+.comment-body-div {
+  position: relative;
+  top: -40px;
+  left: 30px;
+  p {
+     color: white;
+     text-align: left;
+     white-space: pre-wrap;
+     word-wrap: break-word;
+     overflow: auto;
+     position: relative;
+  }
+}

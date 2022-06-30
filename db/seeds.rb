@@ -14,7 +14,8 @@ ActiveRecord::Base.transaction do
     ActiveRecord::Base.connection.reset_pk_sequence!('posts')
     Like.destroy_all
     ActiveRecord::Base.connection.reset_pk_sequence!('likes')
-    # Comment.delete_all 
+    Comment.destroy_all
+    ActiveRecord::Base.connection.reset_pk_sequence!('comments')
 
     user1 = User.create(
       username: "bob",
