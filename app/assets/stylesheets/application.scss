@@ -141,7 +141,7 @@ body {
   background: black;
   align-items: center;
   float: right;
-  z-index: 5;
+  z-index: 25;
 
   .btn {
     display: block;
@@ -561,9 +561,9 @@ hr {
 .delete-comment-btn {
     height: 30px;
     width: 50px;
-    position: relative;
+    position: absolute;
     left: 345px;
-    top: -50px;
+    top: 9px;
     background-color: #333;
     background-image: url("https://fumblr11-seeds.s3.amazonaws.com/delete_icon.png");
     background-repeat: no-repeat;
@@ -614,13 +614,13 @@ hr {
   h3 {
     position: relative;
     left: 30px;
-    top: -15px;
     color: white;
     text-align: left;
     white-space: pre-wrap;
     word-wrap: break-word;
     position: relative;
   }
+
 }
 
 
@@ -635,7 +635,7 @@ hr {
 
 .comment-body-div {
   position: relative;
-  top: -40px;
+  top: -20px;
   left: 30px;
   p {
     width: 350px;
@@ -649,9 +649,9 @@ hr {
  
 }
 
-.follow-btn , .unfollow-btn{
+.follow-btn , .unfollow-btn , .comment-follow-btn{
   height: 30px;
-  width: 50px;
+  width: 55px;
   position: relative;
   z-index: 5;
   top: -19px;
@@ -660,6 +660,13 @@ hr {
   border: none;
   color: cornflowerblue;
   cursor: pointer
+}
+
+.comment-follow-btn {
+  // top: -45px;
+  left: 340px;
+  top: 10px;
+  position: absolute;
 }
 
 
