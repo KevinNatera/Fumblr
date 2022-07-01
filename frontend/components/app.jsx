@@ -14,6 +14,8 @@ import EditProfilePictureContainer from './users/edit_profile_picture_container'
 
 import LikesIndexContainer from './likes/likes_index_container'
 
+import FollowingIndexContainer from './follows/following_index_container'
+
 import { Route, Switch, Redirect, Navigate } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../utils/route_utils';
 import Modal from './modal/modal';
@@ -28,7 +30,7 @@ export default () => (
     <Route path="/" component={NavBarContainer} />
     <Route exact path="/" render={() => <Redirect to="/explore" />} />
    
-    <ProtectedRoute path={["/profile","/activity","/followers","/comments","/edit-profile","/new"]} component={UserShowNavContainer} />
+    <ProtectedRoute path={["/profile","/activity","/following","/comments","/edit-profile","/new"]} component={UserShowNavContainer} />
     
     <Route exact path="/explore" component={HomeContainer} />
     <ProtectedRoute exact path={["/explore","/profile","/new"]} component={CreatePostContainer} />
@@ -36,6 +38,7 @@ export default () => (
 
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
     <ProtectedRoute exact path="/activity" component={LikesIndexContainer} />
+    <ProtectedRoute exact path="/following" component={FollowingIndexContainer} />
 
     <ProtectedRoute exact path="/edit-profile" component={EditProfilePictureContainer} />
     

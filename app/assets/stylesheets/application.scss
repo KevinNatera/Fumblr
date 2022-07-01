@@ -285,7 +285,7 @@ button {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 10;
 }
 
@@ -321,13 +321,13 @@ button {
   
 }
 
-.posts-index-item::marker {
+.posts-index-item::marker, .following-index-item::marker {
     display: none;
     color: transparent;
 }
 
 
-.p-i-header {
+.p-i-header, .following-header{
 
   display: flex;
   align-items: center;
@@ -344,6 +344,8 @@ button {
     vertical-align: center;
     top: -20px;
     }
+
+
 }
 
 .nav-profile-pic {
@@ -354,12 +356,12 @@ button {
   position: relative
 }
 
-.post-profile-pic {
+.post-profile-pic, .following-profile-pic {
   height: 50px;
   width: 50px;
   top: -18px;
   left: -70px;
-  position: relative
+  position: relative;
 }
 
 .create-profile-pic {
@@ -645,4 +647,49 @@ hr {
   }
 
  
+}
+
+.follow-btn , .unfollow-btn{
+  height: 30px;
+  width: 50px;
+  position: relative;
+  z-index: 5;
+  top: -19px;
+  left: -15px;
+  background-color: #333;
+  border: none;
+  color: cornflowerblue;
+  cursor: pointer
+}
+
+
+
+.unfollow-btn {
+  left: 450px;
+  top: -50px;
+  // position: sticky;
+}
+
+
+
+.following-index {
+
+ display: block;
+  
+    h1.page {
+      color: white;
+      position: relative;
+      left: 650px;
+      top: 10px;
+      width: 500px;
+  }
+
+}
+
+.following-index-item {
+  background: #333;
+  left: 450px;
+  max-width: 540px;
+  position: relative;
+  margin-bottom: 30px;
 }
