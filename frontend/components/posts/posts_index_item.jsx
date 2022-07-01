@@ -24,6 +24,7 @@ class PostsIndexItem extends React.Component{
         this.handleEdit = this.handleEdit.bind(this)
         this.deletePost = this.deletePost.bind(this)
         this.toggleCommentDisplay = this.toggleCommentDisplay.bind(this)
+        this.handleFollow = this.handleFollow.bind(this)
 
      }
     
@@ -71,6 +72,15 @@ class PostsIndexItem extends React.Component{
 
      }
 
+     handleFollow(e) {
+          e.preventDefault()
+          let follow = {
+               follower_id: this.props.currentUserId,
+               followee_id: this.props.post.author_id
+          }
+          this.props.createFollow(follow)
+     }
+
 
     render() {
          
@@ -112,7 +122,7 @@ class PostsIndexItem extends React.Component{
           }
 
            this.state.like = {
-                    liker_id: this.props.currentUser,
+                    liker_id: this.props.currentUserId,
                     post_id: this.props.post.id
           }
 
@@ -123,6 +133,19 @@ class PostsIndexItem extends React.Component{
                this.likeButtonText = "UNLIKE";
                this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/unlike_icon.png"
                this.state.like.id = likeArr[i].id
+               break
+          }
+         }
+
+
+
+
+         let followButton = <button className="follow-btn" onClick={this.handleFollow}>Follow</button>
+         let followArr = (this.props.follows.filter(follow => follow.followee_id === this.props.post.author_id))
+
+         for(let i = 0; i < followArr.length; i++) {
+          if (followArr[i].follower_id === this.props.currentUserId) {
+               followButton = undefined
                break
           }
          }
@@ -137,6 +160,7 @@ class PostsIndexItem extends React.Component{
 
                 <img className="post-profile-pic" src={avatar_url}/> <span>{username}</span> 
 
+                    {followButton}
                 </header> 
 
 
