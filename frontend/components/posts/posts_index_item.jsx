@@ -47,6 +47,7 @@ class PostsIndexItem extends React.Component{
 
      handleEdit = (e) => {
           e.preventDefault()
+          console.log(this.props.post)
           this.props.requestSinglePost(this.props.post.id)
           .then( () => {this.props.openEditPostForm()} )
           .then( () => {this.props.requestAllPosts()})

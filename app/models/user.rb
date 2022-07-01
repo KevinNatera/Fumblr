@@ -36,7 +36,15 @@ class User < ApplicationRecord
         primary_key: :id,
         foreign_key: :commenter_id,
         class_name: :Comment
-
+                                          
+    has_many :received_follows,
+        primary_key: :id,
+        foreign_key: :followee_id, 
+        class_name: :Follow
+    
+    has_many :followers, 
+        through: :received_follows, 
+        source: :follower
    
 
     def self.find_by_credentials(email, password)
