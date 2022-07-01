@@ -16,7 +16,9 @@ ActiveRecord::Base.transaction do
     ActiveRecord::Base.connection.reset_pk_sequence!('likes')
     Comment.destroy_all
     ActiveRecord::Base.connection.reset_pk_sequence!('comments')
-
+    Follow.destroy_all
+    ActiveRecord::Base.connection.reset_pk_sequence!('follows')
+    
     user1 = User.create(
       username: "bob",
       email: "bob.com",
@@ -186,6 +188,69 @@ ActiveRecord::Base.transaction do
         body: "He is speaking the language of the gods."
     )
 
+    comment6 = Comment.create(
+        commenter_id: 4,
+        post_id: 8,
+        body: "Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Ac tincidunt 
+        vitae semper quis lectus nulla. Habitant morbi tristique senectus 
+        et netus et malesuada fames. Duis ut diam quam nulla porttitor massa 
+        id neque. Feugiat scelerisque varius morbi enim nunc faucibus a. Dolor sit 
+        amet consectetur adipiscing elit ut aliquam purus sit. Amet consectetur adipiscing 
+        elit ut aliquam purus. Pretium lectus quam id leo in vitae turpis massa. Cursus sit amet dictum
+        sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci. Id semper 
+        risus in hendrerit gravida. Lorem dolor sed viverra ipsum nunc. Condimentum lacinia quis 
+        vel eros donec. Phasellus vestibulum lorem sed risus ultricies."
+    )
+
+    follow1 = Follow.create(
+        follower_id: 4,
+        followee: user6
+    )
+
+    follow2 = Follow.create(
+        follower_id: 6,
+        followee: user4
+    )
+
+    follow3 = Follow.create(
+        follower_id: 4,
+        followee: user1
+    )
+
+    follow4 = Follow.create(
+        follower_id: 4,
+        followee: user3
+    )
+
+    follow5 = Follow.create(
+        follower_id: 5,
+        followee: user4
+    )
+
+    follow6 = Follow.create(
+        follower_id: 5,
+        followee: user1
+    )
+
+    follow7 = Follow.create(
+        follower_id: 5,
+        followee: user6
+    )
+
+    follow8 = Follow.create(
+        follower_id: 5,
+        followee: user2
+    )
+
+    follow9 = Follow.create(
+        follower_id: 5,
+        followee: user3
+    )
+
+    
+    
     # basicAttackPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/basic_attack_copy.png")
     # goldPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/gold+copy.png")
     # healPic1 = open("https://fumblr11-seeds.s3.amazonaws.com/heal+copy.png")
