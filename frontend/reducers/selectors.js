@@ -48,11 +48,16 @@ export const selectAllComments = (state) => {
 }
 
 export const selectPostComments = (state, postId) => {
-    let arr = Object.values(state.entities.comments).filter(comment => comment.post_id == postId)
+    let arr = Object.values(state.entities.comments).filter(comment => comment.post_id === postId)
     return arr.reverse()
 }
 
 export const selectAllFollows = (state) => {
     let arr = Object.values(state.entities.follows)
+    return arr.reverse()
+}
+
+export const selectFollowing = (state, currentUserId) => {
+    let arr = Object.values(state.entities.follows).filter(follow => follow.follower_id === currentUserId)
     return arr.reverse()
 }
