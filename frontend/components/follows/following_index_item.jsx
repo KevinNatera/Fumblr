@@ -39,13 +39,12 @@ class FollowingIndexItem extends React.Component{
         <li className="following-index-item">
 
         
-
+        <header className="following-header">
         <img className="following-profile-pic" src={avatar_url}/> <span>{username}</span> 
-
+            
+        </header>
         <button className="unfollow-btn" onClick={this.handleUnfollow}>Unfollow</button>
-       
-
-        </li>)
+        </li>)  
     }
 
 }
