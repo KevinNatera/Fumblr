@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
-import { selectAllUsers, selectAllLikes, selectAllComments } from '../../reducers/selectors';
+import { selectAllUsers, selectAllLikes, selectAllComments, selectAllFollows } from '../../reducers/selectors';
 import { requestSinglePost, requestAllPosts, deletePost } from '../../actions/posts'
 import { createLike, deleteLike } from '../../actions/likes'
+import { createFollow} from '../../actions/follows'
 import { openModal } from '../../actions/modal';
 // import { clearErrors } from '../../actions/session'
 import PostsIndexItem from './posts_index_item'
@@ -10,7 +11,8 @@ const mapStateToProps = (state, ownProps) => ({
     users: selectAllUsers(state),
     likes: selectAllLikes(state),
     comments: selectAllComments(state),
-    currentUser: state.session.id
+    follows: selectAllFollows(state),
+    currentUserId: state.session.id
     // errors: state.errors.session
 })
 
@@ -21,7 +23,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     openEditPostForm: () => dispatch(openModal('new/edit')),
     createLike: (like) => dispatch(createLike(like)),
     deleteLike: (likeId) => dispatch(deleteLike(likeId)),
-    
+    createFollow: (follow) => dispatch(createFollow(follow))
     // clearErrors: () => dispatch(clearErrors())
 });
 
