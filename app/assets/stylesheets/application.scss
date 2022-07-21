@@ -54,6 +54,16 @@ body {
   height: 100px;
   z-index: 1;
 }
+
+.github-pic, .linkedIn-pic {
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  background-color: white;
+  cursor: pointer;
+}
+
+
  
 .home {
   min-height: 400px;
