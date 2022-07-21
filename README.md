@@ -27,6 +27,6 @@ Users will be able to:
 
 ## Code Snippets
 
-Below is a code snippet taken from the users controller. It executes when a user attempts to update either their profile or cover picture, and checks to see if one or both are present. If so, the image(s) attach to the user and is reflected across the application.
+Below is a code snippet taken from the users controller. It executes when a user attempts to update either their profile or cover picture, and checks to see if one or both are present. If so, the image(s) attach to the user and the process is reflected across the application.
 
 ![Code Snippet](./app/assets/images/code_snippet.png)
