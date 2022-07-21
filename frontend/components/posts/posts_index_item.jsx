@@ -144,12 +144,15 @@ class PostsIndexItem extends React.Component{
          let followArr = (this.props.follows.filter(follow => follow.followee_id === this.props.post.author_id))
 
          for(let i = 0; i < followArr.length; i++) {
-          if (followArr[i].follower_id === this.props.currentUserId || this.props.currentUserId === this.props.post.author_id) {
+          if (followArr[i].follower_id === this.props.currentUserId) {
                followButton = undefined
                break
           }
          }
 
+         if (this.props.currentUserId === this.props.post.author_id) {
+               followButton = undefined
+         }
      
        
           // console.log(this.state.like)

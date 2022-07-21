@@ -47,10 +47,14 @@ class CommentDisplayItem extends React.Component {
        let followArr = (this.props.follows.filter(follow => follow.followee_id === this.props.commenter.id))
 
        for(let i = 0; i < followArr.length; i++) {
-        if (followArr[i].follower_id === this.props.currentUser.id || this.props.currentUser.id === this.props.commenter.id) {
+        if (followArr[i].follower_id === this.props.currentUser.id) {
              followButton = undefined
              break
         }
+       }
+
+       if (this.props.currentUser.id === this.props.commenter.id) {
+        followButton = undefined
        }
         
         return (
