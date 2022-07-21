@@ -45,8 +45,8 @@ class EditProfilePictureForm extends React.Component {
      } else {
      this.setState({ profileImgUrl: "", profileImgFile: null });
      profileImg.src = ""
-
-     if (this.state.coverImgUrl === "") {
+     
+     if (this.state.coverImgUrl === "" || this.state.coverImgUrl === undefined) {
       submitButton.type = "hidden"
      }
 
@@ -76,7 +76,7 @@ class EditProfilePictureForm extends React.Component {
    this.setState({ coverImgUrl: "", coverImgFile: null });
    coverImg.src = ""
 
-   if (this.state.profileImgUrl === "") {
+   if (this.state.profileImgUrl === "" || this.state.profileImgUrl === undefined) {
     submitButton.type = "hidden"
    }
    
@@ -88,11 +88,11 @@ class EditProfilePictureForm extends React.Component {
     e.preventDefault();
     const formData = new FormData();
 
-    if (this.state.profileImgFile !== undefined) {
+    if (this.state.profileImgFile !== undefined && this.state.profileImgFile !== null) {
       formData.append('avatar', this.state.profileImgFile);
     } 
 
-    if (this.state.coverImgFile !== undefined) {
+    if (this.state.coverImgFile !== undefined && this.state.coverImgFile !== null) {
       formData.append('cover', this.state.coverImgFile);
     }
   
