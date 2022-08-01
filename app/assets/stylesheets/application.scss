@@ -60,6 +60,7 @@ body {
   height: 100px;
   z-index: 1;
   background-color: white;
+  margin-left: -430px;
   cursor: pointer;
 }
 
@@ -312,7 +313,9 @@ button {
   width: 200px
 }
 
-    
+
+
+
 
 .posts-index-item {
   background: #333;
@@ -335,6 +338,7 @@ button {
     display: none;
     color: transparent;
 }
+
 
 
 .p-i-header, .following-header{
@@ -709,4 +713,34 @@ hr {
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
+}
+
+
+@media (max-width: 1000px) {
+  .posts-index-item {
+    left: 75px;
+    // position: relative;
+  }
+  .user-show { 
+    position: absolute; 
+    // float: left;
+
+    h1.page {
+      left: 75px;
+    }
+  }
+
+  .create-post-frame {
+    left: 75px;
+  }
+
+  .create-profile-pic {
+    left: 5px;
+    top: 215px;
+  }
+
+  .user-show-nav-bar {
+    
+  }
+
 }
