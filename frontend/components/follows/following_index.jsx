@@ -16,7 +16,7 @@ class FollowingIndex extends React.Component {
         
         return (
             <div className="following-index">
-                <h1 className="page">{this.props.text}</h1>
+                <h1 className="follow-page">{this.props.text}</h1>
                
 
                 {this.props.following.map((follow) => (
