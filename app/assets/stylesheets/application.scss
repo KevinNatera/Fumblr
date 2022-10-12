@@ -14,6 +14,8 @@
  *= require_self
  */
 
+ @import "../node_modules/bootstrap/scss/bootstrap";
+
  html, body, div {
     padding: 0;
     margin: 0;
@@ -71,6 +73,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  // align-items: flex-start;
   border-bottom: 1px solid gray;
   h1 {
   height: 100%;
@@ -166,10 +169,12 @@ body {
   .selected {
     display: block;
     color: white;
+    text-align: center;
     background-color: #333;
     padding: 10px;
     width: 350px;
     text-decoration: none;
+    border-radius: 5px;
   }
 
   .btn:hover {
@@ -185,12 +190,12 @@ body {
   justify-content: space-evenly;
   padding: 20px;
   left: 450px;
-  width: 500px;
+  width: 540px;
   top: 20px;
 
   background: #333;
   align-items: center;
-
+  margin-bottom: 50px;
 
   .create-btn {
     display: block;
@@ -722,11 +727,14 @@ hr {
     // position: relative;
   }
   .user-show { 
-    position: absolute; 
+    position: relative; 
+    
     // float: left;
+  //  top: 500px;
 
     h1.page {
       left: 75px;
+      
     }
   }
 
@@ -739,8 +747,8 @@ hr {
     top: 215px;
   }
 
-  .user-show-nav-bar {
+  // .user-show-nav-bar {
     
-  }
+  // }
 
 }

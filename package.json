@@ -29,6 +29,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "babel-loader": "^8.2.5",
+    "bootstrap": "^5.2.2",
     "install": "^0.13.0",
     "npm": "^8.12.2",
     "react": "^18.2.0",
