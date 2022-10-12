@@ -134,11 +134,13 @@ body {
     left: 20px;
     top: -5px;
   }
+
  
   .logout-btn {
     background-image: url("https://fumblr11-seeds.s3.amazonaws.com/logout_icon.png");
     position: relative;
     left: 15px;
+    top: 15px;
   }
 
 
@@ -367,12 +369,19 @@ button {
 
 }
 
+.profile-nav-div {
+ 
+}
+
+.nav-h2 {
+ 
+}
 .nav-profile-pic {
-  height: 50px;
-  width: 50px;
-  left: 75px;
-  bottom: 10px;
-  position: relative
+  height: 100px;
+  width: 100px;
+  left: 50px;
+  margin-top: 20px;
+  position: relative;
 }
 
 .post-profile-pic, .following-profile-pic {

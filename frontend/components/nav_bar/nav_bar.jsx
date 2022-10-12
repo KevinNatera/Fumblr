@@ -23,7 +23,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
   const display = currentUser ? (  //if there is a current user, return this
   
       <div className="profile-nav-div">
-        <h2> Welcome, {currentUser.username}!</h2>
+        <h2 className="nav-h2"> Welcome, {currentUser.username}!</h2>
         <div className="profile-pic-frame">
         <img className="nav-profile-pic" src={currentUser.avatar_url ? currentUser.avatar_url : "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"}/>
         </div>
