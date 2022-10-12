@@ -516,11 +516,12 @@ hr {
   position: relative;
   left: 380px; 
   top: 50px;
+  margin-top: 10px;
 
   h1 {
     color: white;
     position: relative;
-    width: 500px;
+    width: 600px;
     left: 50px;
   }
 
@@ -529,24 +530,27 @@ hr {
     position: relative;
     top: 20px;
     left: 20px;
-    width: 500px;
+    width: 600px;
+    margin-bottom: 40px;
   }
 
   .edit-profile-preview-frame, .edit-cover-preview-frame {
     position: relative;
     left: 175px;
+    margin-bottom: 25px;
   }
 
   .edit-profile-input, .edit-cover-input {
     position: relative;
     left: 230px;
     top: 10px;
+    margin-bottom: 25px;
   }
 
   .edit-profile-submit {
     position: relative;
-    right: 25px;
-    bottom: 620px;
+    right: 75px;
+    bottom: 700px;
     z-index: 10;
   }
   
