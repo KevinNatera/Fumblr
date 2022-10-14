@@ -170,11 +170,11 @@ body {
 
 .user-show-nav-bar {
   display: flexbox;
-  position: relative;
+  position: absolute;
   justify-content: right;
   padding: 20px;
   right: 10px;
-  top: 50px;
+  vertical-align: middle;
   background: black;
   align-items: center;
   float: right;
@@ -206,53 +206,60 @@ body {
   }
 }
 
-
 .create-post-frame {
   display: flex;
   position: relative;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
+  // text-align: center;
   padding: 20px;
-  left: 450px;
+  margin: auto;
   width: 540px;
   top: 20px;
 
   background: #333;
   align-items: center;
- 
-
-  .create-btn {
-    display: block;
-    padding: 10px;
-    background-image: url("https://fumblr11-seeds.s3.amazonaws.com/text_icon.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 50% 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    background-color: #333;
-    border: none;
-
-    span {
-      color: white;
-      position: relative;
-      top: 30px;
-      right: 5px;
-      font-size: 20px;
-      font-weight: 700;
-      width: 100px;
-      text-align: left;
-      overflow: auto;
-      position: relative;
-    }
-    
-  }
-  .btn:hover {
-     cursor: pointer;
-  }
 }
- 
- 
+
+.create-btn {
+  display: block;
+  padding: 10px;
+  background-image: url("https://fumblr11-seeds.s3.amazonaws.com/text_icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: #333;
+  border: none;
+
+  span {
+    color: white;
+    position: relative;
+    top: 30px;
+    right: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100px;
+    text-align: left;
+    overflow: auto;
+    position: relative;
+  }
+    
+}
+
+.create-btn:hover {
+  cursor: pointer;
+}
+
+.create-post-center {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .session-form {
     display: flex;
     flex-direction: column;
@@ -347,7 +354,7 @@ button {
 
 .posts-index-item {
   background: #333;
-  left: 450px;
+  margin: auto;
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
@@ -422,7 +429,7 @@ button {
 .post-profile-pic, .following-profile-pic {
   height: 50px;
   width: 50px;
-  top: -18px;
+  top: -23px;
   left: -70px;
   position: relative;
 }
@@ -430,9 +437,9 @@ button {
 .create-profile-pic {
   height: 50px;
   width: 50px;
-  top: 73px;
-  left: 380px;
-  position: relative
+  top: -20px;
+  left: -90px;
+  position: relative;
 }
 
 .p-i-title-div {
@@ -543,7 +550,8 @@ button {
 .page, .follow-page {
   color: white;
   position: relative;
-  left: 635px;
+  margin: auto;
+  left: 165px;
   top: 10px;
   width: 500px;
   margin-top: 50px;
@@ -748,6 +756,7 @@ button {
       color: white;
       position: relative;
       left: 650px;
+      margin: auto;
       top: 10px;
       width: 500px;
   }
@@ -756,42 +765,10 @@ button {
 
 .following-index-item {
   background: #333;
-  left: 450px;
+  margin: auto;
   height: 75px;
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
 }
 
-
-@media (max-width: 1000px) {
-  .posts-index-item {
-    left: 75px;
-    // position: relative;
-  }
-  .user-show { 
-    position: relative; 
-    
-    // float: left;
-  //  top: 500px;
-
-    h1.page {
-      left: 75px;
-      
-    }
-  }
-
-  .create-post-frame {
-    left: 75px;
-  }
-
-  .create-profile-pic {
-    left: 5px;
-    top: 215px;
-  }
-
-  // .user-show-nav-bar {
-    
-  // }
-
-}

@@ -26,15 +26,18 @@ class CreatePost extends React.Component {
 
         return (
             <div> 
-                <img className="create-profile-pic" src={avatar_url}/>
+                
+                
 
             <div className="create-post-frame">
 
-               
+            <img className="create-profile-pic" src={avatar_url}/>
+
+                <div className="create-post-center">
               {/* <Link className="btn" to="/new/text" onClick={this.props.openCreateTextPost}>Text</Link> */}
               <button className="create-btn" onClick={this.props.openCreateTextPost}><span>Text</span></button>
               
-
+                </div>
             </div>
 
             </div>
