@@ -19,7 +19,7 @@ class Home extends React.Component {
 
       return (
 
-        <div className="home">
+        <div className="home" >
         <div className="home-img-frame">
           <img className="home-img" src={src} />
         </div> 
