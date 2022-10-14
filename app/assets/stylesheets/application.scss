@@ -348,6 +348,13 @@ button {
     z-index: 1;
   }
   
+  hr {
+    left: 20px;
+    width: 500px;
+    position: relative;
+    border-top: 1px bold #333;
+    color: lightgray;
+  }
 }
 
 .posts-index-item::marker, .following-index-item::marker {
@@ -446,12 +453,6 @@ button {
   
 }
 
-
-hr {
-  width: 500px;
-  border-top: 1px solid #333;
-  color: red;
-}
 
 .edit-delete-div {
     display: flex;
@@ -737,6 +738,7 @@ hr {
 .following-index-item {
   background: #333;
   left: 450px;
+  height: 75px;
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
