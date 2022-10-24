@@ -19,7 +19,8 @@
  html, body, div {
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
+    // font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
   h1 {
@@ -45,12 +46,6 @@ body {
   justify-content: center;
   align-items: center;
   z-index: -1;
-
-  //  -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
-
 }
  
 .home-img {
@@ -64,10 +59,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  // align-items: flex-start;
   border-bottom: 1px solid gray;
-
- 
 
   h1 {
   height: 100%;
@@ -108,7 +100,6 @@ body {
       
   div {
       h2 {
-        // color:white;
         color: #fca311;
       }
     }
@@ -146,8 +137,6 @@ body {
     width: 40px;
     position: relative;
     margin-right: 20px;
-    // left: 20px;
-    // top: -5px;
   }
 
   .home-btn, .profile-btn {
@@ -197,10 +186,8 @@ body {
 
   .selected {
     display: block;
-    // color: white;
     color: #fca311;
     text-align: center;
-    // background-color: #333;
     background-color: #14213d;
     padding: 10px;
     width: 350px;
@@ -209,7 +196,6 @@ body {
   }
 
   .btn:hover {
-    //  background-color: #333;
     background-color: #14213d;
      cursor: pointer;
   }
@@ -218,14 +204,11 @@ body {
 .create-post-frame {
   display: flex;
   position: relative;
-  // justify-content: space-evenly;
-  // text-align: center;
   padding: 20px;
   margin: auto;
   width: 540px;
   top: 20px;
-
-  // background: #333;
+  border-radius: 10px;
   background-color: #14213d;
   align-items: center;
 }
@@ -241,7 +224,6 @@ body {
   height: 50px;
   width: 50px;
   cursor: pointer;
-  // background-color: #333;
   background-color: #14213d;
   border: none;
 
@@ -284,7 +266,6 @@ body {
   form {
     height: 425px;
     width: 400px;
-    // background-color: mediumpurple;
     background-color: #14213d;
     color: white;
     display: flex;
@@ -336,10 +317,8 @@ body {
   form {
    height: 600px;
    width: 400px;
-  //  color: white;
    color: #fca311;
    border-radius: 10px;
-  //  background-color: #333;
   background-color: #14213d;
    display: flex;
    flex-direction: column;
@@ -378,7 +357,8 @@ button {
 
 #edit-profile-image {
   height: 200px;
-  width: 200px
+  width: 200px;
+  border-radius: 10px;
 }
 
 
@@ -386,15 +366,14 @@ button {
 
 
 .posts-index-item {
-  // background: #333;
   background-color: #14213d;
   margin: auto;
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
+  border-radius: 10px;
 
   h1 {
-    // color: white;
     margin-top: 10px;
     margin-bottom: 10px;
     position: relative;
@@ -408,7 +387,6 @@ button {
     width: 500px;
     position: relative;
     border-top: 1px bold #14213d;
-    //#333
     color: lightgray;
   }
 }
@@ -424,14 +402,10 @@ button {
 
   display: flex;
   align-items: center;
-
   border-radius: 3px 3px 0 0;
-  // box-sizing: border-box;
-  // justify-content: left;
   width: 100%;
 
   span {
-    // color: white;
     color: #fca311;
     right: 35px;
     position: relative;
@@ -443,8 +417,6 @@ button {
 }
 
 .profile-nav-div {
-//  display: flex;
-  // justify-content: space-between;
   align-items: center;
 }
 
@@ -452,10 +424,6 @@ button {
   position: relative;
   left: 50px;
 }
-
-// .nav-h2 {
- 
-// }
 
 .nav-profile-pic {
   height: 100px;
@@ -489,7 +457,6 @@ button {
 
 .p-i-title-div {
   h1 {
-  // color: white;
   color: #e5e5e5;
   position: relative;
   left: 20px;
@@ -541,7 +508,6 @@ button {
 }
 
 .note-div {
-  // color: white;
   color: #fca311;
   position: absolute;
   right: 465px;
@@ -554,13 +520,11 @@ button {
 
 .edit-post, .delete-post, .like-post, .comment-post {
   background-repeat: no-repeat;
-  // background-size: cover;
   background-size: 50%;
   background-position: 50% 50%;
   height: 50px;
   width: 50px;
   border: none;
-  // background-color: #333;
   background-color: #14213d;
   cursor: pointer;
 }
@@ -568,7 +532,6 @@ button {
 
 
 .edit-post {
-  
   margin-left: 10px;
   margin-right: 20px;
   background-image: url("https://fumblr11-seeds.s3.amazonaws.com/edit_icon.png");
@@ -601,7 +564,6 @@ button {
 }
 
 .page, .follow-page {
-  // color: white;
   color: #fca311;
   position: relative;
   margin: auto;
@@ -616,12 +578,9 @@ button {
   position: relative;
   margin-top: 10px;
   max-width: fit-content;
-  // top: 50px;
-  // left: 30%;
   margin: auto;
 
   h1 {
-    // color: white;
     color: #fca311;
     position: relative;
     width: 600px;
@@ -691,7 +650,6 @@ button {
     position: absolute;
     left: 350px;
     top: 3px;
-    // background-color: #333;
     background-color: #14213d;
     background-image: url("https://fumblr11-seeds.s3.amazonaws.com/delete_icon.png");
     background-repeat: no-repeat;
@@ -711,12 +669,7 @@ button {
 
 
 .comment-item {
-  // display: flex;
-  // justify-content: left;
-  // max-width: 450px;
   position: relative;
-  // top: -50px;
-
   margin-bottom: 20px;
 }
 
@@ -759,7 +712,6 @@ button {
   height: 50px;
   width: 50px;
   position: relative;
-  // margin-right: 50px;
   left: 20px;
   border-radius: 10px;
   border: 3px solid #fca311;
@@ -792,7 +744,6 @@ button {
   width: 60px;
   position: absolute;
   z-index: 5;
-  // background-color: #333;
   background-color: #14213d;
   border: none;
   color: cornflowerblue;
@@ -833,12 +784,12 @@ button {
 }
 
 .following-index-item {
-  // background: #333;
   background-color: #14213d;
   margin: auto;
   height: 75px;
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
+  border-radius: 10px;
 }
 
