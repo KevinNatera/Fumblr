@@ -57,7 +57,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
       {/* <h1 className="logo">Fumblr</h1>
        */}
        <div className="nav-logo-div">
-       <img className="logo" src="https://fumblr11-seeds.s3.amazonaws.com/fumblr_logo.png"/>
+       {/* <img className="logo" src="https://fumblr11-seeds.s3.amazonaws.com/fumblr_logo.png"/> */}
        <img className="github-pic" src="https://fumblr11-seeds.s3.amazonaws.com/github.png" onClick={redirectToGitHub}/>
        <img className="linkedIn-pic" src="https://fumblr11-seeds.s3.amazonaws.com/linkedIn.png" onClick={redirectToLinkedIn}/>
        </div>

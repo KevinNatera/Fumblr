@@ -78,19 +78,21 @@ body {
   }
 }
 
-.logo {
-  width: 100px;
-  height: 100px;
-  z-index: 1;
-  margin: 20px;
-}
+// .logo {
+//   width: 50px;
+//   height: 50px;
+//   z-index: 1;
+//   margin: 20px;
+//   border-radius: 10px;
+// }
 
 .github-pic, .linkedIn-pic {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   z-index: 1;
   background-color: white;
   margin: 20px;
+  border-radius: 10px;
   cursor: pointer;
 }
  
@@ -261,6 +263,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 .session-form {
     display: flex;
     flex-direction: column;
@@ -419,12 +422,14 @@ button {
 .nav-h2 {
  
 }
+
 .nav-profile-pic {
   height: 100px;
   width: 100px;
   left: 50px;
   margin-top: 20px;
   position: relative;
+  border-radius: 10px;
 }
 
 .post-profile-pic, .following-profile-pic {
@@ -433,6 +438,7 @@ button {
   top: -23px;
   left: -70px;
   position: relative;
+  border-radius: 10px;
 }
 
 .create-profile-pic {
@@ -441,6 +447,7 @@ button {
   top: -20px;
   left: -90px;
   position: relative;
+  border-radius: 10px;
 }
 
 .p-i-title-div {
@@ -562,6 +569,7 @@ button {
 .edit-profile-frame {
   position: relative;
   margin-top: 10px;
+  max-width: fit-content;
   top: 50px;
   left: 35%;
   h1 {
@@ -584,6 +592,7 @@ button {
     position: relative;
     left: 175px;
     margin-bottom: 25px;
+    max-width: fit-content;
   }
 
   .edit-profile-input, .edit-cover-input {
@@ -629,10 +638,10 @@ button {
 
 .delete-comment-btn {
     height: 30px;
-    width: 50px;
+    width: 40px;
     position: absolute;
-    left: 345px;
-    top: 9px;
+    left: 350px;
+    top: 3px;
     background-color: #333;
     background-image: url("https://fumblr11-seeds.s3.amazonaws.com/delete_icon.png");
     background-repeat: no-repeat;
@@ -640,6 +649,7 @@ button {
     background-position: 50% 50%;
     border: none;
     z-index: 5;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -676,18 +686,19 @@ button {
 
 .comment-header {
   position: relative;
-  // top: -350px;
+  margin-top: 5px;
   display: flex;
   justify-content: left;
 
   h3 {
     position: relative;
-    left: 30px;
+    left: 20px;
     color: white;
     text-align: left;
     white-space: pre-wrap;
     word-wrap: break-word;
     position: relative;
+    font-size: 20px;
   }
 
 }
@@ -700,12 +711,19 @@ button {
   position: relative;
   // margin-right: 50px;
   left: 20px;
+  border-radius: 10px;
+}
+
+.current-user-comment-pic {
+  top: -15px;
 }
 
 .comment-body-div {
+  margin-top: 20px;
   position: relative;
   top: -20px;
-  left: 30px;
+  left: 20px;
+
   p {
     width: 350px;
      color: white;
