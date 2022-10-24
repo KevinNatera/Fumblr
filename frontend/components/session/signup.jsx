@@ -59,7 +59,7 @@ class Signup extends React.Component {
                 
                 <form>
                 <h2>Fumblr</h2>
-                    <label>Username:
+                    <label className="username-label">Username:
                         <input
                             type="text"
                             value={this.state.username}
@@ -75,7 +75,7 @@ class Signup extends React.Component {
                             />
                     </label>
                         <br></br>
-                    <label>Password:
+                    <label className="password-label">Password:
                         <input
                             type="password"
                             value={this.state.password}

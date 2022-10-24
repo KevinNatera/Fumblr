@@ -233,6 +233,7 @@ body {
 .create-btn {
   display: block;
   padding: 10px;
+  margin-bottom: 15px;
   background-image: url("https://fumblr11-seeds.s3.amazonaws.com/text_icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -279,20 +280,31 @@ body {
     height: 90vh;
     justify-content: center;
     align-items: center;
-    form {
-     height: 425px;
-     width: 400px;
-     background-color: mediumpurple;
-     color: white;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+  
+  form {
+    height: 425px;
+    width: 400px;
+    // background-color: mediumpurple;
+    background-color: #14213d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
   }
+
+  h2 {
+    color: #fca311;
+  }
+
   label {
     padding: 10px;
     display: block;
+    color: #fca311;
+    position: relative;
   }
+
   button {
     display: block;
     padding: 10px;
@@ -301,9 +313,16 @@ body {
   }
 }
 
+.username-label {
+  left: -30px;
+}
+
 .email-label {
-  position: relative;
-  left: 15px;
+  left: -15px;
+}
+
+.password-label {
+  left: -30px;
 }
 
 .create-post {
@@ -313,10 +332,13 @@ body {
   height: 90vh;
   justify-content: center;
   align-items: center;
+
   form {
-   height: 500px;
+   height: 600px;
    width: 400px;
-   color: white;
+  //  color: white;
+   color: #fca311;
+   border-radius: 10px;
   //  background-color: #333;
   background-color: #14213d;
    display: flex;
@@ -335,8 +357,6 @@ button {
   cursor: pointer;
 }
 }
-
-
 
 .modal-background {
   position: fixed;

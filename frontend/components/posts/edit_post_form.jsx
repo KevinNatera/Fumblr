@@ -65,24 +65,28 @@ class EditPostForm extends React.Component {
             <div className="create-post">
                 
                 <form>
+
                 <h2>Edit Your Post!</h2>
-                    <label>Title:
+
+                    <label>Title</label>
+
                         <input
                             type="text"
                             value={this.state.title}
                             onChange={this.handleInput('title')}
                             />
-                    </label>
+
                     <br></br>
-                    <label>Body:
+
+                    <label>Body</label>
+
                         <textarea
                             value={this.state.body}
                             rows="7"
                             onChange={this.handleInput('body')}
                             >
                             </textarea>
-                    </label>
-
+                   
                     <br></br>
 
 
