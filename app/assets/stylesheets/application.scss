@@ -570,8 +570,10 @@ button {
   position: relative;
   margin-top: 10px;
   max-width: fit-content;
-  top: 50px;
-  left: 35%;
+  // top: 50px;
+  // left: 30%;
+  margin: auto;
+
   h1 {
     color: white;
     position: relative;
@@ -767,7 +769,6 @@ button {
 
 
 .following-index {
-
  display: block;
   
     h1.page {
