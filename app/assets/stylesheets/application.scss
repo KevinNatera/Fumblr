@@ -71,6 +71,7 @@ body {
 
   h1 {
   height: 100%;
+  color: #fca311;
   z-index: 1;
   text-shadow: 1px 1px 15px black;
   text-align: center;
@@ -93,6 +94,7 @@ body {
   background-color: white;
   margin: 20px;
   border-radius: 10px;
+  border: 3px solid #fca311;
   cursor: pointer;
 }
  
@@ -106,7 +108,8 @@ body {
       
   div {
       h2 {
-        color:white;
+        // color:white;
+        color: #fca311;
       }
     }
 
@@ -194,9 +197,11 @@ body {
 
   .selected {
     display: block;
-    color: white;
+    // color: white;
+    color: #fca311;
     text-align: center;
-    background-color: #333;
+    // background-color: #333;
+    background-color: #14213d;
     padding: 10px;
     width: 350px;
     text-decoration: none;
@@ -204,7 +209,8 @@ body {
   }
 
   .btn:hover {
-     background-color: #333;
+    //  background-color: #333;
+    background-color: #14213d;
      cursor: pointer;
   }
 }
@@ -219,7 +225,8 @@ body {
   width: 540px;
   top: 20px;
 
-  background: #333;
+  // background: #333;
+  background-color: #14213d;
   align-items: center;
 }
 
@@ -233,7 +240,8 @@ body {
   height: 50px;
   width: 50px;
   cursor: pointer;
-  background-color: #333;
+  // background-color: #333;
+  background-color: #14213d;
   border: none;
 
   span {
@@ -309,7 +317,8 @@ body {
    height: 500px;
    width: 400px;
    color: white;
-   background-color: #333;
+  //  background-color: #333;
+  background-color: #14213d;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -357,14 +366,17 @@ button {
 
 
 .posts-index-item {
-  background: #333;
+  // background: #333;
+  background-color: #14213d;
   margin: auto;
   max-width: 540px;
   position: relative;
   margin-bottom: 30px;
 
   h1 {
-    color: white;
+    // color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
     position: relative;
     left: 20px;
     width: 500px;
@@ -375,7 +387,8 @@ button {
     left: 20px;
     width: 500px;
     position: relative;
-    border-top: 1px bold #333;
+    border-top: 1px bold #14213d;
+    //#333
     color: lightgray;
   }
 }
@@ -398,11 +411,12 @@ button {
   width: 100%;
 
   span {
-    color: white;
-    right: 30px;
+    // color: white;
+    color: #fca311;
+    right: 35px;
     position: relative;
     vertical-align: center;
-    top: -20px;
+    top: -25px;
     }
 
 
@@ -419,9 +433,9 @@ button {
   left: 50px;
 }
 
-.nav-h2 {
+// .nav-h2 {
  
-}
+// }
 
 .nav-profile-pic {
   height: 100px;
@@ -430,6 +444,7 @@ button {
   margin-top: 20px;
   position: relative;
   border-radius: 10px;
+  border: 3px solid #fca311;
 }
 
 .post-profile-pic, .following-profile-pic {
@@ -439,6 +454,7 @@ button {
   left: -70px;
   position: relative;
   border-radius: 10px;
+  border: 3px solid #fca311;
 }
 
 .create-profile-pic {
@@ -448,11 +464,13 @@ button {
   left: -90px;
   position: relative;
   border-radius: 10px;
+  border: 3px solid #fca311;
 }
 
 .p-i-title-div {
   h1 {
-  color: white;
+  // color: white;
+  color: #e5e5e5;
   position: relative;
   left: 20px;
   top: -35px;
@@ -503,7 +521,8 @@ button {
 }
 
 .note-div {
-  color: white;
+  // color: white;
+  color: #fca311;
   position: absolute;
   right: 465px;
   text-align: center;
@@ -521,7 +540,8 @@ button {
   height: 50px;
   width: 50px;
   border: none;
-  background-color: #333;
+  // background-color: #333;
+  background-color: #14213d;
   cursor: pointer;
 }
 
@@ -539,14 +559,19 @@ button {
 }
 
 .like-post {
+  position: relative;
+  top: -10px;
   margin-left: 10px;
   margin-right: 20px;
   margin-bottom: 20px;
 }
 .comment-post {
+  position: relative;
+  top: -10px;
   margin-bottom: 20px;
   background-image: url("https://fumblr11-seeds.s3.amazonaws.com/comment_icon.png");
 }
+
 
 
 .user-show {
@@ -556,7 +581,8 @@ button {
 }
 
 .page, .follow-page {
-  color: white;
+  // color: white;
+  color: #fca311;
   position: relative;
   margin: auto;
   left: 165px;
@@ -575,7 +601,8 @@ button {
   margin: auto;
 
   h1 {
-    color: white;
+    // color: white;
+    color: #fca311;
     position: relative;
     width: 600px;
     left: 50px;
@@ -644,7 +671,8 @@ button {
     position: absolute;
     left: 350px;
     top: 3px;
-    background-color: #333;
+    // background-color: #333;
+    background-color: #14213d;
     background-image: url("https://fumblr11-seeds.s3.amazonaws.com/delete_icon.png");
     background-repeat: no-repeat;
     background-size: 50%;
@@ -695,11 +723,11 @@ button {
   h3 {
     position: relative;
     left: 20px;
+    margin-right: 10px;
     color: white;
     text-align: left;
     white-space: pre-wrap;
     word-wrap: break-word;
-    position: relative;
     font-size: 20px;
   }
 
@@ -714,6 +742,7 @@ button {
   // margin-right: 50px;
   left: 20px;
   border-radius: 10px;
+  border: 3px solid #fca311;
 }
 
 .current-user-comment-pic {
@@ -740,30 +769,31 @@ button {
 
 .follow-btn , .unfollow-btn , .comment-follow-btn{
   height: 30px;
-  width: 55px;
-  position: relative;
+  width: 60px;
+  position: absolute;
   z-index: 5;
-  top: -19px;
-  left: -15px;
-  background-color: #333;
+  // background-color: #333;
+  background-color: #14213d;
   border: none;
   color: cornflowerblue;
   cursor: pointer
 }
 
-.comment-follow-btn {
-  // top: -45px;
-  left: 340px;
+.follow-btn {
   top: 10px;
-  position: absolute;
+  left: 465px;
+}
+
+.comment-follow-btn {
+  top: 5px;
+  left: 325px;
 }
 
 
 
 .unfollow-btn {
-  left: 450px;
-  top: -50px;
-  // position: sticky;
+  top: 10px;
+  left: 450px; 
 }
 
 
@@ -783,7 +813,8 @@ button {
 }
 
 .following-index-item {
-  background: #333;
+  // background: #333;
+  background-color: #14213d;
   margin: auto;
   height: 75px;
   max-width: 540px;
