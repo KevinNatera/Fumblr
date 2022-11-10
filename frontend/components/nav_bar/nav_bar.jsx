@@ -23,10 +23,10 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
   const display = currentUser ? (  //if there is a current user, return this
   
       <div className="profile-nav-div">
-        <h2 className="nav-h2"> Welcome, {currentUser.username}!</h2>
+        {/* <h2 className="nav-h2"> Welcome, {currentUser.username}!</h2>
         <div className="profile-pic-frame">
         <img className="nav-profile-pic" src={currentUser.avatar_url ? currentUser.avatar_url : "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"}/>
-        </div>
+        </div> */}
        
         <Link className="home-btn" to="/explore">
         <img className="home-btn-img" src="https://fumblr11-seeds.s3.amazonaws.com/home_icon.png"/>
@@ -36,6 +36,9 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
         <img className="profile-btn-img" src="https://fumblr11-seeds.s3.amazonaws.com/profile_icon.png"/>
         </Link>
         <button className="logout-btn" onClick={logout}></button>
+
+       <img className="github-pic" src="https://fumblr11-seeds.s3.amazonaws.com/github.png" onClick={redirectToGitHub}/>
+       <img className="linkedIn-pic" src="https://fumblr11-seeds.s3.amazonaws.com/linkedIn.png" onClick={redirectToLinkedIn}/>
       </div>
   )  
       :  //if there is no currentUser, return the following instead
@@ -58,8 +61,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
        */}
        <div className="nav-logo-div">
        {/* <img className="logo" src="https://fumblr11-seeds.s3.amazonaws.com/fumblr_logo.png"/> */}
-       <img className="github-pic" src="https://fumblr11-seeds.s3.amazonaws.com/github.png" onClick={redirectToGitHub}/>
-       <img className="linkedIn-pic" src="https://fumblr11-seeds.s3.amazonaws.com/linkedIn.png" onClick={redirectToLinkedIn}/>
+    
        </div>
       <div>
         {display}
