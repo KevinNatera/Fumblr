@@ -177,10 +177,11 @@ body {
 
   .btn {
     display: block;
+    text-align: center;
     color: white;
     background-color: black;
     padding: 10px;
-    width: 350px;
+    width: 345px;
     text-decoration: none;
   }
 
@@ -190,14 +191,19 @@ body {
     text-align: center;
     background-color: #14213d;
     padding: 10px;
-    width: 350px;
+    width: 345px;
     text-decoration: none;
     border-radius: 5px;
   }
 
   .btn:hover {
     background-color: #14213d;
-     cursor: pointer;
+    cursor: pointer;
+  }
+
+  .btn:focus {
+    border: 0.5px solid #fca311;
+    border-radius: 5px;
   }
 }
 
@@ -383,11 +389,10 @@ button {
   }
   
   hr {
-    left: 20px;
-    width: 500px;
+    width: 510px;
     position: relative;
-    border-top: 1px bold #14213d;
-    color: lightgray;
+    border-top: 1px solid #14213d;
+    opacity: 0.3;
   }
 }
 
@@ -438,7 +443,7 @@ button {
 .post-profile-pic, .following-profile-pic {
   height: 50px;
   width: 50px;
-  top: -23px;
+  top: -18px;
   left: -70px;
   position: relative;
   border-radius: 10px;
