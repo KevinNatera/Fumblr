@@ -112,6 +112,20 @@ ActiveRecord::Base.transaction do
         url: ""
     )
 
+    post9 = Post.create(
+        author_id: 4,
+        title: "Use the Demo Login button for easy access!",
+        body: "No sign up required, jump in and start posting!",
+        url: ""
+    )
+
+    post10 = Post.create(
+        author_id: 4,
+        title: "Welcome to Fumblr!",
+        body: "This is a fullstack clone of the popular social media website Tumblr. Please sign in to create and interact with posts as well as follow other users.",
+        url: ""
+    )
+
 
     like1 = Like.create(
         liker_id: 2,
@@ -156,6 +170,31 @@ ActiveRecord::Base.transaction do
     like9 = Like.create(
         liker_id: 4,
         post_id: 2,
+    )
+
+    like10 = Like.create(
+        liker_id: 4,
+        post_id: 10,
+    )
+
+    like11 = Like.create(
+        liker_id: 3,
+        post_id: 10,
+    )
+
+    like12 = Like.create(
+        liker_id: 2,
+        post_id: 10,
+    )
+
+    like13 = Like.create(
+        liker_id: 4,
+        post_id: 9,
+    )
+
+    like14 = Like.create(
+        liker_id: 3,
+        post_id: 9,
     )
 
     comment1 = Comment.create(
