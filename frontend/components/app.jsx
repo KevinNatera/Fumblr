@@ -34,7 +34,8 @@ export default () => (
     
     <Route exact path="/explore" component={HomeContainer} />
     <ProtectedRoute exact path={["/explore","/profile","/new"]} component={CreatePostContainer} />
-    <ProtectedRoute exact path="/explore" component={PostsIndexContainer} />
+    
+    <Route exact path="/explore" component={PostsIndexContainer} />
 
     <ProtectedRoute exact path="/profile" component={UserShowContainer} />
     <ProtectedRoute exact path="/activity" component={LikesIndexContainer} />

@@ -33,6 +33,9 @@ class PostsIndexItem extends React.Component{
     }
 
     toggleCommentDisplay() {
+
+     if (this.props.currentUserId !== null) {
+
           if (this.commentDisplay === false) {
                this.commentDisplay = true
           } else if (this.commentDisplay === true) {
@@ -40,6 +43,8 @@ class PostsIndexItem extends React.Component{
           }
 
           this.setState({like: this.state.like})
+     }
+
     }
     
      deletePost = () => {
@@ -57,28 +62,37 @@ class PostsIndexItem extends React.Component{
      handleLike = (e) => {
           e.preventDefault()
 
-          if (this.likeButtonText === "LIKE") {
+          if (this.props.currentUserId !== null) {
+
+               if (this.likeButtonText === "LIKE") {
           
-               this.likeButtonText = "UNLIKE"
-               this.props.createLike(this.state.like)
-               this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/unlike_icon.png"
+                    this.likeButtonText = "UNLIKE"
+                    this.props.createLike(this.state.like)
+                    this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/unlike_icon.png"
 
-          } else {
+               } else {
 
-               this.likeButtonText = "LIKE"
-               this.props.deleteLike(this.state.like.id)
-               this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/like_icon.png"
+                    this.likeButtonText = "LIKE"
+                    this.props.deleteLike(this.state.like.id)
+                    this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/like_icon.png"
+               }
+
           }
 
      }
 
      handleFollow(e) {
           e.preventDefault()
+
+          if (this.props.currentUserId !== null) {
+
           let follow = {
                follower_id: this.props.currentUserId,
                followee_id: this.props.post.author_id
           }
           this.props.createFollow(follow)
+
+          }
      }
 
 
@@ -210,7 +224,7 @@ class PostsIndexItem extends React.Component{
                          </div>
                </footer>
 
-               {this.commentDisplay === true ? <CommentDisplayContainer post={this.props.post} /> : null}
+               {this.commentDisplay === true && this.props.currentUserId !== null ? <CommentDisplayContainer post={this.props.post} /> : null}
            </li>
 
           
