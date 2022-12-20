@@ -55,7 +55,7 @@ body {
 
  
 .home {
-  min-height: 400px;
+  min-height: 275px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,8 +273,8 @@ body {
     align-items: center;
   
   form {
-    height: 425px;
-    width: 400px;
+    height: 700px;
+    width: 600px;
     background-color: #14213d;
     color: white;
     display: flex;
@@ -303,17 +303,37 @@ body {
   }
 }
 
-.username-label {
-  left: -30px;
+.username-label , .password-label{
+  left: -48px;
+  top: -45px;
+  font-size: 24px;
 }
 
-.email-label {
-  left: -15px;
+.username-label {
+  margin-right: 3px;
 }
 
 .password-label {
-  left: -30px;
+  margin-left: 1px;
 }
+
+.email-label {
+  left: -33px;
+  top: -45px;
+  font-size: 24px;
+  margin-left: 12px;
+}
+
+.input {
+  position: relative;
+  top: -5px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 250px;
+}
+
+
+
 
 .create-post {
   display: flex;
@@ -363,6 +383,16 @@ button {
   transform: translate(-50%, -50%);
 }
 
+.modal-title {
+  position: relative;
+  font-size: 48px;
+  top: -70px;
+}
+
+.modal-button {
+  border-radius: 20px;
+  width: 150px;
+}
 
 #edit-profile-image {
   height: 200px;

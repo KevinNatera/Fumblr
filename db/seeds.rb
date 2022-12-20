@@ -113,14 +113,14 @@ ActiveRecord::Base.transaction do
     )
 
     post9 = Post.create(
-        author_id: 4,
+        author_id: 1,
         title: "Use the Demo Login button for easy access!",
         body: "No sign up required, jump in and start posting!",
         url: ""
     )
 
     post10 = Post.create(
-        author_id: 4,
+        author_id: 1,
         title: "Welcome to Fumblr!",
         body: "This is a fullstack clone of the popular social media website Tumblr. Please sign in to create and interact with posts as well as follow other users.",
         url: ""

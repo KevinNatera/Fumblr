@@ -58,12 +58,13 @@ class Signup extends React.Component {
             <div className="session-form">
                 
                 <form>
-                <h2>Fumblr</h2>
+                <h2 className="modal-title">Fumblr</h2>
                     <label className="username-label">Username:
                         <input
                             type="text"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
+                            className="input"
                             />
                     </label>
                     <br></br>
@@ -72,6 +73,7 @@ class Signup extends React.Component {
                             type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
+                            className="input"
                             />
                     </label>
                         <br></br>
@@ -80,11 +82,12 @@ class Signup extends React.Component {
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
+                            className="input"
                             />
                     </label>
 
 
-                <button onClick={this.handleSubmit}> Sign Up</button>
+                <button className="modal-button" onClick={this.handleSubmit}> Sign Up</button>
 
                 <ul>
 
