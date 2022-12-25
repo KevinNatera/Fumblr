@@ -59,22 +59,26 @@ class CreateTextForm extends React.Component {
                 <form>
                 <h2>Create a New Post!</h2>
 
-                    <label>Title</label>
+                    
 
                         <input
                             type="text"
                             value={this.state.title}
                             onChange={this.handleInput('title')}
+                            placeholder="Title"
+                            className="input"
                             />
                    
                     <br></br>
 
-                    <label>Body</label>
+                   
 
                         <textarea
                             value={this.state.body}
                             rows="7"
                             onChange={this.handleInput('body')}
+                            placeholder="Body"
+                            className="input"
                             >
                             </textarea>
                     
@@ -82,8 +86,8 @@ class CreateTextForm extends React.Component {
 
 
 
-                <button onClick={this.handleSubmit}> Create Post</button>
-                <button onClick={this.handleCancel}> Cancel</button>
+                <button className="modal-button" onClick={this.handleSubmit}> Create Post</button>
+                <button className="modal-button" onClick={this.handleCancel}> Cancel</button>
                 <ul>
 
                 { (this.props.errors.responseJSON != null) && errors }

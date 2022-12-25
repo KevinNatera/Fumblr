@@ -331,16 +331,27 @@ body {
   align-items: center;
 
   form {
-   height: 600px;
-   width: 400px;
+   height: 700px;
+   width: 600px;
    color: #fca311;
    border-radius: 10px;
-  background-color: #14213d;
+   background-color: #14213d;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+
+   h2 {
+    position: relative;
+    font-size: 48px;
+    top: -30px;
+   }
+
+   textarea {
+     margin-top: 40px;
+   }
 }
+
 label {
   padding: 10px;
   display: block;
@@ -614,6 +625,7 @@ button {
     left: 50px;
   }
 
+
   .edit-profile-divider {
     border-bottom: 1px solid gray;
     position: relative;
@@ -635,13 +647,17 @@ button {
     left: 230px;
     top: 10px;
     margin-bottom: 25px;
+
   }
 
   .edit-profile-submit {
     position: relative;
     right: 25px;
-    bottom: 700px;
+    bottom: 683px;
     z-index: 10;
+    border-radius: 20px;
+    // width: 150px;
+    border-color: #fca311;;
   }
   
 }
@@ -819,4 +835,3 @@ button {
   margin-bottom: 30px;
   border-radius: 10px;
 }
-
