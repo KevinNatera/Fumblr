@@ -15,24 +15,48 @@ class PostsIndex extends React.Component {
     }
 
     render() {
+
+
+        if (this.props.currentUserId !== null) {
         
-        return (
-            <div className="user-show">
-                <h1 className="page">{this.props.text}</h1>
+            return (
+                <div className="user-show">
+                 <h1 className="page">{this.props.text}</h1>
                
 
-                {this.props.posts.map((post) => (
-                < PostsIndexItemContainer
-                    key={post.id} 
-                    post={post} 
-                    currentUserId={this.props.currentUserId}
-                />
-                ))
-                }
+                 {this.props.posts.map((post) => (
+                 < PostsIndexItemContainer
+                        key={post.id} 
+                        post={post} 
+                        currentUserId={this.props.currentUserId}
+                    />
+                 ))
+                 }
              
                 
             </div>
-        )
+            )
+
+        } else {
+
+            return (
+                <div className="user-show">
+                 <h1 className="page">{this.props.text}</h1>
+               
+
+                 {this.props.bobPosts.map((post) => (
+                 < PostsIndexItemContainer
+                        key={post.id} 
+                        post={post} 
+                        currentUserId={this.props.currentUserId}
+                    />
+                 ))
+                 }
+             
+                
+            </div>
+            )
+        }
     }
 
 }

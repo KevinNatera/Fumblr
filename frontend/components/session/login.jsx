@@ -55,20 +55,22 @@ class Login extends React.Component {
                 
                 <form>
                 <h2 className="modal-title">Fumblr</h2>
-                    <label className="email-label">Email:
+                    <label className="email-label">
                         <input
                             type="text"
                             value={this.state.email}
                             onChange={this.handleInput('email')}
+                            placeholder="Email"
                             className="input"
                             />
                     </label>
                         <br></br>
-                    <label className="password-label">Password:
+                    <label className="password-label">
                         <input
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
+                            placeholder="Password"
                             className="input"
                             />
                     </label>

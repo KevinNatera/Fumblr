@@ -78,7 +78,7 @@ ActiveRecord::Base.transaction do
     )
 
     post4 = Post.create(
-        author_id: 1,
+        author_id: 2,
         title: "ewifjn",
         body: "4-0rk4po",
         url: ""

@@ -303,32 +303,19 @@ body {
   }
 }
 
-.username-label , .password-label{
-  left: -48px;
+.username-label , .password-label, .email-label{
+  // left: -30px;
   top: -45px;
   font-size: 24px;
 }
 
-.username-label {
-  margin-right: 3px;
-}
-
-.password-label {
-  margin-left: 1px;
-}
-
-.email-label {
-  left: -33px;
-  top: -45px;
-  font-size: 24px;
-  margin-left: 12px;
-}
 
 .input {
   position: relative;
   top: -5px;
   padding: 10px 15px;
   border-radius: 20px;
+  border-color: #fca311;
   width: 250px;
 }
 
@@ -392,6 +379,7 @@ button {
 .modal-button {
   border-radius: 20px;
   width: 150px;
+  border-color: #fca311;;
 }
 
 #edit-profile-image {

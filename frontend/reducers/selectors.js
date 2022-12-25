@@ -3,6 +3,22 @@ export const selectAllPosts = (state) => {
     return arr.reverse()
 }
 
+export const selectAllBobPosts = (state) => {
+    let arr = Object.values(state.entities.posts)
+
+    let newArr = [];
+
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i].author_id === 1) {
+            newArr.push(arr[i])
+        }
+    }
+
+
+    return newArr.reverse()
+}
+
 export const selectUserPosts = (state,id) => {
     return Object.values(state.entities.posts).filter(post => post.author_id === id).reverse()
 }

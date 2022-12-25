@@ -4,12 +4,13 @@ import { requestAllPosts } from '../../actions/posts'
 import { requestAllLikes } from '../../actions/likes'
 import { requestAllComments } from '../../actions/comments'
 import { requestAllFollows } from '../../actions/follows'
-import { selectAllPosts } from '../../reducers/selectors';
+import { selectAllPosts, selectAllBobPosts } from '../../reducers/selectors';
 // import { clearErrors } from '../../actions/session'
 import PostsIndex from './posts_index'
 
 const mapStateToProps = (state, ownProps) => ({
     posts: selectAllPosts(state),
+    bobPosts: selectAllBobPosts(state),
     currentUserId: state.session.id,
     text: "All Posts"
     // errors: state.errors.session
