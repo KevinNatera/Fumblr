@@ -8,7 +8,7 @@ class Home extends React.Component {
   componentDidMount() {
   }
 
-
+  // style={ { backgroundImage: `url( ${src} )` } }
 
   render() {
     let src = "https://fumblr11-seeds.s3.amazonaws.com/fumblr.png"
@@ -20,8 +20,8 @@ class Home extends React.Component {
       return (
 
         <div className="home" >
-        <div className="home-img-frame">
-          <img className="home-img" src={src} />
+        <div className="home-img-frame" style={ { backgroundImage: `url( ${src} )` } } >
+          {/* <img className="home-img" src={src} /> */}
         </div> 
         <h1>Fumblr Home</h1>
       </div>
