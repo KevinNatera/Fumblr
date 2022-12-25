@@ -27,9 +27,6 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
         <div className="profile-pic-frame">
         <img className="nav-profile-pic" src={currentUser.avatar_url ? currentUser.avatar_url : "https://fumblr11-seeds.s3.amazonaws.com/default_batman.png"}/>
         </div> */}
-    
-      
-
 
         <Link className="home-btn" to="/explore">
         <img className="home-btn-img" src="https://fumblr11-seeds.s3.amazonaws.com/home_icon.png"/>
@@ -65,6 +62,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
        {/* <img className="logo" src="https://fumblr11-seeds.s3.amazonaws.com/fumblr_logo.png"/> */}
          <img className="github-pic" src="https://fumblr11-seeds.s3.amazonaws.com/github.png" onClick={redirectToGitHub}/>
         <img className="linkedIn-pic" src="https://fumblr11-seeds.s3.amazonaws.com/linkedIn.png" onClick={redirectToLinkedIn}/>
+        {/* <h1 className="fumblr-home-title">Fumblr Home</h1> */}
        </div>
       <div>
         {display}
