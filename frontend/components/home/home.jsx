@@ -23,7 +23,7 @@ class Home extends React.Component {
         <div className="home-img-frame" style={ { backgroundImage: `url( ${src} )` } } >
           {/* <img className="home-img" src={src} /> */}
         </div> 
-        <h1>Fumblr Home</h1>
+        {/* <h1>Fumblr Home</h1> */}
       </div>
 
       )
