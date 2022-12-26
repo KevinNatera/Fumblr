@@ -3,7 +3,7 @@
 //we want the container to use
 
 import { connect } from 'react-redux'
-import { createNewUser } from '../../actions/session'
+import { createNewUser, login } from '../../actions/session'
 import { clearErrors } from '../../actions/session'
 import Signup from './signup'
 import { closeModal } from '../../actions/modal';
@@ -20,6 +20,7 @@ const mapStateToProps = (state, ownProps) => ({
 //returns a POJO
 const mapDispatchToProps = dispatch => ({
     createNewUser: formUser => dispatch(createNewUser(formUser)),
+    loginUser: formUser => dispatch(login(formUser)),
     clearErrors: () => dispatch(clearErrors()),
     closeModal: () => dispatch(closeModal())
 });

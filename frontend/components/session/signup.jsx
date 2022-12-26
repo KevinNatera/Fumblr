@@ -38,7 +38,9 @@ class Signup extends React.Component {
         //after the form is filled out, the state will have all the data required to 
         //create a user
         this.props.createNewUser(this.state)
-            .then( () => this.props.closeModal())  //success             //fail ,() => window.location.reload() 
+            .then( () => this.props.closeModal())
+            .then( () =>  {window.location.reload()} )
+             //success             //fail ,() => window.location.reload() 
             // .then( () =>  {window.location.reload()} )
     }   //then if the user is created, redirect 
 
