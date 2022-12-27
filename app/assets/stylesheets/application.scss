@@ -679,17 +679,22 @@ button {
 .create-comment {
   position: relative;
   top: 35px;
-  left: 50px;
+  left: 30px;
   width: 350px;
   height: 50px;
   margin-bottom: 30px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border-color: #fca311;
   // z-index: 5;
 }
 
 .create-comment-btn {
   position: relative;
-  top: -20px;
-  left: 60px;
+  top: -30px;
+  left: 37px;
+  border-radius: 20px;
+  border-color: #fca311;
   z-index: 15;
   cursor: pointer;
 }

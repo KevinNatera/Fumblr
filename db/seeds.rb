@@ -71,60 +71,76 @@ ActiveRecord::Base.transaction do
     )
 
     post3 = Post.create(
-        author_id: 2,
-        title: "r4t4",
-        body: "t42r4r3",
-        url: ""
-    )
-
-    post4 = Post.create(
-        author_id: 2,
-        title: "ewifjn",
-        body: "4-0rk4po",
-        url: ""
-    )
-
-    post5 = Post.create(
-        author_id: 3,
-        title: "f30j9op",
-        body: "r02op09rop",
-        url: ""
-    )
-
-    post6 = Post.create(
-        author_id: 5,
-        title: "someone",
-        body: "like my post plz :(",
-        url: ""
-    )
-
-    post7 = Post.create(
-        author_id: 6,
-        title: "They're watching.",
-        body: "Right now.",
-        url: ""
-    )
-
-    post8 = Post.create(
-        author_id: 5,
-        title: "PLZZZZZZ",
-        body: "D':",
-        url: ""
-    )
-
-    post9 = Post.create(
         author_id: 1,
         title: "Use the Demo Login button for easy access!",
         body: "No sign up required, jump in and start posting!",
         url: ""
     )
 
-    post10 = Post.create(
+    post4 = Post.create(
         author_id: 1,
         title: "Welcome to Fumblr!",
         body: "This is a fullstack clone of the popular social media website Tumblr. Please sign in to create and interact with posts as well as follow other users.",
         url: ""
     )
+
+    post5 = Post.create(
+        author_id: 2,
+        title: "r4t4",
+        body: "t42r4r3",
+        url: ""
+    )
+
+    post6 = Post.create(
+        author_id: 2,
+        title: "ewifjn",
+        body: "4-0rk4po",
+        url: ""
+    )
+
+    post7 = Post.create(
+        author_id: 3,
+        title: "f30j9op",
+        body: "r02op09rop",
+        url: ""
+    )
+
+    post8 = Post.create(
+        author_id: 5,
+        title: "someone",
+        body: "like my post plz :(",
+        url: ""
+    )
+
+    post9 = Post.create(
+        author_id: 6,
+        title: "They're watching.",
+        body: "Right now.",
+        url: ""
+    )
+
+    post10 = Post.create(
+        author_id: 5,
+        title: "PLZZZZZZ",
+        body: "D':",
+        url: ""
+    )
+
+    post11 = Post.create(
+        author_id: 3,
+        title: "Also...",
+        body: "Please ignore the sad little man posting below me.",
+        url: ""
+    )
+
+    post12 = Post.create(
+        author_id: 3,
+        title: "A message to all",
+        body: "Thanks for taking the time to visit this site. It is much appreciated!",
+        url: ""
+    )
+
+   
 
 
     like1 = Like.create(
@@ -139,7 +155,7 @@ ActiveRecord::Base.transaction do
 
     like3 = Like.create(
         liker_id: 4,
-        post_id: 3,
+        post_id: 12,
     )
 
     like4 = Like.create(
@@ -159,7 +175,7 @@ ActiveRecord::Base.transaction do
 
     like7 = Like.create(
         liker_id: 3,
-        post_id: 4,
+        post_id: 12,
     )
 
     like8 = Like.create(
@@ -173,18 +189,18 @@ ActiveRecord::Base.transaction do
     )
 
     like10 = Like.create(
-        liker_id: 4,
-        post_id: 10,
+        liker_id: 6,
+        post_id: 11,
     )
 
     like11 = Like.create(
-        liker_id: 3,
-        post_id: 10,
+        liker_id: 1,
+        post_id: 12,
     )
 
     like12 = Like.create(
         liker_id: 2,
-        post_id: 10,
+        post_id: 12,
     )
 
     like13 = Like.create(
@@ -205,13 +221,13 @@ ActiveRecord::Base.transaction do
 
     comment2 = Comment.create(
         commenter_id: 4,
-        post_id: 6,
+        post_id: 8,
         body: "Get a load of this fella"
     )
 
     comment3 = Comment.create(
         commenter_id: 6,
-        post_id: 6,
+        post_id: 8,
         body: "No one likes you."
     )
 
@@ -223,13 +239,13 @@ ActiveRecord::Base.transaction do
 
     comment5 = Comment.create(
         commenter_id: 1,
-        post_id: 5,
+        post_id: 7,
         body: "He is speaking the language of the gods."
     )
 
     comment6 = Comment.create(
         commenter_id: 4,
-        post_id: 8,
+        post_id: 12,
         body: "Lorem ipsum dolor sit amet, 
         consectetur adipiscing elit, sed do eiusmod tempor 
         incididunt ut labore et dolore magna aliqua. Ac tincidunt 
