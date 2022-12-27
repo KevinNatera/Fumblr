@@ -21,6 +21,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     requestAllPosts: () => dispatch(requestAllPosts()),
     deletePost: () => dispatch(deletePost(ownProps.post.id)),
     openEditPostForm: () => dispatch(openModal('new/edit')),
+    openLoginForm: () => dispatch(openModal('login')),
     createLike: (like) => dispatch(createLike(like)),
     deleteLike: (likeId) => dispatch(deleteLike(likeId)),
     createFollow: (follow) => dispatch(createFollow(follow))

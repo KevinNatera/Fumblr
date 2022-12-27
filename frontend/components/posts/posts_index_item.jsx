@@ -43,9 +43,12 @@ class PostsIndexItem extends React.Component{
           }
 
           this.setState({like: this.state.like})
+
+     } else {
+          this.props.openLoginForm()
      }
 
-    }
+    } 
     
      deletePost = () => {
           this.props.deletePost(this.props.post.id)
@@ -77,6 +80,8 @@ class PostsIndexItem extends React.Component{
                     this.likeImgUrl = "https://fumblr11-seeds.s3.amazonaws.com/like_icon.png"
                }
 
+          } else {
+               this.props.openLoginForm()
           }
 
      }
@@ -92,6 +97,8 @@ class PostsIndexItem extends React.Component{
           }
           this.props.createFollow(follow)
 
+          } else {
+               this.props.openLoginForm()
           }
      }
 
