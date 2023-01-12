@@ -227,6 +227,7 @@ body {
   border-radius: 10px;
   background-color: #14213d;
   align-items: center;
+
 }
 
 .create-btn {
@@ -242,20 +243,23 @@ body {
   cursor: pointer;
   background-color: #14213d;
   border: none;
-
-  span {
-    color: white;
-    position: relative;
-    top: 30px;
-    right: 5px;
-    font-size: 20px;
-    font-weight: 700;
-    width: 100px;
-    text-align: left;
-    overflow: auto;
-    position: relative;
-  }
+  position: relative;
+  left: 30px;
+  top: 10px;
     
+}
+
+.create-span {
+  color: white;
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100px;
+  top: -10px;
+  text-align: left;
+  overflow: auto;
+  position: relative;
+  
 }
 
 .create-btn:hover {
