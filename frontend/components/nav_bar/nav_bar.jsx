@@ -45,7 +45,7 @@ export default ({ currentUser, logout, openSignupForm, openLoginForm }) => {
     <div>
 
     
-    <button className="login-btn" onClick={openLoginForm}>Log in</button> 
+    <button className="login-btn" onClick={openLoginForm}>Log In</button> 
     <button className="signup-btn" onClick={openSignupForm}>Sign Up</button> 
 {/*       
       <Link className="btn" to="/signup">Sign Up</Link>
