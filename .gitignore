@@ -1,3 +1,4 @@
 .bundle
 node_modules
 log/*.log
+log/development.log
