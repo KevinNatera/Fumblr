@@ -2,3 +2,4 @@
 node_modules
 log/*.log
 log/development.log
+config/master.key
